@@ -7,6 +7,7 @@
 #  check_in   :date             not null
 #  check_out  :date             not null
 #  guest_id   :integer          not null
+#  status     :string           default("needs action")
 #
 
 require 'test_helper'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151027010202) do
+ActiveRecord::Schema.define(version: 20151027041002) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,16 +49,6 @@ ActiveRecord::Schema.define(version: 20151027010202) do
   add_index "messages", ["from_user"], name: "index_messages_on_from_user", using: :btree
   add_index "messages", ["to_user"], name: "index_messages_on_to_user", using: :btree
 
-  create_table "notifications", force: :cascade do |t|
-    t.string  "action_type",                    null: false
-    t.integer "user_id",                        null: false
-    t.integer "reservation_id"
-    t.boolean "read",           default: false, null: false
-  end
-
-  add_index "notifications", ["reservation_id"], name: "index_notifications_on_reservation_id", using: :btree
-  add_index "notifications", ["user_id"], name: "index_notifications_on_user_id", using: :btree
-
   create_table "pictures", force: :cascade do |t|
     t.integer "user_id"
     t.integer "listing_id"
@@ -68,10 +58,11 @@ ActiveRecord::Schema.define(version: 20151027010202) do
   add_index "pictures", ["user_id"], name: "index_pictures_on_user_id", using: :btree
 
   create_table "reservations", force: :cascade do |t|
-    t.integer "listing_id", null: false
-    t.date    "check_in",   null: false
-    t.date    "check_out",  null: false
-    t.integer "guest_id",   null: false
+    t.integer "listing_id",                          null: false
+    t.date    "check_in",                            null: false
+    t.date    "check_out",                           null: false
+    t.integer "guest_id",                            null: false
+    t.string  "status",     default: "needs action"
   end
 
   add_index "reservations", ["guest_id"], name: "index_reservations_on_guest_id", using: :btree

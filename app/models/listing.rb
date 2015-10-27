@@ -27,6 +27,8 @@ class Listing < ActiveRecord::Base
       foreign_key: :ghost_id
     )
 
+    has_many :pictures
+    has_one :ghost_picture, through: :ghost, source: :picture
     has_many :reservations
 
     def self.map_listings(north_lat, east_lng, south_lat, west_lng)
@@ -40,7 +42,11 @@ class Listing < ActiveRecord::Base
           east_lng: east_lng,
           west_lng: west_lng
         }
-      ])
+      ]).join(:pictures, :ghost_picture)
+    end
+
+    def accepted_reservations
+      self.reservations.where("status = 'accepted'")
     end
 
 end

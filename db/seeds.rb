@@ -37,6 +37,10 @@ Reservation.create!(listing_id: 2, check_in: Date.today,
   check_out: Date.tomorrow, guest_id: 2
 )
 
+Reservation.create!(listing_id: 1, check_in: Date.new(2015,10,27), check_out: Date.new(2015,10,29),
+  guest_id: 2, status: "approved"
+)
+
 ListingRating.create!(reservation_id: 1, review: "mike reviewing boogys first place",
   creepiness: 5
 )

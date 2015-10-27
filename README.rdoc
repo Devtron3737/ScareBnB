@@ -26,3 +26,16 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+TO DO
+
+add constraints for lat long in listings
+add password_hash and bcrypt/authentication stuff
+
+ratings logic (DONE)
+reservations logic (DONE)
+lisings fetch logic (DONE)
+need to figure out user thumbnail for listings fetch (how to make in one query)
+
+
+add shepard stuff
