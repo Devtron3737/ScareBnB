@@ -15,7 +15,7 @@ var CheckOut = React.createClass({
         onChange={this.handleChange}
         type='date'
         placeholder={this.state.date}
-        className=''
+        className='check-out'
       />
     );
   },

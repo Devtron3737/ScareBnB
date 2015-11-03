@@ -3,9 +3,11 @@ var Listings = React.createClass({
     return(
       <div>
         <NavBar />
-        <Dates />
+        <section className='listings-content clearfix' >
+          <Dates />
+
+        </section>
         <Map />
-        
       </div>
     );
   }

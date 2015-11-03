@@ -15,7 +15,7 @@ var CheckIn = React.createClass({
         onChange={this.handleChange}
         placeholder={Date()}
         type='date'
-        className='date'
+        className='check-in'
       />
     );
   },

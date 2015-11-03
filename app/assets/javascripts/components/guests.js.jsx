@@ -10,7 +10,7 @@ var Guests = React.createClass({
 
   render: function () {
     return(
-      <div className='guests'>
+      <div className='guests' id='guests'>
         <select value={this.state.value} onChange={this.handleChange}>
         {
           function () {

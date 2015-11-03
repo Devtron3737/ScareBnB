@@ -14,6 +14,8 @@ var SearchBar = React.createClass({
 
   render: function () {
     return(
+      <div className='search-field-container clearfix'>
+        <img src={'/images/mag_glass_grey.png'} className='mag-glass-pic' alt='' height='42' />
         <input id='search-field'
              type='text'
              onSubmit={this.handleSubmit}
@@ -21,6 +23,9 @@ var SearchBar = React.createClass({
              placeholder='Where are you going?'>
              {this.state.value}
         </input>
+      </div>
+
+
     );
   }
 });

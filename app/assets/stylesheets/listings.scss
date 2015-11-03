@@ -1,54 +1,121 @@
 .nav-container {
   width: 100%;
   border: 1px solid lightgrey;
-  background: blue;
+  height: 60px;
+}
+
+.nav-container * {
+  font-size: 13px;
+  color: #585858;
 }
 
 #home-logo {
   float: left;
+  border-right: lightgrey 1px solid;
+  height: 100%;
+  width: 70px;
+}
+
+#logo-pic {
+  position: relative;
+  bottom: 5px;
+  left: 6px;
+  // transform: translateY(50%);
+}
+
+.search-field-container {
+  width: 750px;
+  float:left;
+}
+
+.search-field-container > * {
+  float: left;
+  padding: 3px;
 }
 
 #search-field {
-  float:left;
-
+  float: left;
+  font-size: 16px;
+  width: 600px;
+  position: relative;
+  bottom: 50%;
+  transform: translateY(50%);
 }
 
 .navbar-list {
+  float: right;
+  height: 100%;
+}
+
+.navbar-list-item {
+  border-left: 1px solid lightgrey;
+  padding-right: 25px;
+  padding-left: 25px;
+  height: 100%;
+  float: left;
+}
+
+.ghost-text {
   float: left;
 
 }
 
-// airbnb light grey #F8F8F8
-// rgba(252, 252, 253, 1); //airbnb offwhite
-
-.ghost-icon {
-  color: black;
+.house-pic {
   float: left;
-
 }
 
-
-.date {
+.message-text {
   float: left;
+  top: 2px;
+}
+
+.message-pic {
+  float: left;
+  top: 2px;
+}
+
+.listings-content {
+  width: calc(100% - 600px); // map width = 600px
+  height: 100%;
+  // background: yellow;
+  // padding: 30px;
+}
+
+.dates {
   display: block;
   padding: 10px;
-  border-right: 1px grey solid;
+  // border-right: 1px grey solid;
   font-size: 15px;
+  width: auto;
   color: #585858; //airbnb darkgrey
   height: 20px;
-  position: relative;
   -webkit-appearance: none;
 }
 
+.check-in {
+  float:left;
+  border: black 3px solid;
+}
+
+.check-out {
+  float:left;
+  border: black 3px solid;
+}
+
+#guests {
+  float: left;
+
+}
+
 #map {
-  width: 600px;
+  width: 550px;
   height: 800px;
 }
 
 #map-container {
   position: fixed;
   right: 0;
-  top: 200px;
+  top: 61px;
   width: auto;
   height: auto;
 }

@@ -1,17 +1,17 @@
 var NavBar = React.createClass({
   render: function () {
     return(
-      <nav className='nav-container'>
+      <nav className='nav-container clearfix'>
         <div id='home-logo'>
           <a href="/">
-           <img src={'/images/logo_red.png'} alt='logo' height='55' />
+           <img id='logo-pic' src={'/images/logo_red.png'} alt='logo' height='60' />
           </a>
         </div>
-        <SearchBar />
-        <span className=''>
-          <GhostIcon />
+        <SearchBar id='search-field' />
+        <span className='navbar-list clearfix'>
+          <HouseIcon />
           <MessagesIcon />
-          <a href='#'>Account</a>
+          <div className='navbar-list-item'><a href='#' id='account'>Account</a></div>
         </span>
       </nav>
     );

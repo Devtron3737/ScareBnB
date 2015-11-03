@@ -1,7 +1,7 @@
 var ListingsList = React.createClass({
   render: function () {
     return(
-      <div className='listings-list'>
+      <div>
         {
           this.props.listings.map( function (listing) {
             return <ListingBlock listing={listing} />;
