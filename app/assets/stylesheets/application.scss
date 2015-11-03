@@ -1,0 +1,103 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ html, body, header, nav, h1, a,
+ ul, li, strong, main, button, i,
+ section, img, div, h2, p, form,
+ fieldset, label, input, textarea,
+ span, article, footer, time, small,
+ select, option {
+   border: 0;
+   margin: 0;
+   outline: 0;
+   padding: 0;
+   box-sizing: inherit;
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 400;
+   text-decoration: inherit;
+   text-align: inherit;
+   color: inherit;
+   background: transparent;
+   display: block;
+ }
+
+ body {
+  //  background: #F8F8FF;
+  background: rgba(252, 252, 253, 1); //airbnb offwhite
+ }
+
+ input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none;
+}
+
+// input[type=date]::-webkit-calendar-picker-indicator {
+//     // -webkit-appearance: none;
+//     // display: none;
+//
+// }
+
+ ul {
+   list-style-type: none;
+ }
+
+ .clearfix:after {
+   content: "";
+   clear: both;
+   display: block;
+ }
+
+
+ .search-button {
+   background: rgba(255, 77, 77, 1); //airbnb red
+   font-weight: 800;
+   width: 100px;
+   color: white;
+   height: 20px;
+   text-align: center;
+  //  border: 1px solid rgba(255, 128, 128, 1);
+   float: left;
+  //  position: relative;
+   border-top-right-radius: 3%;
+   border-bottom-right-radius: 3%;
+   // position: absolute;
+   // left: calc(80% - 5px);
+   // top: calc(31% - 1px);
+ }
+
+ .search-button:hover {
+   background: rgba(255, 128, 128, 1); //airbnb light red
+   cursor: pointer;
+ }
+
+ .guests {
+   position: relative;
+   display: inline-block;
+   padding: 0;
+   border-right: 0px;
+
+   select {
+     -webkit-appearance: none;
+     // margin: 0;
+     border: 0px;
+     height: 40px;
+     width: 100px;
+     background: transparent;
+     font-size: 15px;
+     color: #585858;
+     padding-left: 20px;
+   }
+ }

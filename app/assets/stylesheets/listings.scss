@@ -1,0 +1,54 @@
+.nav-container {
+  width: 100%;
+  border: 1px solid lightgrey;
+  background: blue;
+}
+
+#home-logo {
+  float: left;
+}
+
+#search-field {
+  float:left;
+
+}
+
+.navbar-list {
+  float: left;
+
+}
+
+// airbnb light grey #F8F8F8
+// rgba(252, 252, 253, 1); //airbnb offwhite
+
+.ghost-icon {
+  color: black;
+  float: left;
+
+}
+
+
+.date {
+  float: left;
+  display: block;
+  padding: 10px;
+  border-right: 1px grey solid;
+  font-size: 15px;
+  color: #585858; //airbnb darkgrey
+  height: 20px;
+  position: relative;
+  -webkit-appearance: none;
+}
+
+#map {
+  width: 600px;
+  height: 800px;
+}
+
+#map-container {
+  position: fixed;
+  right: 0;
+  top: 200px;
+  width: auto;
+  height: auto;
+}

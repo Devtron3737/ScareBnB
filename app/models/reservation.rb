@@ -57,7 +57,6 @@ class Reservation < ActiveRecord::Base
     false
   end
 
-  # doesnt work, syntax error related to id check in conflicts
   def update_reservations
     # make sure not to update yourself (the recent reservation creation)
     self.conflicts('needs action').update_all(status: 'rejected')

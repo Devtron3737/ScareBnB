@@ -40,6 +40,16 @@ GEM
       activerecord (>= 3.2, <= 4.3)
       rake (~> 10.4)
     arel (6.0.3)
+    aws-sdk (2.1.32)
+      aws-sdk-resources (= 2.1.32)
+    aws-sdk-core (2.1.32)
+      jmespath (~> 1.0)
+    aws-sdk-resources (2.1.32)
+      aws-sdk-core (= 2.1.32)
+    babel-source (5.8.26)
+    babel-transpiler (0.7.0)
+      babel-source (>= 4.0, < 6)
+      execjs (~> 2.0)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -60,15 +70,21 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.9.1.1)
+    connection_pool (2.2.0)
     debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.6.0)
+    figaro (1.1.1)
+      thor (~> 0.14)
+    flux-rails-assets (1.0.1)
+      railties (>= 3.1)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
     jbuilder (2.3.2)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
+    jmespath (1.1.3)
     jquery-rails (4.0.5)
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
@@ -129,6 +145,13 @@ GEM
     rake (10.4.2)
     rdoc (4.2.0)
       json (~> 1.4)
+    react-rails (1.3.0)
+      babel-transpiler (>= 0.7.0)
+      coffee-script-source (~> 1.8)
+      connection_pool
+      execjs
+      rails (>= 3.2)
+      tilt
     sass (3.4.19)
     sass-rails (5.0.4)
       railties (>= 4.0.0, < 5.0)
@@ -168,10 +191,13 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
+  aws-sdk
   better_errors
   binding_of_caller
   byebug
   coffee-rails (~> 4.1.0)
+  figaro
+  flux-rails-assets
   jbuilder (~> 2.0)
   jquery-rails
   json
@@ -179,6 +205,7 @@ DEPENDENCIES
   pg
   pry-rails
   rails (= 4.2.4)
+  react-rails (= 1.3.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring

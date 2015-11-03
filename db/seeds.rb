@@ -28,16 +28,16 @@ Listing.create!(ghost_id: 3, toe_nails: 2, city: "San Francsico",
 )
 
 Reservation.create!(listing_id: 1, check_in: Date.today,
-  check_out: Date.tomorrow, guest_id: 4
+  check_out: Date.tomorrow, guest_id: 4, status: "approved"
 )
 Reservation.create!(listing_id: 2, check_in: Date.today,
-  check_out: Date.tomorrow, guest_id: 4
+  check_out: Date.tomorrow, guest_id: 4, status: "approved"
 )
-Reservation.create!(listing_id: 2, check_in: Date.today,
-  check_out: Date.tomorrow, guest_id: 2
+Reservation.create!(listing_id: 3, check_in: Date.today,
+  check_out: Date.tomorrow, guest_id: 2, status: "approved"
 )
 
-Reservation.create!(listing_id: 1, check_in: Date.new(2015,10,27), check_out: Date.new(2015,10,29),
+Reservation.create!(listing_id: 1, check_in: Date.new(2015,11,27), check_out: Date.new(2015,11,29),
   guest_id: 2, status: "approved"
 )
 
@@ -48,7 +48,7 @@ ListingRating.create!(reservation_id: 2, review: "mike reviewing boogys second p
   creepiness: 5
 )
 ListingRating.create!(reservation_id: 3, review: "casper reviewing boogys second place",
-  creepiness: 5
+  creepiness: 1
 )
 
 UserRating.create!(reservation_id: 1, review: "boogy reviewing mike",

@@ -15,4 +15,5 @@ class Rating < ActiveRecord::Base
   validates :listing_id, :user_id, :creepiness, presence: true
   #add not null constraint and validation
   #for reservation_id
+  
 end

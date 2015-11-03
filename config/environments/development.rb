@@ -38,4 +38,17 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  config.paperclip_defaults = {
+    storage: :s3,
+    s3_protocol: 'http',
+    url: 's3_domain_url',
+    path: 'images/:class/:id.:style.:extension',
+    s3_host_name: 's3-us-west-1.amazonaws.com',
+    s3_credentials: {
+      bucket: ENV['BUCKET_NAME_DEV'],
+      access_key_id: ENV['PUSHER_APP_ID'],
+      secret_access_key: ENV['PUSHER_SECRET']
+    }
+  }
 end
