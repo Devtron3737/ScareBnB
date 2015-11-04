@@ -41,7 +41,7 @@ class Listing < ActiveRecord::Base
       Listing.where([
         "lat < :north AND lat > :south
         AND
-        lng < :east AND lng > :west",
+        lng > :east AND lng < :west",
         {
           north: options[:north],
           south: options[:south],

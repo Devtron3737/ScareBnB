@@ -1,13 +1,13 @@
 class Api::ListingsController < ApplicationController
   def index
     coords = {
-      north: params[:north],
-      east: params[:east],
-      south: params[:south],
-      west: params[:west]
+      north: params[:north].to_f,
+      east: params[:east].to_f,
+      south: params[:south].to_f,
+      west: params[:west].to_f
     }
-    # @listings = Listing.map_listings(coords)
-    @listings = Listing.all
+    @listings = Listing.map_listings(coords)
+    # @listings = Listing.all
 
     # so bounds are sent using ajax request
     # this request is made via the action_preparer

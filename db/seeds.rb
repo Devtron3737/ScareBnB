@@ -12,19 +12,19 @@ User.create!(fname: "Mike", password: "boo")
 
 Listing.create!(ghost_id: 1, toe_nails: 2, city: "San Francsico",
   state: "CA", address: "111 Madrid St.", description: "Boogys place",
-  amenities: JSON.generate(["stuff"]), lat: 50.7, lng: -94.0
+  amenities: JSON.generate(["stuff"]), lat: 37.727635, lng: -122.428021
 )
 Listing.create!(ghost_id: 1, toe_nails: 2, city: "San Francsico",
-  state: "CA", address: "111 Madrid St.", description: "Boogys 2nd place",
-  amenities: JSON.generate(["stuff"]), lat: 40.1, lng: -94.5
+  state: "CA", address: "2762 40th Ave.", description: "Boogys 2nd place",
+  amenities: JSON.generate(["stuff"]), lat: 37.735323, lng: -122.497367
 )
-Listing.create!(ghost_id: 2, toe_nails: 2, city: "San Francsico",
-  state: "CA", address: "111 Madrid St.", description: "Caspers place",
-  amenities: JSON.generate(["stuff"]), lat: 41.7, lng: -94.1
+Listing.create!(ghost_id: 2, toe_nails: 2, city: "Berkeley",
+  state: "CA", address: "2445 Prospect St.", description: "Caspers place",
+  amenities: JSON.generate(["stuff"]), lat: 37.866250, lng: -122.249629
 )
-Listing.create!(ghost_id: 3, toe_nails: 2, city: "San Francsico",
-  state: "CA", address: "111 Madrid St.", description: "Dorothys place",
-  amenities: JSON.generate(["stuff"]), lat: 39.7, lng: -94.7
+Listing.create!(ghost_id: 3, toe_nails: 2, city: "Oakland",
+  state: "CA", address: "824 54th St.", description: "Dorothys place",
+  amenities: JSON.generate(["stuff"]), lat: 37.839046, lng: -122.270618
 )
 
 Reservation.create!(listing_id: 1, check_in: Date.today,
