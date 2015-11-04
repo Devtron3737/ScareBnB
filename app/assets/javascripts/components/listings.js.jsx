@@ -5,7 +5,7 @@ var Listings = React.createClass({
         <NavBar />
         <section className='listings-content clearfix' >
           <Dates />
-
+          <ListingsList />
         </section>
         <Map />
       </div>

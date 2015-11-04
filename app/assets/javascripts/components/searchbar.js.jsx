@@ -13,35 +13,31 @@ var SearchBar = React.createClass({
     this.autocomplete = new google.maps.places.Autocomplete(searchField, options);
   },
 
+
+  //formats PlaceResult object. creates action_preparer
   handleSubmit: function () {
-    //this should create an action to submit
-    // fetch new listings list
     event.preventDefault();
     var place = this.autocomplete.getPlace();
     var viewport = place.geometry.viewport;
 
-    // S E N W
+    // array of coords, [S E N W]
     var bounds = viewport.toString()
-      .replace(/[()]/g, '')
+      .replace(/[()]/g,'')
       .replace(/ /g,'')
       .split(',');
 
-    var boundsFormatted = {
+    var boundsObject = {
       north: bounds[2],
       east: bounds[1],
       south: bounds[0],
       west: bounds[3]
     };
 
-    $.ajax({
-      url: '/api/listings.json',
-      method: 'GET',
-      data: boundsFormatted,
-      success: function (listings) {
-        console.log('success!');
-        console.log(listings);
-      }
-    });
+    //need to encompass searchfield, guests, and dates
+    // in same <form>. then setup defaults if things are
+    // empty
+
+    SearchActions.listingsSearch(boundsObject);
   },
 
   handleChange: function () {
