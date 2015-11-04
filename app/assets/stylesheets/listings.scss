@@ -3,6 +3,8 @@
   border: 1px solid lightgrey;
   height: 60px;
   position: fixed;
+  background: rgba(252, 252, 253, 1);
+  z-index: 1;
 }
 
 .nav-container * {
@@ -109,12 +111,57 @@
 
 .listings-list {
   width: 100%;
-  background: blue;
+  background: #ededed; //airbnb med grey
 }
 
-.listing-block {
-  float: left;
 
+// first block is off center for some reason
+.listing-block {
+  float: right;
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  background: grey;
+  width: 350px;
+  height: 240px;
+  overflow: visible;
+}
+
+.listing-block:hover {
+  cursor: pointer;
+}
+
+.listing-user-pic {
+  position: absolute;
+  right: 10px;
+  border-radius: 50%;
+  bottom: -30px;
+  border: 2px #ededed solid;
+}
+
+.listing-creepiness {
+  color: green;
+}
+
+.listing-title {
+  color: purple;
+}
+
+.listing-toe-nail {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  left: 0px;
+  color: white;
+  font-size: 20px;
+  font-weight: 800;
+  background: rgba(89, 89, 89, 0.72);
+}
+
+.listing-toe-nail * {
+  float: left;
 }
 
 #map {

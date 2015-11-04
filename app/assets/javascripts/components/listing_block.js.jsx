@@ -11,11 +11,15 @@ var ListingBlock = React.createClass({
     //change image
     return (
       <div className='listing-block' onMouseOver={this.handleMouseOver}>
-        <img className='listing-pic' src={'/images/deathstar.jpg'} height='120' />
+        <img className='listing-pic' src={'/images/deathstar.jpg'} height='240' width='350' />
         <detail className='listing-creepiness'>{listing.creepiness}</detail>
-        <img className='listing-user-pic' src={'/images/darth-vader.jpg'} height='100' />
-        <title>{listing.title}</title>
-        <detail className='listing-toe-nail'>{listing.toe_nails}</detail>
+        <div id='listing-title'>{listing.title}</div>
+        <div className='listing-toe-nail'>
+          {listing.toe_nails}
+          <img className='toenail-pic' src={'/images/toenail.png'} height='40' />
+        </div>
+        <img className='listing-user-pic' src={'/images/darth-vader.jpg'} height='60' width='60' />
+
       </div>
     )
   }
