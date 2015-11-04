@@ -1,10 +1,10 @@
 class Api::ListingsController < ApplicationController
   def index
     coords = {
-      north_lat: params[:north_lat],
-      east_lng: params[:east_lng],
-      south_lat: params[:south_lat],
-      west_lng: params[:west_lng]
+      north: params[:north],
+      east: params[:east],
+      south: params[:south],
+      west: params[:west]
     }
     # @listings = Listing.map_listings(coords)
     @listings = Listing.all

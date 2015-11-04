@@ -25,6 +25,23 @@ var SearchBar = React.createClass({
       .replace(/[()]/g, '')
       .replace(/ /g,'')
       .split(',');
+
+    var boundsFormatted = {
+      north: bounds[2],
+      east: bounds[1],
+      south: bounds[0],
+      west: bounds[3]
+    };
+
+    $.ajax({
+      url: '/api/listings.json',
+      method: 'GET',
+      data: boundsFormatted,
+      success: function (listings) {
+        console.log('success!');
+        console.log(listings);
+      }
+    });
   },
 
   handleChange: function () {

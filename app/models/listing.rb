@@ -39,14 +39,14 @@ class Listing < ActiveRecord::Base
 
       # .joins(:reservations) (add that before .where)
       Listing.where([
-        "lat < :north_lat AND lat > :south_lat
+        "lat < :north AND lat > :south
         AND
-        lng < :east_lng AND lng > :west_lng",
+        lng < :east AND lng > :west",
         {
-          north_lat: options[:north_lat],
-          south_lat: options[:south_lat],
-          east_lng: options[:east_lng],
-          west_lng: options[:west_lng]
+          north: options[:north],
+          south: options[:south],
+          east: options[:east],
+          west: options[:west]
         }
       ])
       # .filter_by_dates(options[check_in], options[check_out])
