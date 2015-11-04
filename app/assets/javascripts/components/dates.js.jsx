@@ -4,8 +4,8 @@ var Dates = React.createClass({
 
     return(
       <div className='dates clearfix'>
-        <CheckIn  />
-        <CheckOut className='check-out' />
+        <DateField type='check_in' />
+        <DateField type='check_out' />
         <Guests />
       </div>
     );

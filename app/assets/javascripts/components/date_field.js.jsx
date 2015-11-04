@@ -1,4 +1,4 @@
-var CheckIn = React.createClass({
+var DateField = React.createClass({
   getInitialState: function () {
     return {value: ""};
   },
@@ -10,12 +10,17 @@ var CheckIn = React.createClass({
   },
 
   render: function () {
+    var type = (this.props.type === 'check_in') ?
+                      'Check in' :
+                      'Check out';
     return (
       <input
         onChange={this.handleChange}
-        placeholder={Date()}
+        placeholder={type}
+        value={DateUtil.getDefault(type)}
+        required='required'
         type='date'
-        className='check-in'
+        className='date-field'
       />
     );
   },

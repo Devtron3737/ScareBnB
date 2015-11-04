@@ -4,7 +4,7 @@ var ListingsList = React.createClass({
 {
 id: 1,
 ghost_id: 1,
-toe_nails: 2,
+toe_nails: 21,
 city: "San Francsico",
 state: "CA",
 address: "111 Madrid St.",
@@ -19,7 +19,7 @@ title: "Boogys place"
 {
 id: 2,
 ghost_id: 1,
-toe_nails: 2,
+toe_nails: 221,
 city: "San Francsico",
 state: "CA",
 address: "2762 40th Ave.",
@@ -34,7 +34,7 @@ title: "Boogys second place"
 {
 id: 3,
 ghost_id: 2,
-toe_nails: 2,
+toe_nails: 134,
 city: "Berkeley",
 state: "CA",
 address: "2445 Prospect St.",
@@ -49,7 +49,7 @@ title: "Caspers place"
 {
 id: 4,
 ghost_id: 3,
-toe_nails: 2,
+toe_nails: 54,
 city: "Oakland",
 state: "CA",
 address: "824 54th St.",
