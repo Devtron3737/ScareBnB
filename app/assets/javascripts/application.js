@@ -13,10 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require geocomplete
 //= require react
 //= require react_ujs
-//= requre flux
+//= require flux
 //= require eventemitter
 //= require components
 //= require_tree .

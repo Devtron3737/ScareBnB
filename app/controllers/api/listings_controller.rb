@@ -6,7 +6,8 @@ class Api::ListingsController < ApplicationController
       south: params[:south].to_f,
       west: params[:west].to_f
     }
-    @listings = Listing.map_listings(coords)
+    # @listings = Listing.map_listings(coords)
+    @listings = Listing.all
 
     respond_to do |format|
       format.html

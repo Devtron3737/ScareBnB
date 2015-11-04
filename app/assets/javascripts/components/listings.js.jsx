@@ -3,10 +3,10 @@ var Listings = React.createClass({
     return(
       <div>
         <NavBar />
-        <section className='listings-content clearfix' >
+        <div className='listing-contents clearfix' >
           <Dates />
           <ListingsList />
-        </section>
+        </div>
         <Map />
       </div>
     );

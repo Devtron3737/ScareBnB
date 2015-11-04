@@ -2,6 +2,7 @@
   width: 100%;
   border: 1px solid lightgrey;
   height: 60px;
+  position: fixed;
 }
 
 .nav-container * {
@@ -74,15 +75,14 @@
   top: 2px;
 }
 
-.listings-content {
-  width: calc(100% - 600px); // map width = 600px
-  height: 100%;
-  // background: yellow;
-  // padding: 30px;
+.listing-contents {
+  width: calc(100% - 550px); // map width = 600px
+  height: 100%px;
+  position: absolute;
+  top: 61px;
 }
 
 .dates {
-  display: block;
   padding: 10px;
   // border-right: 1px grey solid;
   font-size: 15px;
@@ -94,15 +94,25 @@
 
 .check-in {
   float:left;
-  border: black 3px solid;
+  // border: black 3px solid;
 }
 
 .check-out {
   float:left;
-  border: black 3px solid;
 }
 
 #guests {
+  float: left;
+}
+
+
+
+.listings-list {
+  width: 100%;
+  background: blue;
+}
+
+.listing-block {
   float: left;
 
 }

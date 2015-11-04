@@ -33,6 +33,8 @@ var SearchBar = React.createClass({
       west: bounds[3]
     };
 
+    console.log(boundsObject);
+
     //need to encompass searchfield, guests, and dates
     // in same <form>. then setup defaults if things are
     // empty
