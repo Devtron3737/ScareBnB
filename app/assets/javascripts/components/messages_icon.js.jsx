@@ -8,7 +8,7 @@ var MessagesIcon = React.createClass({
     return(
       <div className='navbar-list-item clearfix'><a href="#">
         <h3 className='message-text'>Messages</h3>
-        <img src={'/images/message_icon_grey.png'} className='message-pic' alt='house-pic' height='42' />
+        <img src={'/images/message_icon_grey.png'} className='message-pic' alt='house-pic' height='36' />
       </a></div>
     );
   }

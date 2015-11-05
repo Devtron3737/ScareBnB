@@ -8,7 +8,7 @@ var HouseIcon = React.createClass({
     return(
       <div className='navbar-list-item clearfix'><a href="#">
         <h3 className='ghost-text'>Ghost</h3>
-        <img src={'/images/home_icon_grey.png'} className='house-pic' alt='house-pic' height='45' />
+        <img src={'/images/home_icon_grey.png'} className='house-pic' alt='house-pic' height='40' />
       </a></div>
     );
   }

@@ -16,11 +16,10 @@ var DateField = React.createClass({
     return (
       <input
         onChange={this.handleChange}
-        placeholder={type}
         value={DateUtil.getDefault(type)}
         required='required'
         type='date'
-        className='date-field'
+        className='date-item'
       />
     );
   },

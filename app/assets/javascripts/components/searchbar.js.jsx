@@ -7,6 +7,7 @@ var SearchBar = React.createClass({
     var defaultBounds = new google.maps.LatLngBounds(
       new google.maps.LatLng(35.260843, -120.679486),
       new google.maps.LatLng(35.295317, -120.643094)
+      //make default sf
     );
     var options = {bounds: defaultBounds},
         searchField = document.getElementById('search-field');
@@ -14,32 +15,14 @@ var SearchBar = React.createClass({
   },
 
 
-  //formats PlaceResult object. creates action_preparer
+
   handleSubmit: function () {
     event.preventDefault();
     var place = this.autocomplete.getPlace();
-    var viewport = place.geometry.viewport;
-
-    // array of coords, [S E N W]
-    var bounds = viewport.toString()
-      .replace(/[()]/g,'')
-      .replace(/ /g,'')
-      .split(',');
-
-    var boundsObject = {
-      north: bounds[2],
-      east: bounds[1],
-      south: bounds[0],
-      west: bounds[3]
-    };
-
-    console.log(boundsObject);
-
-    //need to encompass searchfield, guests, and dates
+    SearchActions.placeSearch(place.geometry);
+    // need to encompass searchfield, guests, and dates
     // in same <form>. then setup defaults if things are
     // empty
-
-    SearchActions.listingsSearch(boundsObject);
   },
 
   handleChange: function () {

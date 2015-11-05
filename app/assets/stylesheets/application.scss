@@ -49,15 +49,15 @@ input[type=date]::-webkit-inner-spin-button {
   display: none;
 }
 
-input[type="date"]:before {
-  content: attr(placeholder) !important;
-  color: #aaa;
-  margin-right: 0.5em;
-}
-input[type="date"]:focus:before,
-input[type="date"]:valid:before {
-  content: "";
-}
+// input[type="date"]:before {
+//   content: attr(placeholder) !important;
+//   color: #aaa;
+//   margin-right: 0.5em;
+// }
+// input[type="date"]:focus:before,
+// input[type="date"]:valid:before {
+//   content: "";
+// }
 
 // input[type=date]::-webkit-calendar-picker-indicator {
 //     // -webkit-appearance: none;

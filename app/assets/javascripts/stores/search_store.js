@@ -1,7 +1,9 @@
 ( function (root) {
 
   var _listings = [];
-  var CHANGE_EVENT = "change";
+  var _place = {lat: 0, lng: 0};
+  var LISTINGS_CHANGE = "listings_change";
+  var PLACE_CHANGE = "place_change";
 
   var SearchStore = root.SearchStore = $.extend(
     {},
@@ -12,24 +14,51 @@
           case 'listings_search':
             SearchStore.updateListings(payLoad.listings);
             break;
+          case 'place_search':
+            SearchStore.updatePlace(payLoad.place);
+            break;
         }
       }),
 
-      all: function () {
+      getListings: function () {
         return _listings.slice();
+      },
+
+      getPlace: function () {
+        var placeDup = {};
+
+        for (var coord in _place) {
+          placeDup[coord] = _place[coord];
+        }
+
+        return placeDup;
       },
 
       updateListings: function (listings) {
         _listings = listings;
-        this.emit(CHANGE_EVENT);
+        this.emit(LISTINGS_CHANGE);
       },
 
-      addChangeListener: function (callback) {
-        this.on(CHANGE_EVENT, callback);
+      updatePlace: function (place) {
+        _place = place;
+
+        this.emit(PLACE_CHANGE);
       },
 
-      removeChangeListener: function (callback) {
-        this.off(CHANGE_EVENT, callback);
+      addListingsChangeListener: function (callback) {
+        this.on(LISTINGS_CHANGE, callback);
+      },
+
+      addPlaceChangeListener: function (callback) {
+        this.on(PLACE_CHANGE, callback);
+      },
+
+      removeListingsChangeListener: function (callback) {
+        this.off(LISTINGS_CHANGE, callback);
+      },
+
+      removePlaceChangeListener: function (callback) {
+        this.off(PLACE_CHANGE, callback);
       }
     }
   );
