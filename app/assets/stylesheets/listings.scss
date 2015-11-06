@@ -1,96 +1,4 @@
-.nav-container {
-  width: 100%;
-  border: 1px solid lightgrey;
-  height: 60px;
-  position: fixed;
-  background: rgba(252, 252, 253, 1);
-  z-index: 1;
-}
 
-.nav-container * {
-  font-size: 13px;
-  color: #585858;
-}
-
-#home-logo {
-  float: left;
-  border-right: lightgrey 1px solid;
-  height: 100%;
-  width: 70px;
-}
-
-.search-field-container {
-  width: 750px;
-  float:left;
-}
-
-.search-field-container > * {
-  float: left;
-  padding: 3px;
-}
-
-#search-field {
-  float: left;
-  font-size: 16px;
-  width: 600px;
-  position: relative;
-  bottom: 50%;
-  transform: translateY(50%);
-}
-
-.pac-item {
-  padding: 8px;
-}
-
-.pac-item * {
-  float: left;
-}
-
-.pac-item-query {
-  font-size: 15px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-}
-
-.pac-item-selected {
-  background: rgba(255, 77, 77, 0.97);
-  color: white;
-  .pac-item-query{
-    color: white;
-  }
-}
-
-.navbar-list {
-  float: right;
-  height: 100%;
-}
-
-.navbar-list-item {
-  border-left: 1px solid lightgrey;
-  padding-right: 25px;
-  padding-left: 25px;
-  height: 100%;
-  float: left;
-}
-
-.ghost-text {
-  float: left;
-
-}
-
-.house-pic {
-  float: left;
-}
-
-.message-text {
-  float: left;
-  top: 2px;
-}
-
-.message-pic {
-  float: left;
-  top: 2px;
-}
 
 .listing-contents {
   width: calc(100% - 550px); // map width = 600px
@@ -127,7 +35,8 @@
 
 .date-item {
   float: left;
-  border-bottom: 1px solid grey;
+  border: 1px solid lightgrey;
+  border-bottom: 3px solid lightgrey;
   border-radius: 6%;
   height: 30px;
   width: 180px;
@@ -146,7 +55,8 @@
 }
 
 #listings-guest {
-  border-bottom: 1px solid grey;
+  border: 1px solid lightgrey;
+  border-bottom: 3px solid lightgrey;
 
   font-size: 15px;
 

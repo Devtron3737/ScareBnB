@@ -14,4 +14,9 @@ class Api::ListingsController < ApplicationController
       format.json { render json: @listings }
     end
   end
+
+  def show
+    @listing = Listing.find(params[:id])
+    @reservations = @listing.accepted_reservations
+  end
 end
