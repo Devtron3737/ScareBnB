@@ -38,6 +38,28 @@
   transform: translateY(50%);
 }
 
+.pac-item {
+  padding: 8px;
+}
+
+.pac-item * {
+  float: left;
+}
+
+.pac-item-query {
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+.pac-item-selected {
+  background: rgba(255, 77, 77, 0.97);
+  color: white;
+  .pac-item-query{
+    color: white;
+  }
+}
+
 .navbar-list {
   float: right;
   height: 100%;

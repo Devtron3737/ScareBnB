@@ -12,7 +12,7 @@ var Map = React.createClass({
     var map = React.findDOMNode(this.refs.map),
         options = {
           center: this.state.center,
-          zoom: 17
+          zoom: 10
         };
     this.map = new google.maps.Map(map, options);
     // install listeners
@@ -37,6 +37,7 @@ var Map = React.createClass({
     //get bounds while also updating this.map
     var bounds = this.retrieveBounds(place);
     //format for ajax request
+    console.log(bounds);
     var formattedBounds = this.formatBounds(bounds);
 
     this.setState({
