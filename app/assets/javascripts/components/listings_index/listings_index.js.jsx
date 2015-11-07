@@ -12,10 +12,3 @@ var Listings = React.createClass({
     );
   }
 });
-
-$(function () {
-  React.render(
-    <Listings />,
-    document.getElementById('listings-index')
-  );
-});

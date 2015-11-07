@@ -37,7 +37,6 @@ gem 'paperclip', '~> 4.2'
 gem 'aws-sdk'
 gem 'figaro'
 gem 'react-rails', '1.3.0'
-gem 'react-router-rails', '~>0.13.3.1'
 gem 'flux-rails-assets'
 
 group :development, :test do
