@@ -3,9 +3,9 @@ var NavBar = React.createClass({
     return(
       <nav className='nav-container clearfix'>
         <div id='home-logo'>
-          <a href="/">
+          <Link path='/'>
            <img id='logo-pic' src={'/images/logo_red.png'} alt='logo' height='50' />
-          </a>
+          </Link>
         </div>
         <SearchBar id='search-field' />
         <span className='navbar-list clearfix'>

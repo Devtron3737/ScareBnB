@@ -1,7 +1,8 @@
 var Router = ReactRouter.Router,
     Route = ReactRouter.Route,
     IndexRoute = ReactRouter.IndexRoute,
-    Link = ReactRouter.Link;
+    Link = ReactRouter.Link,
+    NotFoundRoute = ReactRouter.NotFoundRoute;
 
 var App = React.createClass({
   render: function () {
@@ -16,9 +17,9 @@ var App = React.createClass({
 var routes = (
   <Route name='app' component={App}  path="/">
     <IndexRoute name='home' component={Home} />
-    <Route name='listings-index' component={ListingsIndex} path="listings" >
-      <Route name='listing-show' component={ListingsShow} path=":id"/>
-    </Route>
+    <Route name='listings-index' component={ListingsIndex} path="listings" />
+    <Route component={ListingsShow} path="listings/:listingId"/>
+    <NotFoundRoute component={NotFoundPage} />
   </Route>
 );
 

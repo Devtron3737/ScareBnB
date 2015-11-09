@@ -1,4 +1,4 @@
-var Listings = React.createClass({
+var ListingsIndex = React.createClass({
   render: function () {
     return(
       <div>
