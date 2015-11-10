@@ -56,7 +56,12 @@ var Home = React.createClass({
         <main id='home-content'>
           <h3>Just for a scare</h3>
           <h4>From demented children to creepy butlers, who knows what's waiting for you.</h4>
-          <Link to='listings'>listings!</Link>
+          <ul id='home-listings'>
+            <li>
+              <img src={'/images/goldengate.png'} height='100' width='130' />
+              <div class='hpme-listings-title'>San Francisco</div>
+            </li>
+          </ul>
 
         </main>
 

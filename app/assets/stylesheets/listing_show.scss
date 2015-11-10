@@ -1,0 +1,99 @@
+#listing-header {
+  position: absolute;
+  top: 60px;
+  height: 700px;
+
+}
+
+#listing-header-pic {
+  display: block;
+  // background-image: image-url('deathstar.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 550px;
+  // overflow: visible;
+}
+
+.listing-header-detail {
+  position: relative;
+  display: block;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+.listing-header-detail > * {
+  float: left;
+  margin-top: 25px;
+}
+
+#listing-show-user {
+  // background: yellow;
+  width: 100px;
+  font-size: 18px;
+  color: grey;
+  text-align: center;
+}
+
+#listing-show-user > img {
+  border: 0;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+#listing-header-info {
+  margin-left: 70px;
+}
+
+#listing-show-title {
+  color: #585858;
+  font-size: 30px;
+}
+
+#listing-show-title-detail {
+    color: grey;
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+
+.header-amenities > * {
+  float: left;
+  text-align: center;
+  color: grey;
+  font-size: 13px;
+  margin-right: 40px;
+}
+
+.header-amenities img {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+.listing-show-content-container {
+  position: absolute;
+  top: 800px;
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #ededed;
+  margin-right: 300px;
+  border-top: solid 1px lightgrey;
+}
+
+#listing-show-content-title {
+  font-size: 17px;
+  font-weight: 800px;
+  margin-left: 300px;
+  margin-top: 30px;
+}
+
+.listing-show-content {
+  border-bottom: 1px solid lightgrey;
+  margin-left: 300px;
+  width: 600px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 14px;
+  color: grey;
+}
