@@ -1,4 +1,29 @@
 var Home = React.createClass({
+  mixins: [ReactRouter.History],
+
+  componentDidMount: function () {
+    var defaultBounds = new google.maps.LatLngBounds(
+      new google.maps.LatLng(37.54025472421631, -122.6264275146484),
+      new google.maps.LatLng(37.97454774677482, -122.2487724853516)
+      //make default sf
+    );
+    var options = {bounds: defaultBounds},
+        searchField = document.getElementById('home-search-field');
+    this.autocomplete = new google.maps.places.Autocomplete(searchField, options);
+  },
+
+  handleSubmit: function () {
+    event.preventDefault();
+    var place = this.autocomplete.getPlace();
+    SearchActions.placeSearch(place.geometry);
+
+    this.history.pushState(null, '/listings');
+
+    // need to encompass searchfield, guests, and dates
+    // in same <form>. then setup defaults if things are
+    // empty
+  },
+
   render: function () {
     return(
       <div>
@@ -30,7 +55,7 @@ var Home = React.createClass({
           <h3 className='welcome-sub'>Rest with ghouls, goblins, and zombies in the Bay Area.</h3>
 
           <div className='home-searchbar-box'>
-            <form>
+            <form onSubmit={this.handleSubmit}>
               <div id='home-searchbar-container'>
                 <span className='home-searchbar'>
                   <input className='searchbar-items' id='home-search-field' type='text' placeholder='Where do you want to go?'></input>
@@ -58,8 +83,8 @@ var Home = React.createClass({
           <h4>From demented children to creepy butlers, who knows what's waiting for you.</h4>
           <ul id='home-listings'>
             <li>
-              <img src={'/images/goldengate.png'} height='100' width='130' />
-              <div class='hpme-listings-title'>San Francisco</div>
+              <img src={'/images/goldengate.jpg'} height='300' width='330' />
+              <div class='home-listings-title'>San Francisco</div>
             </li>
           </ul>
 

@@ -2,6 +2,7 @@ var mapCenter = { lat: 37.7758, lng: -122.435 };
 
 var Map = React.createClass({
   getInitialState: function () {
+
     return {
       center: mapCenter,
     };
@@ -9,6 +10,7 @@ var Map = React.createClass({
 
   componentDidMount: function () {
     this.markers = [];
+
     var map = React.findDOMNode(this.refs.map),
         options = {
           center: this.state.center,
@@ -16,6 +18,9 @@ var Map = React.createClass({
         };
     this.map = new google.maps.Map(map, options);
     // install listeners
+    var place = SearchStore.getPlace();
+    this.retrieveBounds(place);
+
     SearchStore.addPlaceChangeListener(this._onPlaceChange);
     SearchStore.addListingsChangeListener(this._onListingsChange);
     this.listenForIdle();
