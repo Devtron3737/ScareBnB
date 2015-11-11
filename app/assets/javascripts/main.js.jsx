@@ -18,6 +18,7 @@ var routes = (
     <IndexRoute name='home' component={Home} />
     <Route name='listings-index' component={ListingsIndex} path="listings/:search" />
     <Route component={ListingsShow} path="listings/:listingId"/>
+    <Route component={GhostPage} path="user/:userId/manage" />
   </Route>
 );
 
