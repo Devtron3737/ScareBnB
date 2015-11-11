@@ -10,15 +10,15 @@ var Manage = React.createClass({
     return(
       <div>
         <div>
-
-          <section>
+          <section onClick={this.handleClick}>
             Your Listings
           </section>
 
-          <section>
+          <section onClick={this.handleClick}>
             Your Reservations
           </section>
         </div>
+        
         { section }
       </div>
     );
