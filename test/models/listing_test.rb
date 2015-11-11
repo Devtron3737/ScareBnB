@@ -12,6 +12,7 @@
 #  description :text             not null
 #  lat         :float
 #  lng         :float
+#  title       :string           not null
 #
 
 require 'test_helper'

@@ -33,9 +33,9 @@ gem 'json'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'paperclip', '~> 4.2'
-gem 'aws-sdk'
-gem 'figaro'
+# gem 'paperclip', '~> 4.2'
+# gem 'aws-sdk'
+# gem 'figaro'
 gem 'react-rails', '1.3.0'
 gem 'flux-rails-assets'
 

@@ -12,6 +12,7 @@
 #  description :text             not null
 #  lat         :float
 #  lng         :float
+#  title       :string           not null
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

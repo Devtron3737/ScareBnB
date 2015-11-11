@@ -14,6 +14,7 @@
 
 //= require jquery
 //= require jquery_ujs
+//= require jquery-cloudinary
 //= require react
 //= require react_ujs
 //= require flux
