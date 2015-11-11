@@ -17,7 +17,7 @@ var ListingsList = React.createClass({
       <div className='listings-list clearfix'>
         {
           this.state.listings.map( function (listing) {
-            return <ListingBlock listing={listing} />;
+            return <ListingBlock key={listing.id} listing={listing} />;
           })
         }
       </div>

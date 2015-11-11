@@ -7,7 +7,7 @@
         method: 'GET',
         data: options,
         success: function (listings) {
-          console.log('successful ajax');
+          console.log('successful listings ajax');
           console.log(listings);
           SearchActions.dispatchListings(listings);
         }
