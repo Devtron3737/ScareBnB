@@ -1,4 +1,5 @@
 var SearchBar = React.createClass({
+  mixins: [ReactRouter.History],
 
   getInitialState: function () {
     var value = this.props.search.place;
@@ -22,6 +23,14 @@ var SearchBar = React.createClass({
 
   handleSubmit: function () {
     event.preventDefault();
+
+    if (!this.props.search.indexPage) {
+      var value = document.getElementById('search-field').value;
+      this.history.pushState(null, '/listings/' + value);
+      return;
+    }
+
+
 
     var place = this.autocomplete.getPlace();
 

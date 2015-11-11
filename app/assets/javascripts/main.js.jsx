@@ -4,6 +4,8 @@ var Router = ReactRouter.Router,
     Link = ReactRouter.Link;
 
 var App = React.createClass({
+  mixins: [ReactRouter.History],
+  
   render: function () {
       return(
         <div>
