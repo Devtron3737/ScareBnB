@@ -15,7 +15,7 @@
     },
 
     dispatchUser: function (userInfo) {
-      ManageDispatcher.dispatch({
+      Dispatcher.dispatch({
         actionType: 'get_user',
         userInfo: userInfo
       });

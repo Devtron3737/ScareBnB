@@ -8,15 +8,17 @@ var GhostPage = React.createClass({
 
   componentDidMount: function () {
     var userId = this.props.params.userId;
+    ManageStore.addUserChangeListener(this._onChange);
     ManageActions.getUserInfo(userId);
   },
 
-  getListings: function () {
-    //retrieve from store
-  },
+  _onChange: function () {
+    var userInfo = ManageStore.getUser();
 
-  getReservations: function () {
-    //retrieve from store
+    this.setState({
+      listings: userInfo.listings,
+      reservations: userInfo.reservations
+    });
   },
 
   render: function () {
