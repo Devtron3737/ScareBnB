@@ -25,13 +25,14 @@ var GhostPage = React.createClass({
     console.log('in ghost page');
     console.log(this.state.listings);
     console.log(this.state.reservations);
+    var options = {
+      indexPage: false,
+      place: ""
+    };
 
     return(
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <NavBar />
-        </form>
-
+        <NavBar search={options} />
         <Manage listings={this.state.listings} reservations={this.state.reservations}  />
       </div>
     );
