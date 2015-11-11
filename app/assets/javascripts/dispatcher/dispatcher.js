@@ -1,1 +1,1 @@
-var SearchDispatcher = new FluxDispatcher();
+var Dispatcher = new FluxDispatcher();

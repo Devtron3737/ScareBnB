@@ -17,21 +17,21 @@
     placeSearch: function (place) {
       console.log('dispatching!');
       console.log(place);
-      SearchDispatcher.dispatch({
+      Dispatcher.dispatch({
         actionType: "place_search",
         place: place
       });
     },
 
     searchValue: function (value) {
-      SearchDispatcher.dispatch({
+      Dispatcher.dispatch({
         actionType: 'search_value',
         searchValue: value
       });
     },
 
     dispatchListings: function (listings) {
-      SearchDispatcher.dispatch({
+      Dispatcher.dispatch({
         actionType: "listings_search",
         listings: listings
       });

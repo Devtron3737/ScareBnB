@@ -10,7 +10,7 @@
     {},
     EventEmitter.prototype,
     {
-      dispatcherId: SearchDispatcher.register(function (payLoad) {
+      dispatcherId: Dispatcher.register(function (payLoad) {
         switch (payLoad.actionType) {
           case 'listings_search':
             SearchStore.updateListings(payLoad.listings);

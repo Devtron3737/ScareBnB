@@ -6,8 +6,17 @@ var GhostPage = React.createClass({
     });
   },
 
-  fetchListings: function () {
+  componentDidMount: function () {
+    var userId = this.props.params.userId;
+    ManageActions.getUserInfo(userId);
+  },
 
+  getListings: function () {
+    //retrieve from store
+  },
+
+  getReservations: function () {
+    //retrieve from store
   },
 
   render: function () {

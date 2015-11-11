@@ -2,7 +2,7 @@ var Manage = React.createClass({
   render: function () {
     var section = "";
     if (this.state.section === "listings") {
-      section = <ManageListings userId={this.props.userId} />;
+      section = <ManageListings listings={listings} />;
     } else {
       section = <ManageReservations userId={this.props.userId} />;
     }
@@ -18,7 +18,7 @@ var Manage = React.createClass({
             Your Reservations
           </section>
         </div>
-        
+
         { section }
       </div>
     );

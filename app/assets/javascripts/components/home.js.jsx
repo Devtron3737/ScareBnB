@@ -48,7 +48,7 @@ var Home = React.createClass({
           </nav>
 
           <h2 className='welcome-head'>We've been expecting you...</h2>
-          <h3 className='welcome-sub'>Rest with ghouls, goblins, and zombies in the Bay Area.</h3>
+          <h3 className='welcome-sub'>Rest at haunted abodes in the Bay Area.</h3>
 
           <div className='home-searchbar-box'>
             <form onSubmit={this.handleSubmit}>
