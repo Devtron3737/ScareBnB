@@ -9,8 +9,7 @@ var NavBar = React.createClass({
         </div>
         <SearchBar search={this.props.search} id='search-field' />
         <span className='navbar-list clearfix'>
-          <HouseIcon />
-          <MessagesIcon />
+          
           <div className='navbar-list-item'>Account</div>
         </span>
       </nav>

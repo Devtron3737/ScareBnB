@@ -23,12 +23,16 @@ var GhostPage = React.createClass({
 
   render: function () {
     console.log('in ghost page');
-    console.log('user id: ' + this.props.params.userId);
+    console.log(this.state.listings);
+    console.log(this.state.reservations);
+
     return(
       <div>
-        <NavBar />
+        <form onSubmit={this.handleSubmit}>
+          <NavBar />
+        </form>
+
         <Manage listings={this.state.listings} reservations={this.state.reservations}  />
-        <Footer />
       </div>
     );
   }

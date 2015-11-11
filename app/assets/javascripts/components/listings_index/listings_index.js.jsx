@@ -9,9 +9,14 @@ var ListingsIndex = React.createClass({
     //        guests={this.props.query.guests}
     // />
 
+    var options = {
+      indexPage: true,
+      place: this.props.params.search
+    };
+
     return(
       <div>
-        <NavBar search={this.props.params.search}/>
+        <NavBar search={options} />
         <div className='listing-contents clearfix' >
           <Dates />
           <ListingsList />

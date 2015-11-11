@@ -1,6 +1,8 @@
 var SearchBar = React.createClass({
+
   getInitialState: function () {
-    return {value: this.props.search};
+    var value = this.props.search.place;
+    return {value: value};
   },
 
   componentDidMount: function () {
@@ -13,7 +15,9 @@ var SearchBar = React.createClass({
     this.autocomplete = new google.maps.places.Autocomplete(searchField, options);
     this.placeService = new google.maps.places.PlacesService(searchField);
 
-    this.handleSubmit();
+    if (this.props.search.indexPage) {
+      this.handleSubmit();
+    }
   },
 
   handleSubmit: function () {
