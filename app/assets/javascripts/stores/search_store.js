@@ -2,6 +2,7 @@
 
   var _listings = [];
   var _place = {lat: 0, lng: 0};
+  var _searchValue = "";
   var LISTINGS_CHANGE = "listings_change";
   var PLACE_CHANGE = "place_change";
 
@@ -16,6 +17,9 @@
             break;
           case 'place_search':
             SearchStore.updatePlace(payLoad.place);
+            break;
+          case 'search_value':
+            SearchStore.updateSearchValue(payLoad.searchValue);
             break;
         }
       }),
@@ -34,6 +38,10 @@
         return placeDup;
       },
 
+      getSearchValue: function () {
+        return _searchValue.slice();
+      },
+
       updateListings: function (listings) {
         _listings = listings;
         this.emit(LISTINGS_CHANGE);
@@ -43,6 +51,10 @@
         _place = place;
 
         this.emit(PLACE_CHANGE);
+      },
+
+      updateSearchValue: function (value) {
+        _searchValue = value;
       },
 
       addListingsChangeListener: function (callback) {

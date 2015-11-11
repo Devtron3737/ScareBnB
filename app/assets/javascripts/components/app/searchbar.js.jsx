@@ -1,28 +1,48 @@
 var SearchBar = React.createClass({
   getInitialState: function () {
-    return {value: ""};
+    return {value: this.props.search};
   },
 
   componentDidMount: function () {
     var defaultBounds = new google.maps.LatLngBounds(
       new google.maps.LatLng(37.54025472421631, -122.6264275146484),
       new google.maps.LatLng(37.97454774677482, -122.2487724853516)
-      //make default sf
     );
     var options = {bounds: defaultBounds},
         searchField = document.getElementById('search-field');
     this.autocomplete = new google.maps.places.Autocomplete(searchField, options);
+    this.placeService = new google.maps.places.PlacesService(searchField);
+
+    this.handleSubmit();
   },
-
-
 
   handleSubmit: function () {
     event.preventDefault();
+
     var place = this.autocomplete.getPlace();
-    SearchActions.placeSearch(place.geometry);
+    if (place) {
+      SearchActions.placeSearch(place.geometry);
+    } else {
+      var service = new google.maps.places.AutocompleteService();
+
+      service.getPlacePredictions(
+        {input: this.state.value},
+        this.selectFirstPrediction
+      );
+    }
     // need to encompass searchfield, guests, and dates
     // in same <form>. then setup defaults if things are
     // empty
+  },
+
+  selectFirstPrediction: function (predictions) {
+    var placeId = predictions[0].place_id;
+    this.placeService.getDetails(
+      {placeId: placeId},
+      function (place) {
+        SearchActions.placeSearch(place.geometry);
+      }
+    );
   },
 
   handleChange: function () {
@@ -37,8 +57,8 @@ var SearchBar = React.createClass({
           <input id='search-field'
                type='text'
                onChange={this.handleChange}
-               placeholder='Where are you going?'>
-               {this.state.value}
+               placeholder='Where are you going?'
+               value={this.state.value}>
           </input>
         </form>
       </div>

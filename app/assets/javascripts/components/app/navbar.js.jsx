@@ -7,7 +7,7 @@ var NavBar = React.createClass({
            <img id='logo-pic' src={'/images/logo_red.png'} alt='logo' height='50' />
           </Link>
         </div>
-        <SearchBar id='search-field' />
+        <SearchBar search={this.props.search} id='search-field' />
         <span className='navbar-list clearfix'>
           <HouseIcon />
           <MessagesIcon />

@@ -21,6 +21,13 @@
       });
     },
 
+    searchValue: function (value) {
+      SearchDispatcher.dispatch({
+        actionType: 'search_value',
+        searchValue: value
+      });
+    },
+
     dispatchListings: function (listings) {
       SearchDispatcher.dispatch({
         actionType: "listings_search",

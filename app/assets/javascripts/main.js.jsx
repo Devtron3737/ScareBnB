@@ -16,7 +16,7 @@ var App = React.createClass({
 var routes = (
   <Route name='app' component={App}  path="/">
     <IndexRoute name='home' component={Home} />
-    <Route name='listings-index' component={ListingsIndex} path="listings" />
+    <Route name='listings-index' component={ListingsIndex} path="listings/:search" />
     <Route component={ListingsShow} path="listings/:listingId"/>
   </Route>
 );

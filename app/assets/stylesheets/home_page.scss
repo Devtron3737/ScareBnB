@@ -150,6 +150,22 @@
 }
 
 #home-listings {
-  // background: red;
-  // margin-left: 300px;
+  background: red;
+  width: 800px;
+  margin-left: 180px;;
+}
+
+#home-listings li {
+  position: relative;
+  float: left;
+  margin: 20px;
+}
+
+.home-listings-title {
+  position: absolute;
+  top: 40%;
+  left: 75px;
+  color: rgba(252, 252, 253, 1);
+  font-size: 30px;
+  font-weight: 800;
 }

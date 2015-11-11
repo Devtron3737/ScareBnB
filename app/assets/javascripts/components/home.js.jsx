@@ -14,21 +14,29 @@ var Home = React.createClass({
 
   handleSubmit: function () {
     event.preventDefault();
-    var place = this.autocomplete.getPlace();
-    SearchActions.placeSearch(place.geometry);
 
-    this.history.pushState(null, '/listings');
-
+    // var place = this.autocomplete.getPlace();
+    // SearchActions.placeSearch(place.geometry);
+    var value = document.getElementById('home-search-field').value;
+    // SearchActions.searchValue(value);
+    this.history.pushState(null, '/listings/' + value);
     // need to encompass searchfield, guests, and dates
     // in same <form>. then setup defaults if things are
     // empty
   },
 
+  handleClick: function (location) {
+
+
+
+    $('#home-search-field').val(place);
+    this.handleSubmit();
+    // onClick={this.handleClick("San Francisco, CA, United States")}
+  },
+
   render: function () {
     return(
       <div>
-
-
         <header className='home header'>
           <nav className='header-nav clearfix'>
             <h1 className='header-logo'>
@@ -83,8 +91,45 @@ var Home = React.createClass({
           <h4>From demented children to creepy butlers, who knows what's waiting for you.</h4>
           <ul id='home-listings'>
             <li>
-              <img src={'/images/goldengate.jpg'} height='300' width='330' />
-              <div class='home-listings-title'>San Francisco</div>
+              <Link to='listings/San Francisco, CA'>
+                <img src={'/images/goldengate.jpg'} height='300' width='330' />
+                <div className='home-listings-title'>San Francisco</div>
+              </Link>
+            </li>
+
+            <li>
+              <Link to='listings/Oakland, CA'>
+                <img src={'/images/haunted_house.jpg'} height='300' width='330' />
+                <div className='home-listings-title'>Oakland</div>
+              </Link>
+            </li>
+
+            <li>
+              <Link to='listings/Berkeley, CA'>
+                <img src={'/images/berkeley.jpg'} height='300' width='330' />
+                <div className='home-listings-title'>Berkeley</div>
+              </Link>
+            </li>
+
+            <li>
+              <Link to='listings/Marin County, CA'>
+                <img src={'/images/cemetary3.jpg'} height='300' width='330' />
+                <div className='home-listings-title'>Marin</div>
+              </Link>
+            </li>
+
+            <li>
+              <Link to='listings/Daly City, CA'>
+                <img src={'/images/dalycity.jpg'} height='300' width='330' />
+                <div className='home-listings-title'>Daly City</div>
+              </Link>
+            </li>
+
+            <li>
+              <Link to='listings/San Mateo, CA'>
+                <img src={'/images/sanmateo.jpg'} height='300' width='330' />
+                <div className='home-listings-title'>San Mateo</div>
+              </Link>
             </li>
           </ul>
 
