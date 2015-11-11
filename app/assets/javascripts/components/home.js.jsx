@@ -15,23 +15,11 @@ var Home = React.createClass({
   handleSubmit: function () {
     event.preventDefault();
 
-    // var place = this.autocomplete.getPlace();
-    // SearchActions.placeSearch(place.geometry);
     var value = document.getElementById('home-search-field').value;
-    // SearchActions.searchValue(value);
     this.history.pushState(null, '/listings/' + value);
     // need to encompass searchfield, guests, and dates
     // in same <form>. then setup defaults if things are
     // empty
-  },
-
-  handleClick: function (location) {
-
-
-
-    $('#home-search-field').val(place);
-    this.handleSubmit();
-    // onClick={this.handleClick("San Francisco, CA, United States")}
   },
 
   render: function () {

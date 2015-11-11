@@ -9,7 +9,7 @@ var SearchBar = React.createClass({
       new google.maps.LatLng(37.97454774677482, -122.2487724853516)
     );
     var options = {bounds: defaultBounds},
-        searchField = document.getElementById('search-field');
+        searchField =  document.getElementById('search-field');
     this.autocomplete = new google.maps.places.Autocomplete(searchField, options);
     this.placeService = new google.maps.places.PlacesService(searchField);
 
@@ -20,11 +20,13 @@ var SearchBar = React.createClass({
     event.preventDefault();
 
     var place = this.autocomplete.getPlace();
-    if (place) {
+
+    if (place && place.geometry) {
+      console.log('place wasnt undefined!');
+      console.log(place);
       SearchActions.placeSearch(place.geometry);
     } else {
       var service = new google.maps.places.AutocompleteService();
-
       service.getPlacePredictions(
         {input: this.state.value},
         this.selectFirstPrediction
@@ -40,6 +42,8 @@ var SearchBar = React.createClass({
     this.placeService.getDetails(
       {placeId: placeId},
       function (place) {
+        console.log('in selectFirstPrediction');
+        console.log(place);
         SearchActions.placeSearch(place.geometry);
       }
     );

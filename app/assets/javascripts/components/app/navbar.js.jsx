@@ -11,7 +11,7 @@ var NavBar = React.createClass({
         <span className='navbar-list clearfix'>
           <HouseIcon />
           <MessagesIcon />
-          <div className='navbar-list-item'><a href='#' id='account'>Account</a></div>
+          <div className='navbar-list-item'>Account</div>
         </span>
       </nav>
     );
