@@ -94,29 +94,29 @@ var Home = React.createClass({
 
             <li>
               <Link to='listings/Berkeley, CA'>
-                <img src={'/images/berkeley.jpg'} height='300' width='330' />
+                <img src={'/images/hand.jpg'} height='300' width='330' />
                 <div className='home-listings-title'>Berkeley</div>
               </Link>
             </li>
 
             <li>
               <Link to='listings/Marin County, CA'>
-                <img src={'/images/cemetary3.jpg'} height='300' width='330' />
+                <img src={'/images/castle.jpg'} height='300' width='330' />
                 <div className='home-listings-title'>Marin</div>
               </Link>
             </li>
 
             <li>
               <Link to='listings/Daly City, CA'>
-                <img src={'/images/dalycity.jpg'} height='300' width='330' />
+                <img src={'/images/cemetary3.jpg'} height='300' width='330' />
                 <div className='home-listings-title'>Daly City</div>
               </Link>
             </li>
 
             <li>
-              <Link to='listings/San Mateo, CA'>
-                <img src={'/images/sanmateo.jpg'} height='300' width='330' />
-                <div className='home-listings-title'>San Mateo</div>
+              <Link to='listings/South San Francisco, CA'>
+                <img src={'/images/southsanfran.jpg'} height='300' width='330' />
+                <div className='home-listings-title'>South San Francisco</div>
               </Link>
             </li>
           </ul>

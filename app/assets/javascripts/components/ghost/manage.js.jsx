@@ -20,9 +20,9 @@ var Manage = React.createClass({
         listings = this.props.listings,
         reservations = this.props.reservations;
     if (this.state.section === "listings") {
-      section = <ManageListings listings={listings} />;
+      section = <ManageListingsBlock listings={listings} />;
     } else {
-      section = <ManageReservations reservations={reservations} />;
+      section = <ManageReservationsBlock reservations={reservations} />;
     }
 
     return(

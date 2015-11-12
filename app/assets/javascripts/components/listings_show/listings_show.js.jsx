@@ -1,8 +1,17 @@
 var ListingsShow = React.createClass({
+  componentWillMount: function () {
+    console.log('trying to mount listings show!');
+  },
+
   render: function () {
+    var searchBarOptions = {
+      indexPage: false,
+      place: ""
+    };
+    
     return(
       <div>
-        <NavBar />
+        <NavBar search={searchBarOptions}/>
         <header id='listing-header'>
           <img id='listing-header-pic' src={'/images/deathstar.jpg'} height='600' />
 

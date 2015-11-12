@@ -10,7 +10,7 @@ var ListingBlock = React.createClass({
 
   handleClick: function () {
     // event.preventDefault()
-    var listingPath = '/listings/' + this.props.listing.id
+    var listingPath = '/listing/' + this.props.listing.id
 
     this.history.pushState(null, listingPath)
     console.log("in handle click!")
