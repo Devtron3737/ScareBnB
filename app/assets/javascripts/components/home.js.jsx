@@ -35,7 +35,7 @@ var Home = React.createClass({
 
 
             <ul className='header-list'>
-              <li className='house-icon'><Link to='user/1/manage'>
+              <li className='house-icon'><Link to='user/2/manage'>
                 <h3 className='ghost-text'>Ghost</h3>
                 <img className='house-pic' src={'/images/home_icon.png'} height='45' /></Link></li>
               <li className='message-icon'><a href="#">

@@ -3,7 +3,7 @@
 
     getUserInfo: function (id) {
       $.ajax({
-        url: '/api/user.json',
+        url: '/api/users/' + id + '.json',
         method: 'GET',
         data: id,
         success: function (userInfo) {
