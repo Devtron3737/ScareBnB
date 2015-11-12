@@ -26,8 +26,8 @@ var Manage = React.createClass({
     }
 
     return(
-      <div>
-        <div>
+      <div className='manage-container clearfix'>
+        <div className='manage-category'>
           <section onClick={this.toListings}>
             Your Listings
           </section>
@@ -37,7 +37,9 @@ var Manage = React.createClass({
           </section>
         </div>
 
-        { section }
+        <div className='manage-block'>
+          { section }
+        </div>
       </div>
     );
   }

@@ -1,0 +1,16 @@
+.manage-container {
+  background: #ededed; // medium grey
+  width: 100%;
+  position: absolute;
+  top: 60px;
+  height: 500px;
+}
+
+.manage-container > div {
+  float: left;
+}
+
+.manage-category > section:hover {
+  background: rgba(255, 77, 77, 0.97);
+  cursor: pointer;
+}
