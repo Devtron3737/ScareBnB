@@ -16,6 +16,7 @@
 
       updateUser: function (user) {
         _user = user;
+        this.emit(USER_CHANGE);
       },
 
       getUser: function () {
@@ -23,7 +24,7 @@
         for (var attr in _user) {
           user[attr] = _user[attr];
         }
-
+        
         return user;
       },
 

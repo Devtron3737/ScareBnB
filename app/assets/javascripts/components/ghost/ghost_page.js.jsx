@@ -23,9 +23,6 @@ var GhostPage = React.createClass({
   },
 
   render: function () {
-    console.log('in ghost page');
-    console.log(this.state.listings);
-    console.log(this.state.reservations);
     var options = {
       indexPage: false,
       place: ""
