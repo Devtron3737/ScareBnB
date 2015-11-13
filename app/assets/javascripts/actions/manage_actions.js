@@ -14,6 +14,25 @@
       });
     },
 
+    deleteListing: function (options) {
+      $.ajax({
+        url: '/api/listings/' + options.listingId + '.json',
+        method: 'DELETE',
+        data: options.listingId,
+        success: function () {
+          console.log('successful listing delete ajax');
+          ManageActions.getUserInfo(options.userId);
+        }
+      });
+    },
+
+    dispatchListingUpdate: function (listings) {
+      Dispatcher.dispatch({
+        actionType: 'delete_listing',
+        listings: listings
+      });
+    },
+
     dispatchUser: function (userInfo) {
       Dispatcher.dispatch({
         actionType: 'get_user',

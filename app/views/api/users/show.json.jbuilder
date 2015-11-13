@@ -1,7 +1,7 @@
 # creates a hash called listings, with array of Listings
 # and listing attributes
 json.listings(@listings) do |listing|
-  json.(listing, :id, :title, :address, :city, :state)
+  json.(listing, :id, :title, :address, :city, :state, :ghost_id)
 end
 
 # creates a hash called reservations, with array of reservations

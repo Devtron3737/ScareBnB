@@ -56,15 +56,8 @@ Rails.application.routes.draw do
   #   end
 
   namespace :api do
-    resources :listings, only: [:index, :show]
-    resources :users do
-      resources :messages
-      resources :listings, except: [:index, :show]
-      resources :listing_ratings
-      resources :user_ratings
-    end
-    resources :ratings
+    resources :listings, only: [:index, :show, :destroy]
     resources :reservations
-
+    resources :users
   end
 end

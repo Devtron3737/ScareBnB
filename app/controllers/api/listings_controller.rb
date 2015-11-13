@@ -19,4 +19,8 @@ class Api::ListingsController < ApplicationController
     @listing = Listing.find(params[:id])
     @reservations = @listing.accepted_reservations
   end
+
+  def destroy
+    Listing.delete(params[:id])
+  end
 end

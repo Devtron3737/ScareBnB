@@ -24,7 +24,7 @@
         for (var attr in _user) {
           user[attr] = _user[attr];
         }
-        
+
         return user;
       },
 

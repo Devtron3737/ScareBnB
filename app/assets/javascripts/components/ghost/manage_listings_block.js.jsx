@@ -1,4 +1,10 @@
 var ManageListingsBlock = React.createClass({
+  handleListingDelete: function () {
+    ManageActions.deleteListing({
+      userId: this.props.listing.ghost_id,
+      listingId: this.props.listing.id
+    });
+  },
 
   render: function () {
     var listing = this.props.listing;
@@ -17,7 +23,7 @@ var ManageListingsBlock = React.createClass({
         </div>
 
         <div className='manage-listing-block-btns'>
-          <button onClick={this.handleSubmit} className='button' id='manage-listing-delete' type='button'>Remove</button>
+          <button onClick={this.handleListingDelete} className='button' id='manage-listing-delete' >Remove</button>
         </div>
       </div>
     );
