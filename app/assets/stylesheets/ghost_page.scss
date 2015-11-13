@@ -46,7 +46,7 @@
   width: 450px;
 }
 
-.manage-listing-title {
+.manage-block-title {
   background: #ededed; // medium grey
   border-bottom: 1px solid lightgrey;
   color: #585858; //dark grey
@@ -56,21 +56,21 @@
   // margin-left: 50px;
 }
 
-.manage-listing-block {
+.manage-category-block {
   background: rgba(252, 252, 253, 1); // offwhite
   border-bottom: 1px solid lightgrey;
   padding: 20px;
 }
 
-.manage-listing-block > div {
+.manage-category-block > div {
   float: left;
 }
 
-.manage-listing-block-info {
+.manage-category-block-info {
   width: 70%;
 }
 
-#manage-listing-delete {
+#manage-category-remove {
   padding: 5px;
   border-radius: 7%;
   margin-left: 10px;

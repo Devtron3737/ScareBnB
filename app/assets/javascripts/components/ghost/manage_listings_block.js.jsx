@@ -10,8 +10,8 @@ var ManageListingsBlock = React.createClass({
     var listing = this.props.listing;
     var sep = ", ";
     return (
-      <div className='manage-listing-block clearfix'>
-        <div className='manage-listing-block-info'>
+      <div className='manage-category-block clearfix'>
+        <div className='manage-category-block-info'>
           <div>{listing.title}</div>
           <div>
             {
@@ -22,8 +22,8 @@ var ManageListingsBlock = React.createClass({
           </div>
         </div>
 
-        <div className='manage-listing-block-btns'>
-          <button onClick={this.handleListingDelete} className='button' id='manage-listing-delete' >Remove</button>
+        <div className='manage-category-block-btns'>
+          <button onClick={this.handleListingDelete} className='button' id='manage-category-remove' >Remove</button>
         </div>
       </div>
     );

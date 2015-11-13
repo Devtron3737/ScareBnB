@@ -4,7 +4,7 @@ var ManageListings = React.createClass({
     var listings = this.props.listings;
     return (
       <div>
-        <div className='manage-listing-title'>Listings</div>
+        <div className='manage-block-title'>Listings</div>
         {
           listings.map(function (listing, index) {
             return <ManageListingsBlock key={index} listing={listing} />;
