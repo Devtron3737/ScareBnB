@@ -36,6 +36,7 @@ var GhostPage = React.createClass({
       <div>
         <NavBar search={options} />
         <Manage listings={this.state.listings} reservations={this.state.reservations}  />
+        <Footer />
       </div>
     );
   }

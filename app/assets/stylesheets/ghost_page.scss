@@ -1,11 +1,12 @@
 .manage-container {
   background: #F8F8F8; //light grey
-  // background-image: image-url('cemetary2.jpg');
+  // background-image: image-url('redpattern.jpg');
   // background-size: cover;
   display: block;
   width: 100%;
   position: relative;
-  height: 800px;
+  padding-bottom: 300px;
+  padding-top: 150px;
 }
 
 .manage-container > div {
@@ -15,7 +16,6 @@
 .manage-category {
   margin-left: 20%;
   width: 250px;
-  margin-top: 15%;
 }
 
 .manage-category > section {
@@ -41,7 +41,6 @@
 }
 
 .manage-block {
-  margin-top: 15%;
   border: 1px solid lightgrey;
   border-bottom: 0;
   width: 450px;
