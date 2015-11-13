@@ -11,18 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151104022418) do
+ActiveRecord::Schema.define(version: 20151113185039) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "listing_ratings", force: :cascade do |t|
-    t.integer "reservation_id", null: false
-    t.text    "review"
-    t.integer "creepiness",     null: false
-  end
-
-  add_index "listing_ratings", ["reservation_id"], name: "index_listing_ratings_on_reservation_id", using: :btree
 
   create_table "listings", force: :cascade do |t|
     t.integer "ghost_id",    null: false
@@ -38,17 +30,6 @@ ActiveRecord::Schema.define(version: 20151104022418) do
   end
 
   add_index "listings", ["ghost_id"], name: "index_listings_on_ghost_id", using: :btree
-
-  create_table "messages", force: :cascade do |t|
-    t.integer "from_user",                 null: false
-    t.integer "to_user",                   null: false
-    t.text    "content"
-    t.string  "title"
-    t.boolean "read",      default: false
-  end
-
-  add_index "messages", ["from_user"], name: "index_messages_on_from_user", using: :btree
-  add_index "messages", ["to_user"], name: "index_messages_on_to_user", using: :btree
 
   create_table "pictures", force: :cascade do |t|
     t.integer  "user_id"
@@ -72,14 +53,6 @@ ActiveRecord::Schema.define(version: 20151104022418) do
 
   add_index "reservations", ["guest_id"], name: "index_reservations_on_guest_id", using: :btree
   add_index "reservations", ["listing_id"], name: "index_reservations_on_listing_id", using: :btree
-
-  create_table "user_ratings", force: :cascade do |t|
-    t.integer "reservation_id", null: false
-    t.text    "review"
-    t.integer "creepiness"
-  end
-
-  add_index "user_ratings", ["reservation_id"], name: "index_user_ratings_on_reservation_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string "fname",    null: false

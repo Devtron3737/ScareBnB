@@ -4,8 +4,8 @@ json.listings(@listings) do |listing|
   json.(listing, :id, :title, :address, :city, :state, :ghost_id)
 end
 
-# creates a hash called reservations, with array of reservations
-# and reservation attributes
+
+# { [ {id, checkin, checkout, listing: {id, ghost_id, address..}}, next reservation ] }
 json.reservations(@reservations) do |reservation|
   json.id reservation.id
   json.check_in reservation.check_in

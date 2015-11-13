@@ -44,6 +44,7 @@
   border: 1px solid lightgrey;
   border-bottom: 0;
   width: 450px;
+  // padding:
 }
 
 .manage-block-title {
@@ -68,6 +69,10 @@
 
 .manage-category-block-info {
   width: 70%;
+}
+
+#reservation-address {
+  width: 50%;
 }
 
 #manage-category-remove {
