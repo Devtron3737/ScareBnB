@@ -16,7 +16,7 @@
 
 // airbnb light grey #F8F8F8
 // airbnb offwhite rgba(252, 252, 253, 1);
-// airbnb darkgrey #585858;
+// airbnb darkgrey
 // airbnb medium grey #ededed;
 // airbnb red rgba(255, 77, 77, 0.97);
 
@@ -187,4 +187,45 @@ ul {
 .message-pic {
   float: left;
   top: 2px;
+}
+
+// FOOTER-----------------------
+
+.footer-container {
+  display: block;
+  background-image: image-url('darkroom.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 450px;
+  margin-top: 200px;
+  // z-index: 1;
+}
+
+.footer-container > section {
+  border-bottom: 1px solid lightgrey;
+  width: 600px;
+  position: relative;
+  left: 50%;
+  top: 70%;
+  transform: translateX(-50%);
+  height: 20px;
+}
+
+.footer-container a {
+  color: white;
+  font-size: 18;
+}
+
+.footer-container a:hover {
+  color: rgba(255, 77, 77, 0.97); //red
+}
+
+#footer-about {
+  position: absolute;
+  left: 10px;
+}
+
+#footer-github {
+  position: absolute;
+  right: 10px;
 }

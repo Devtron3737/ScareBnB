@@ -17,8 +17,8 @@
 //= require jquery-cloudinary
 //= require react
 //= require react_ujs
+//= require eventemitter
 //= require flux
 //= require react-router
-//= require eventemitter
 //= require components
 //= require_tree .

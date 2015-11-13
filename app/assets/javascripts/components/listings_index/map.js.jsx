@@ -26,6 +26,11 @@ var Map = React.createClass({
     this.listenForIdle();
   },
 
+  componentWillUnmount: function () {
+    SearchStore.removePlaceChangeListener(this._onPlaceChange);
+    SearchStore.removeListingsChangeListener(this._onListingsChange);
+  },
+
   listenForIdle: function () {
     //creates an action to fetch listings after
     //users done dragging through map

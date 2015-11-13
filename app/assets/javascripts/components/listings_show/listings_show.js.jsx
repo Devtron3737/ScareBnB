@@ -1,14 +1,11 @@
 var ListingsShow = React.createClass({
-  componentWillMount: function () {
-    console.log('trying to mount listings show!');
-  },
-
+  
   render: function () {
     var searchBarOptions = {
       indexPage: false,
       place: ""
     };
-    
+
     return(
       <div>
         <NavBar search={searchBarOptions}/>

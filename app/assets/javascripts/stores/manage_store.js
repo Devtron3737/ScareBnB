@@ -33,7 +33,7 @@
       },
 
       removeUserChangeListener: function (callback) {
-        this.off(USER_CHANGE, callback);
+        this.removeListener(USER_CHANGE, callback);
       }
 
     }

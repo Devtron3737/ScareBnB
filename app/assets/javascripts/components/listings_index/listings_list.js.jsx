@@ -7,6 +7,10 @@ var ListingsList = React.createClass({
     SearchStore.addListingsChangeListener(this._onListingsChange);
   },
 
+  componentWillUnmount: function () {
+    SearchStore.removeListingsChangeListener(this._onListingsChange);
+  },
+
   _onListingsChange: function () {
     var listings = SearchStore.getListings();
     this.setState({listings: listings});

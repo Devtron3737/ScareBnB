@@ -13,6 +13,10 @@ var GhostPage = React.createClass({
     ManageActions.getUserInfo(userId);
   },
 
+  componentWillUnmount: function () {
+    ManageStore.removeUserChangeListener(this._onChange);
+  },
+
   _onChange: function () {
     var userInfo = ManageStore.getUser();
 

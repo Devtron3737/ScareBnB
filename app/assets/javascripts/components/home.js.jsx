@@ -25,7 +25,7 @@ var Home = React.createClass({
   render: function () {
     return(
       <div>
-        <header className='home header'>
+        <header className='home-header'>
           <nav className='header-nav clearfix'>
             <h1 className='header-logo'>
               <a href="/">
@@ -74,7 +74,7 @@ var Home = React.createClass({
           </div>
         </header>
 
-        <main id='home-content'>
+        <main className='home-content clearfix'>
           <h3>Just for a scare</h3>
           <h4>From demented children to creepy butlers, who knows what's waiting for you.</h4>
           <ul id='home-listings'>
@@ -122,7 +122,7 @@ var Home = React.createClass({
           </ul>
 
         </main>
-
+        <Footer />
       </div>
     );
   }

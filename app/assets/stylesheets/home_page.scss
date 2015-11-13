@@ -1,7 +1,8 @@
 // HEADER___________________________________
 
-.home.header {
-  position: absolute;
+.home-header {
+  display: block;
+  position: relative;
   background-image: image-url('gothic.jpg');
   background-size: cover;
   width: 100%;
@@ -131,13 +132,14 @@
   border-bottom-right-radius: 3%;
 }
 
-#home-content {
-  position: absolute;
-  top: 600px;
-  left: calc(50% - 1100px/2);
+.home-content {
+  position: relative;
+  display: block;
+  // top: 600px;
+  // left: calc(50% - 1100px/2);
   // background: red;
   height: auto;
-  width: 1100px;
+  // width: 1100px;
   color: #585858;
   text-align: center;
   margin-top: 45px;
@@ -156,7 +158,6 @@
 }
 
 #home-listings {
-  background: red;
   width: 800px;
   margin-left: 180px;;
 }

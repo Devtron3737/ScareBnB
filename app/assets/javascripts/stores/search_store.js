@@ -66,11 +66,11 @@
       },
 
       removeListingsChangeListener: function (callback) {
-        this.off(LISTINGS_CHANGE, callback);
+        this.removeListener(LISTINGS_CHANGE, callback);
       },
 
       removePlaceChangeListener: function (callback) {
-        this.off(PLACE_CHANGE, callback);
+        this.removeListener(PLACE_CHANGE, callback);
       }
     }
   );
