@@ -16,8 +16,8 @@ var ManageListingsBlock = React.createClass({
           </div>
         </div>
 
-        <div className='listing-block-btns'>
-          <div>BUTTON!</div>
+        <div className='manage-listing-block-btns'>
+          <button onClick={this.handleSubmit} className='button' id='manage-listing-delete' type='button'>Remove</button>
         </div>
       </div>
     );

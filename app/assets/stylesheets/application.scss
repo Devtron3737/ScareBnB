@@ -60,19 +60,16 @@ ul {
 }
 
 
-.search-button {
+.button {
  background: rgba(255, 77, 77, 1); //airbnb red
  font-weight: 800;
  width: 100px;
  color: white;
  height: 20px;
  text-align: center;
- float: left;
- border-top-right-radius: 3%;
- border-bottom-right-radius: 3%;
 }
 
-.search-button:hover {
+.button:hover {
  background: rgba(255, 128, 128, 1); //airbnb light red
  cursor: pointer;
 }

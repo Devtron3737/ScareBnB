@@ -26,6 +26,14 @@
   color: white;
 }
 
+#manage-listing-addlisting {
+  padding: 5px;
+  border-radius: 7%;
+  font-size: 13px;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
 .manage-category > section:hover {
   // background: rgba(255, 77, 77, 0.97);
   cursor: pointer;
@@ -59,4 +67,13 @@
 }
 
 .manage-listing-block-info {
+  width: 70%;
+}
+
+#manage-listing-delete {
+  padding: 5px;
+  border-radius: 7%;
+  margin-left: 10px;
+  font-size: 13px;
+
 }

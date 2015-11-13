@@ -68,7 +68,7 @@ var Home = React.createClass({
                     </select>
                   </div>
                 </span>
-                <button onClick={this.handleSubmit} className='searchbar-items search-button' type='button'>Search</button>
+                <button onClick={this.handleSubmit} className='searchbar-items button' id='home-search-button' type='button'>Search</button>
               </div>
             </form>
           </div>
