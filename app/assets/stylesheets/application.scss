@@ -16,7 +16,7 @@
 
 // airbnb light grey #F8F8F8
 // airbnb offwhite rgba(252, 252, 253, 1);
-// airbnb darkgrey
+// airbnb darkgrey #585858; //dark grey
 // airbnb medium grey #ededed;
 // airbnb red rgba(255, 77, 77, 0.97);
 
@@ -100,7 +100,7 @@ ul {
   border: 1px solid lightgrey;
   height: 60px;
   position: fixed;
-  background: rgba(252, 252, 253, .7);
+  background: rgba(252, 252, 253, 1);
   z-index: 1;
 }
 
@@ -219,6 +219,20 @@ ul {
 
 .footer-container a:hover {
   color: rgba(255, 77, 77, 0.97); //red
+}
+
+.footer-container img {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+}
+
+#tomb-left {
+  left: calc(50% - 15px);
+}
+
+#tomb-right {
+  left: calc(50% + 21px);
 }
 
 #footer-about {

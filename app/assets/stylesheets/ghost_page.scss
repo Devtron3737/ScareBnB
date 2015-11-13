@@ -1,9 +1,10 @@
 .manage-container {
-  // background: #F8F8F8; //light grey
-  background-image: image-url('cemetary2.jpg');
-  background-size: cover;
+  background: #F8F8F8; //light grey
+  // background-image: image-url('cemetary2.jpg');
+  // background-size: cover;
+  display: block;
   width: 100%;
-  position: absolute;
+  position: relative;
   height: 800px;
 }
 
@@ -23,7 +24,7 @@
   border-bottom: 1px solid lightgrey;
   font-size: 18px;
   padding-left: 5px;
-  color: white;
+  color: #585858; //dark grey
 }
 
 #manage-listing-addlisting {
