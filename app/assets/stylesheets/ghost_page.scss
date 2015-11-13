@@ -1,20 +1,62 @@
 .manage-container {
-  background: #ededed; // medium grey
+  // background: #F8F8F8; //light grey
+  background-image: image-url('cemetary2.jpg');
+  background-size: cover;
   width: 100%;
   position: absolute;
-  top: 60px;
-  height: 500px;
+  height: 800px;
 }
 
 .manage-container > div {
   float: left;
 }
 
+.manage-category {
+  margin-left: 20%;
+  width: 250px;
+  margin-top: 15%;
+}
+
+.manage-category > section {
+  margin-top: 30px;
+  width: 200px;
+  border-bottom: 1px solid lightgrey;
+  font-size: 18px;
+  padding-left: 5px;
+  color: white;
+}
+
 .manage-category > section:hover {
-  background: rgba(255, 77, 77, 0.97);
+  // background: rgba(255, 77, 77, 0.97);
   cursor: pointer;
 }
 
 .manage-block {
+  margin-top: 15%;
+  border: 1px solid lightgrey;
+  border-bottom: 0;
+  width: 450px;
+}
 
+.manage-listing-title {
+  background: #ededed; // medium grey
+  border-bottom: 1px solid lightgrey;
+  color: #585858; //dark grey
+  padding: 10px;
+  padding-left: 20px;
+  font-size: 20px;
+  // margin-left: 50px;
+}
+
+.manage-listing-block {
+  background: rgba(252, 252, 253, 1); // offwhite
+  border-bottom: 1px solid lightgrey;
+  padding: 20px;
+}
+
+.manage-listing-block > div {
+  float: left;
+}
+
+.manage-listing-block-info {
 }

@@ -20,9 +20,9 @@ var Manage = React.createClass({
         listings = this.props.listings,
         reservations = this.props.reservations;
     if (this.state.section === "listings") {
-      section = <ManageListingsBlock listings={listings} />;
+      section = <ManageListings listings={listings} />;
     } else {
-      section = <ManageReservationsBlock reservations={reservations} />;
+      section = <ManageReservations reservations={reservations} />;
     }
 
     return(
@@ -34,6 +34,10 @@ var Manage = React.createClass({
 
           <section onClick={this.toReservations}>
             Your Reservations
+          </section>
+
+          <section>
+            ADD LISTING
           </section>
         </div>
 
