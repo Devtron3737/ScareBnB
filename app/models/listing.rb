@@ -53,7 +53,7 @@ class Listing < ActiveRecord::Base
       # .filter_by_dates(options[check_in], options[check_out])
 
       # add join for listing pics and user pic
-      # add :avg_creepiness
+
       # add method that filters listings for only ones that are available those dates
     end
 
@@ -63,10 +63,6 @@ class Listing < ActiveRecord::Base
         "
         "
         ])
-    end
-
-    def accepted_reservations
-      self.reservations.where("status = approved")
     end
 
     def avg_creepiness
