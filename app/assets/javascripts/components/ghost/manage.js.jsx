@@ -15,15 +15,35 @@ var Manage = React.createClass({
     }
   },
 
+  handleAddListing: function () {
+    if (this.state.section !== "newListing") {
+      this.setState({section: "newListing"});
+    }
+  },
+
   render: function () {
     var section = "",
         listings = this.props.listings,
-        reservations = this.props.reservations;
-    if (this.state.section === "listings") {
-      section = <ManageListings listings={listings} />;
-    } else {
-      section = <ManageReservations reservations={reservations} />;
+        reservations = this.props.reservations,
+        userId = this.props.;
+
+    switch (this.state.section) {
+      case "listings":
+        section = <ManageListings listings={listings} />;
+        break;
+      case "reservations":
+        section = <ManageReservations reservations={reservations} />;
+        break;
+      case "newListing":
+        section = <NewListing />
+        break;
     }
+
+    // if (this.state.section === "listings") {
+    //   section = <ManageListings listings={listings} />;
+    // } else {
+    //   section = <ManageReservations reservations={reservations} />;
+    // }
 
     return(
       <div className='manage-container clearfix'>
