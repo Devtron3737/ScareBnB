@@ -15,7 +15,7 @@ var Manage = React.createClass({
     }
   },
 
-  handleAddListing: function () {
+  toAddListing: function () {
     if (this.state.section !== "newListing") {
       this.setState({section: "newListing"});
     }
@@ -56,7 +56,12 @@ var Manage = React.createClass({
             Your Reservations
           </section>
 
-          <button onClick={this.handleAddListing} className='button' id='manage-listing-addlisting' type='button'>Add Listing</button>
+          <button onClick={this.toAddListing}
+                  className='button'
+                  id='manage-listing-addlisting'
+                  type='button'>
+                  Add Listing
+          </button>
 
         </div>
 
