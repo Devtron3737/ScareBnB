@@ -113,7 +113,7 @@ var Map = React.createClass({
   markMap: function (listing) {
     var ghostIcon = {
       url: '/images/marker.png',
-      scaledSize: new google.maps.Size(40, 40),
+      scaledSize: new google.maps.Size(35, 40),
       anchor: new google.maps.Point(40, 35)
     };
 

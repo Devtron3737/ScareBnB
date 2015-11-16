@@ -33,7 +33,7 @@ var SearchBar = React.createClass({
 
 
     var place = this.autocomplete.getPlace();
-    window.location.hash = '/listings/' + searchValue;
+    // window.location.hash = '/listings/' + searchValue;
     if (place && place.geometry) {
       console.log('place wasnt undefined!');
       console.log(place);
