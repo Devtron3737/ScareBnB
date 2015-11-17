@@ -1,24 +1,28 @@
 var NewListing = React.createClass({
+  handleSubmit: function () {
+
+  },
+
   render: function () {
+
     return(
       <div className='manage-category-block clearfix'>
         <div className='manage-category-block-info' id='reservation-address'>
           <div>List Your Haunting</div>
-          <div>
-            {
-              reservation.listing.address + sep +
-              reservation.listing.city + sep +
-              reservation.listing.state
-            }
-          </div>
-        </div>
+          <ul>
+            <li>Adress <input type='text' id='manage-new-address' placholder='ex:  525 S Winchester Blvd San Jose, CA' /></li>
+            <li>City <input type='text' id='manage-new-city' placholder='ex: San Jose' /></li>
+            <li>State <input type='text' id='manage-new-state' placholder='ex: CA' /></li>
+            <li>Title <input type='text' id='manage-new-title' placholder='ex:  Winchester Mystery House' /></li>
+            <li>Description <input type='text' id='manage-new-description' placholder='ex: CA' /></li>
+            <li>Toenails <input type='text' id='manage-new-toenails' /></li>
+          </ul>
 
-        <div className='manage-category-dates'>
-          {reservation.check_in + ' to ' + reservation.check_out}
-        </div>
-
-        <div className='manage-category-block-btns'>
-          <button onClick={this.handleReservationDelete} className='button' id='manage-category-remove' >Remove</button>
+          <button onClick={this.handleSubmit}
+                  className='button'
+                  id='manage-category-remove' >
+                  List
+          </button>
         </div>
       </div>
     )

@@ -25,7 +25,7 @@ var Manage = React.createClass({
     var section = "",
         listings = this.props.listings,
         reservations = this.props.reservations,
-        userId = this.props.;
+        userId = this.props.userId;
 
     switch (this.state.section) {
       case "listings":
@@ -35,7 +35,7 @@ var Manage = React.createClass({
         section = <ManageReservations reservations={reservations} />;
         break;
       case "newListing":
-        section = <NewListing />
+        section = <NewListing userId={userId} />
         break;
     }
 
