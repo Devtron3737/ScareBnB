@@ -15,6 +15,11 @@ var NewListing = React.createClass({
     // action to add listing with associated info
   },
 
+  handlePicUpload: function () {
+    cloudinary.openUploadWidget({ cloud_name: window.CLOUDINARY_CLOUD_NAME, upload_preset: window.CLOUDINARY_API_KEY},
+      function(error, result) { console.log(error, result) });
+  },
+
   render: function () {
 
     return(
@@ -36,6 +41,12 @@ var NewListing = React.createClass({
           <li className='clearfix'>Description <input type='textfield' id='manage-new-description' placeholder='ex: A horribly confusing abode' /></li>
           <li className='clearfix'>Toenails <input type='text' id='manage-new-toenails' /></li>
         </ul>
+
+        <button onClick={this.handlePicUpload}
+                className='button'
+                id='manage-new-picupload' >
+                Upload photos
+        </button>
 
         <button onClick={this.handleSubmit}
                 className='button'
