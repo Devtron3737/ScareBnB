@@ -13,25 +13,25 @@ var NewListing = React.createClass({
   },
 
   handleSubmit: function () {
-    var coords = this.getCoords()
-    console.log('in handle submit of new listing')
-    console.log(coords)
-    var listingAttrs = {
-      title: this.getVal('manage-new-title'),
-      toe_nails: this.getVal('manage-new-toenails'),
-      address: this.getVal('manage-new-address'),
-      description: this.getVal('manage-new-description'),
-      ghost_id: this.props.userId,
-      pictures: this.pictures
-      lat: coords.lat
-      lng: coords.lng
-
-    }
+    var coords = this.getCoords(),
+        listingAttrs = {
+          title: this.getVal('manage-new-title'),
+          toe_nails: this.getVal('manage-new-toenails'),
+          address: this.getVal('manage-new-address'),
+          description: this.getVal('manage-new-description'),
+          ghost_id: this.props.userId,
+          pictures: this.pics,
+          lat: coords.lat,
+          lng: coords.lng
+        }
 
     ManageActions.createListing(listingAttrs);
 
     this.pics.length = 0;
-    this.setState({picCount: 0})
+    this.setState({
+      picCount: 0,
+      value: listingAttrs.address
+    })
   },
 
   getVal: function (id) {
@@ -50,23 +50,13 @@ var NewListing = React.createClass({
       elementId: 'manage-new-address',
 
       placeDefined: function (place) {
-        console.log('in placeDefined')
-        console.log(place)
         coords.lat = place.geometry.location.lat()
         coords.lng = place.geometry.location.lng()
       },
 
       placeUndefined: function (predictions) {
-        console.log('in placeUndefined')
-        console.log(predictions)
-        var predictionId = predictions[0].place_id;
-        this.placeService.getDetails(
-          {placeId: predictionId},
-          function (prediction) {
-            coords.lat = prediction.geometry.location.lat()
-            coords.lng = prediction.geometry.location.lng()
-          }
-        )
+        // add alert
+        console.log('please enter a valid address')
       }
     }
 
