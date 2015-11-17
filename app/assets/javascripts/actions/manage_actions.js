@@ -26,6 +26,18 @@
       });
     },
 
+    createListing: function (listingAttrs) {
+      $.ajax({
+        url: '/api/listings.json',
+        method: 'POST',
+        data: listingAttrs,
+        success: function () {
+          console.log('successful listing create ajax');
+          ManageActions.getUserInfo(listingAttrs.ghost_id);
+        }
+      });
+    },
+
     dispatchListingUpdate: function (listings) {
       Dispatcher.dispatch({
         actionType: 'delete_listing',

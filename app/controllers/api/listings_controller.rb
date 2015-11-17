@@ -20,10 +20,26 @@ class Api::ListingsController < ApplicationController
     @reservations = @listing.accepted_reservations
   end
 
+  def create
+    Listing.create!(listing_params)
+    # go through images
+    # make sure it saves
+  end
+
   def destroy
     Listing.delete(params[:id])
     respond_to do |format|
       format.json { render json: {} }
     end
   end
+
+  private
+
+  def listing_params
+   params.permit(
+    :title, :toe_nails, :lat, :lng,
+    :address, :city, :state, :ghost_id,
+    :amenities, :description, :pictures
+  )
+ end
 end

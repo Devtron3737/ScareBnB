@@ -36,5 +36,36 @@ var SearchUtil = {
     return(
       new google.maps.places.Autocomplete(searchField, options)
     )
+  },
+
+  extractPlace: function (options) {
+
+    if (options.place && options.place.geometry) {
+      options.placeDefined(options.place);
+    } else {
+      var searchField =  document.getElementById(options.elementId),
+          service = new google.maps.places.AutocompleteService();
+      this.placeService = new google.maps.places.PlacesService(searchField);
+
+      service.getPlacePredictions(
+        {input: searchField.value},
+        options.placeUndefined.bind(this)
+        // this.selectFirstPrediction.bind(this)
+      );
+    }
   }
+
+  // selectFirstPrediction: function (predictions) {
+  //   var predictionId = predictions[0].place_id;
+  //   // console.log('inside selectFirstPrediction, predictions:')
+  //   // console.log(predictions)
+  //   var prediction = ""
+  //   // console.log(this)
+  //   this.placeService.getDetails(
+  //     {placeId: predictionId},
+  //     function (prediction) {
+  //       console.log(predication)
+  //     }
+  //   );
+  // },
 }

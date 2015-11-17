@@ -8,8 +8,8 @@ var SearchBar = React.createClass({
 
   componentDidMount: function () {
     this.autocomplete = SearchUtil.createGoogleAutocomplete('search-field');
-    this.searchField =  document.getElementById('search-field');
-    this.placeService = new google.maps.places.PlacesService(this.searchField);
+    // this.searchField =  document.getElementById('search-field');
+    // this.placeService = new google.maps.places.PlacesService(this.searchField);
 
     if (this.props.search.indexPage) {
       this.handleSubmit();
@@ -20,37 +20,58 @@ var SearchBar = React.createClass({
     event.preventDefault();
 
     if (!this.props.search.indexPage) {
-      this.history.pushState(null, '/listings/' + this.searchField.value);
+      var searchQuery =  document.getElementById('search-field');
+      this.history.pushState(null, '/listings/' + searchQuery.value);
       return;
     }
 
-    var place = this.autocomplete.getPlace();
+    var extractOptions = {
+      place: this.autocomplete.getPlace(),
+
+      elementId: 'search-field',
+
+      placeDefined: function (place) {
+        SearchActions.placeSearch(place.geometry)
+      },
+
+      placeUndefined: function (predictions) {
+        var predictionId = predictions[0].place_id;
+        this.placeService.getDetails(
+          {placeId: predictionId},
+          function (prediction) {
+            SearchActions.placeSearch(prediction.geometry)
+          }
+        )
+       }
+     }
+
+    SearchUtil.extractPlace(extractOptions)
+
+
     // window.location.hash = '/listings/' + searchValue;
-    if (place && place.geometry) {
-      console.log('place wasnt undefined!');
-      console.log(place);
-      SearchActions.placeSearch(place.geometry);
-    } else {
-      var service = new google.maps.places.AutocompleteService();
-      service.getPlacePredictions(
-        {input: this.state.value},
-        this.selectFirstPrediction
-      );
-    }
+    // if (place && place.geometry) {
+    //   SearchActions.placeSearch(place.geometry);
+    // } else {
+    //   var service = new google.maps.places.AutocompleteService();
+    //   service.getPlacePredictions(
+    //     {input: this.state.value},
+    //     this.selectFirstPrediction
+    //   );
+    // }
     // need to encompass searchfield, guests, and dates
     // in same <form>. then setup defaults if things are
     // empty
   },
 
-  selectFirstPrediction: function (predictions) {
-    var placeId = predictions[0].place_id;
-    this.placeService.getDetails(
-      {placeId: placeId},
-      function (place) {
-        SearchActions.placeSearch(place.geometry);
-      }
-    );
-  },
+  // selectFirstPrediction: function (predictions) {
+  //   var placeId = predictions[0].place_id;
+  //   this.placeService.getDetails(
+  //     {placeId: placeId},
+  //     function (place) {
+  //       SearchActions.placeSearch(place.geometry);
+  //     }
+  //   );
+  // },
 
   handleChange: function () {
     this.setState({value: event.target.value});
