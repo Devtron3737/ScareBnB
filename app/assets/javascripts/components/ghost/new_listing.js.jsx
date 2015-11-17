@@ -1,9 +1,10 @@
 var NewListing = React.createClass({
   getInitialState: function () {
-    return {value: ""}
+    return {value: "", picCount: 0}
   },
 
   componentDidMount: function () {
+    this.pics = [];
     this.autocomplete = SearchUtil.createGoogleAutocomplete('manage-new-address');
   },
 
@@ -13,6 +14,8 @@ var NewListing = React.createClass({
 
   handleSubmit: function () {
     // action to add listing with associated info
+    this.pics.length = 0;
+    this.setState({picCount: 0})
   },
 
   handlePicUpload: function () {
@@ -21,9 +24,12 @@ var NewListing = React.createClass({
         cloud_name: window.CLOUDINARY_CLOUD_NAME,
         upload_preset: window.CLOUDINARY_UPLOAD_PRESET,
         theme: 'white'
-
       },
-      function(error, result) { console.log(error, result) });
+      function (error, result) {
+        this.pics.push(result[0].url);
+        this.setState({picCount: this.pics.length});
+      }
+    )
   },
 
   render: function () {
@@ -51,8 +57,9 @@ var NewListing = React.createClass({
         <button onClick={this.handlePicUpload}
                 className='button'
                 id='manage-new-picupload' >
-                Upload photos
+                Upload photo
         </button>
+        <div>Photo count: {this.state.picCount}</div>
 
         <button onClick={this.handleSubmit}
                 className='button'
