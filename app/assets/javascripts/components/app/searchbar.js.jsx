@@ -7,14 +7,9 @@ var SearchBar = React.createClass({
   },
 
   componentDidMount: function () {
-    var defaultBounds = new google.maps.LatLngBounds(
-      new google.maps.LatLng(37.54025472421631, -122.6264275146484),
-      new google.maps.LatLng(37.97454774677482, -122.2487724853516)
-    );
-    var options = {bounds: defaultBounds},
-        searchField =  document.getElementById('search-field');
-    this.autocomplete = new google.maps.places.Autocomplete(searchField, options);
-    this.placeService = new google.maps.places.PlacesService(searchField);
+    this.autocomplete = SearchUtil.createGoogleAutocomplete('search-field');
+    this.searchField =  document.getElementById('search-field');
+    this.placeService = new google.maps.places.PlacesService(this.searchField);
 
     if (this.props.search.indexPage) {
       this.handleSubmit();
@@ -23,14 +18,11 @@ var SearchBar = React.createClass({
 
   handleSubmit: function () {
     event.preventDefault();
-    var searchValue = document.getElementById('search-field').value;
 
     if (!this.props.search.indexPage) {
-      this.history.pushState(null, '/listings/' + searchValue);
+      this.history.pushState(null, '/listings/' + this.searchField.value);
       return;
     }
-
-
 
     var place = this.autocomplete.getPlace();
     // window.location.hash = '/listings/' + searchValue;
@@ -55,8 +47,6 @@ var SearchBar = React.createClass({
     this.placeService.getDetails(
       {placeId: placeId},
       function (place) {
-        console.log('in selectFirstPrediction');
-        console.log(place);
         SearchActions.placeSearch(place.geometry);
       }
     );

@@ -32,10 +32,9 @@ var SearchUtil = {
 
     var options = {bounds: defaultBounds},
         searchField =  document.getElementById(elementId);
-      console.log(searchField);
 
-      return(
-        new google.maps.places.Autocomplete(searchField, options)
-      )
+    return(
+      new google.maps.places.Autocomplete(searchField, options)
+    )
   }
 }
