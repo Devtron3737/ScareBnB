@@ -1,29 +1,48 @@
 var NewListing = React.createClass({
-  handleSubmit: function () {
+  getInitialState: function () {
+    return {value: ""}
+  },
 
+  componentDidMount: function () {
+    this.autocomplete = SearchUtil.createGoogleAutocomplete('manage-new-address');
+  },
+
+  handleChange: function () {
+    this.setState({value: event.target.value});
+  },
+
+  handleSubmit: function () {
+    // action to add listing with associated info
   },
 
   render: function () {
 
     return(
-      <div className='manage-category-block clearfix'>
-        <div className='manage-category-block-info' id='reservation-address'>
-          <div>List Your Haunting</div>
-          <ul>
-            <li>Adress <input type='text' id='manage-new-address' placholder='ex:  525 S Winchester Blvd San Jose, CA' /></li>
-            <li>City <input type='text' id='manage-new-city' placholder='ex: San Jose' /></li>
-            <li>State <input type='text' id='manage-new-state' placholder='ex: CA' /></li>
-            <li>Title <input type='text' id='manage-new-title' placholder='ex:  Winchester Mystery House' /></li>
-            <li>Description <input type='text' id='manage-new-description' placholder='ex: CA' /></li>
-            <li>Toenails <input type='text' id='manage-new-toenails' /></li>
-          </ul>
+      <div id='manage-new-container'>
 
-          <button onClick={this.handleSubmit}
-                  className='button'
-                  id='manage-category-remove' >
-                  List
-          </button>
-        </div>
+        <div className='manage-block-title'>List Your Haunting</div>
+
+        <ul id='manage-new-list'>
+          <li className='clearfix'>Title <input type='text' id='manage-new-title' placeholder='ex: Winchester Mystery House' /></li>
+          <li className='clearfix'>
+            Address
+            <input type='text'
+                   id='manage-new-address'
+                   placeholder='ex: 525 S Winchester Blvd, San Jose, CA'
+                   onChange={this.handleChange}
+                   value={this.state.value}>
+            </input>
+          </li>
+          <li className='clearfix'>Description <input type='textfield' id='manage-new-description' placeholder='ex: A horribly confusing abode' /></li>
+          <li className='clearfix'>Toenails <input type='text' id='manage-new-toenails' /></li>
+        </ul>
+
+        <button onClick={this.handleSubmit}
+                className='button'
+                id='manage-new-submit' >
+                List
+        </button>
+
       </div>
     )
   }

@@ -80,5 +80,31 @@
   border-radius: 7%;
   margin-left: 10px;
   font-size: 13px;
+}
 
+#manage-new-container {
+  border-bottom: 1px solid lightgrey;
+}
+
+#manage-new-list {
+  padding: 20px;
+  float:left;
+}
+
+#manage-new-list li {
+  width: 100%;
+  float: left;
+}
+
+#manage-new-list input {
+  border-bottom: 1px solid lightgrey;
+  width: 60%;
+  font-size: 16px;
+  float: right;
+}
+
+#manage-new-submit {
+  padding: 5px;
+  border-radius: 7%;
+  font-size: 13px;
 }
