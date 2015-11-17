@@ -5,6 +5,7 @@
 #  id         :integer          not null, primary key
 #  user_id    :integer
 #  listing_id :integer
+#  url        :string
 #
 
 class Picture < ActiveRecord::Base
