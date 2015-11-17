@@ -14,7 +14,7 @@
 
 //= require jquery
 //= require jquery_ujs
-//= require jquery-cloudinary
+//= require cloudinary
 //= require react
 //= require react_ujs
 //= require eventemitter
