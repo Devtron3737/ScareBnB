@@ -29,15 +29,15 @@
     createListing: function (listingAttrs) {
       console.log('in manage actions')
       console.log(listingAttrs)
-      // $.ajax({
-      //   url: '/api/listings.json',
-      //   method: 'POST',
-      //   data: listingAttrs,
-      //   success: function () {
-      //     console.log('successful listing create ajax');
-      //     ManageActions.getUserInfo(listingAttrs.ghost_id);
-      //   }
-      // });
+      $.ajax({
+        url: '/api/listings.json',
+        method: 'POST',
+        data: listingAttrs,
+        success: function () {
+          console.log('successful listing create ajax');
+          ManageActions.getUserInfo(listingAttrs.ghost_id);
+        }
+      });
     },
 
     dispatchListingUpdate: function (listings) {

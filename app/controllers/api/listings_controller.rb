@@ -21,7 +21,16 @@ class Api::ListingsController < ApplicationController
   end
 
   def create
-    Listing.create!(listing_params)
+    listing = Listing.new(listing_params)
+
+    #listing.ghost_id = current_user.id
+    listing.save!
+
+    if !params[:pictures].empty?
+      params[:pictures].each do |picture|
+        Picture.create!(listing_id: listing.id, url: picture)
+      end
+    end
     # go through images
     # make sure it saves
   end
@@ -36,10 +45,10 @@ class Api::ListingsController < ApplicationController
   private
 
   def listing_params
-   params.permit(
-    :title, :toe_nails, :lat, :lng,
-    :address, :city, :state, :ghost_id,
-    :amenities, :description, :pictures
-  )
- end
+    params.permit(
+      :title, :toe_nails, :lat, :lng,
+      :address, :city, :state, :ghost_id,
+      :amenities, :description
+    )
+  end
 end
