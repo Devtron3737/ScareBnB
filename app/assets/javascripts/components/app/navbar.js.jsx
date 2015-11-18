@@ -4,7 +4,7 @@ var NavBar = React.createClass({
       <nav className='nav-container clearfix'>
         <div id='home-logo'>
           <Link to='/'>
-           <img id='logo-pic' src={'/images/logo_red.png'} alt='logo' height='50' />
+           <img id='logo-pic' src={'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811046/logo_red_yi6mz8.png'} alt='logo' height='50' />
           </Link>
         </div>
         <SearchBar search={this.props.search} id='search-field' />
