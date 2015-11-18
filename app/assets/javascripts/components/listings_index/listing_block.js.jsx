@@ -2,12 +2,6 @@ var ListingBlock = React.createClass({
 
   mixins: [ReactRouter.History],
 
-  handleMouseOver: function () {
-    // change map marker color when
-    // mouse over listing block
-    console.log('in mouse over!')
-  },
-
   handleClick: function () {
     // event.preventDefault()
     var listingPath = '/listing/' + this.props.listing.id
@@ -22,10 +16,11 @@ var ListingBlock = React.createClass({
     //change image
     //   params={{listingId: listing.id}}
     return (
-      <div className='listing-block' onMouseOver={this.handleMouseOver} onClick={this.handleClick}>
-          <img className='listing-pic' src={'/images/deathstar.jpg'} height='240' width='350' />
-          <detail className='listing-creepiness'>{listing.creepiness}</detail>
+      <div className='listing-block' onClick={this.handleClick}>
+          <img className='listing-pic' src={listing.pictures[0].url} height='240' width='350' />
+
           <div id='listing-title'>{listing.title}</div>
+          <div id='listing-address'>{listing.address}</div>
           <div className='listing-toe-nail'>
             {listing.toe_nails}
             <img className='toenail-pic' src={'/images/toenail.png'} height='40' />

@@ -8,11 +8,6 @@ class Api::ListingsController < ApplicationController
     }
     @listings = Listing.map_listings(coords)
     # @listings = Listing.all
-
-    respond_to do |format|
-      format.html
-      format.json { render json: @listings }
-    end
   end
 
   def show
