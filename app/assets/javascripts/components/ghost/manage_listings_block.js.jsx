@@ -14,11 +14,7 @@ var ManageListingsBlock = React.createClass({
         <div className='manage-category-block-info'>
           <div>{listing.title}</div>
           <div>
-            {
-              listing.address + sep +
-              listing.city + sep +
-              listing.state
-            }
+            {listing.address}
           </div>
         </div>
 
