@@ -13,6 +13,8 @@ var ListingBlock = React.createClass({
   render: function () {
     var listing = this.props.listing
     var listingPath = '/listings/' + listing.id
+    console.log(listing)
+
     //change image
     //   params={{listingId: listing.id}}
     return (

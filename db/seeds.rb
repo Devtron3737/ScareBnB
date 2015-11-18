@@ -161,6 +161,7 @@ Picture.create!(listing_id: 19, url: 'http://res.cloudinary.com/dn7rukqow/image/
 Picture.create!(listing_id: 20, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811042/cemetary2_tl0ysd.jpg')
 Picture.create!(listing_id: 21, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811041/asylum2_ozp9hm.jpg')
 Picture.create!(listing_id: 22, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811038/bathroom_wnjpoj.jpg')
+Picture.create!(listing_id: 23, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811038/bathroom_wnjpoj.jpg')
 
 
 Reservation.create!(listing_id: 1, check_in: Date.today,

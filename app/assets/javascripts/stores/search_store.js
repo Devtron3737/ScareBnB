@@ -1,6 +1,6 @@
 ( function (root) {
 
-  var _listings = [];
+  var _listings = {};
   var _place = {lat: 0, lng: 0};
   var _searchValue = "";
   var LISTINGS_CHANGE = "listings_change";
@@ -25,7 +25,14 @@
       }),
 
       getListings: function () {
-        return _listings.slice();
+        var listings = {}
+        for (var i in _listings) {
+          listings[i] = _listings[i]
+        }
+
+        console.log('in store after dup')
+        console.log(listings.listings)
+        return listings.listings;
       },
 
       getPlace: function () {
