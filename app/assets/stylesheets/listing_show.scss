@@ -1,14 +1,14 @@
 #listing-header {
-  position: absolute;
-  top: 60px;
+  display: block;
+  // position: absolute;
+  // top: 60px;
   height: 700px;
-
+  width: 100%;
 }
 
 #listing-header-pic {
   display: block;
   // background-image: image-url('deathstar.jpg');
-  background-size: cover;
   width: 100%;
   height: 550px;
   // overflow: visible;

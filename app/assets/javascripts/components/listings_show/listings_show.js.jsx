@@ -34,7 +34,7 @@ var ListingsShow = React.createClass({
           <div>
             <NavBar search={searchBarOptions}/>
             <header id='listing-header'>
-              <img id='listing-header-pic' src={listing.pictures[0].url} height='600' />
+              <img id='listing-header-pic' src={listing.pictures[0].url} height='700' />
 
               <section className='listing-header-detail clearfix'>
                 <div id='listing-show-user'>
@@ -87,6 +87,8 @@ var ListingsShow = React.createClass({
                 woodyfsddfgfdgsdfdsfd
               </p>
             </main>
+
+            <Footer />
 
           </div>
         );

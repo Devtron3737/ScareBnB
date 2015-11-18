@@ -26,6 +26,7 @@ User.create!(name: "Sally", password: "boo")#18
 User.create!(name: "Jack", password: "boo")#19
 User.create!(name: "Darth Vader", password: "boo")#20
 
+
 Picture.create!(user_id: 1, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447812270/boogy.jpg')
 Picture.create!(user_id: 2, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447812270/casper.jpg')
 Picture.create!(user_id: 3, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447812386/wicked%20witch.jpg')
@@ -163,7 +164,7 @@ Listing.create!(ghost_id: 20, toe_nails: 111, title: "The hauntedest of the haun
 Picture.create!(listing_id: 1, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811570/The_Haunted_House_Das_Geisterhaus__5360049608_pd23da.jpg')
 Picture.create!(listing_id: 2, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811569/18u67x18rmw7jjpg_ddwkro.jpg')
 Picture.create!(listing_id: 3, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811569/haunted-house_fukfn0.jpg')
-Picture.create!(listing_id: 4, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811568/1415110089999_wps_70_Pic_shows_A_local_artist__x1djdw.jpg')
+Picture.create!(listing_id: 4, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447872208/1415110089999_wps_70_Pic_shows_A_local_artist__ti1rhw.jpg')
 Picture.create!(listing_id: 5, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811568/3_wmtabx.jpg')
 Picture.create!(listing_id: 6, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811568/hauntedhouse_nceflt.jpg')
 Picture.create!(listing_id: 7, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811568/20120429_rtl9992-edit_0_epu3dk.jpg')
