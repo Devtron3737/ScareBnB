@@ -3,7 +3,7 @@ var DateUtil = {
     var today = new Date();
     var day = today.getDate();
 
-    if (type === 'Check out') {
+    if (type === 'check_out') {
       today.setDate(day + 1);
       day = today.getDate();
     }

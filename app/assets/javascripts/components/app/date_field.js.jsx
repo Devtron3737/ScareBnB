@@ -1,6 +1,6 @@
 var DateField = React.createClass({
   getInitialState: function () {
-    return {value: ""};
+    return {value: DateUtil.getDefault(this.props.type)};
   },
 
   handleChange: function () {
@@ -10,13 +10,11 @@ var DateField = React.createClass({
   },
 
   render: function () {
-    var type = (this.props.type === 'check_in') ?
-                      'Check in' :
-                      'Check out';
+
     return (
       <input
         onChange={this.handleChange}
-        value={DateUtil.getDefault(type)}
+        value={this.state.value}
         required='required'
         type='date'
         className='date-item'
