@@ -5,7 +5,7 @@ var ListingsShow = React.createClass({
   },
 
   componentDidMount: function () {
-    var listingId = this.params.listingId
+    var listingId = this.props.params.listingId
     SearchActions.fetchListing(listingId)
   },
 

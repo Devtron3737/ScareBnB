@@ -12,7 +12,7 @@ class Api::ListingsController < ApplicationController
 
   def show
     @listing = Listing.find(params[:id])
-    @reservations = @listing.accepted_reservations
+    # @reservations = @listing.accepted_reservations
   end
 
   def create
@@ -44,9 +44,8 @@ class Api::ListingsController < ApplicationController
 
   def listing_params
     params.permit(
-      :title, :toe_nails, :lat, :lng,
-      :address, :city, :state, :ghost_id,
-      :amenities, :description
+      :title, :toe_nails, :lat, :lng, :address,
+      :ghost_id, :amenities, :description
     )
   end
 end
