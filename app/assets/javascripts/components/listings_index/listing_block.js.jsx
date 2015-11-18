@@ -7,7 +7,6 @@ var ListingBlock = React.createClass({
     var listingPath = '/listing/' + this.props.listing.id
 
     this.history.pushState(null, listingPath)
-    console.log("in handle click!")
   },
 
   render: function () {
@@ -26,7 +25,7 @@ var ListingBlock = React.createClass({
             {listing.toe_nails}
             <img className='toenail-pic' src={'/images/toenail.png'} height='40' />
           </div>
-          <img className='listing-user-pic' src={listing.user_picture} height='60' width='60' />
+          <img className='listing-user-pic' src={listing.user_picture.url} height='60' width='60' />
       </div>
     )
   }
