@@ -33,6 +33,23 @@
         actionType: "listings_search",
         listings: listings
       });
+    },
+
+    fetchListing: function (listingId) {
+      $.ajax({
+        url: '/api/listing/' + listingId + '.json',
+        method: 'GET',
+        success: function (listing) {
+          console.log('successful listing show ajax');
+          console.log(listing);
+          // Dispatcher.dispatch({
+          //   actionType: "show_listing",
+          //   listing: listing
+          // })
+        }
+      });
+
+
     }
   };
 })(this);

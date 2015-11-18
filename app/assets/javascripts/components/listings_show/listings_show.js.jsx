@@ -1,5 +1,14 @@
 var ListingsShow = React.createClass({
 
+  getInitialState: function () {
+    return {listing: {}}
+  },
+
+  componentDidMount: function () {
+    var listingId = this.params.listingId
+    SearchActions.fetchListing(listingId)
+  },
+
   render: function () {
     var searchBarOptions = {
       indexPage: false,
