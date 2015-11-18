@@ -6,7 +6,18 @@ var ListingsShow = React.createClass({
 
   componentDidMount: function () {
     var listingId = this.props.params.listingId
+    SearchStore.addListingShowChangeListener(this._onChange)
     SearchActions.fetchListing(listingId)
+  },
+
+  componenetWillUnmount: function () {
+    SearchStore.removeListingShowChangeListener(this._onChange)
+  },
+
+  _onChange: function () {
+    this.setState({
+      listing: SearchStore.getListingShow()
+    })
   },
 
   render: function () {
@@ -15,15 +26,16 @@ var ListingsShow = React.createClass({
       place: ""
     };
 
+    var listing = this.state.listing
     return(
       <div>
         <NavBar search={searchBarOptions}/>
         <header id='listing-header'>
-          <img id='listing-header-pic' src={'/images/deathstar.jpg'} height='600' />
+          <img id='listing-header-pic' src={listing.pictures[0].url} height='600' />
 
           <section className='listing-header-detail clearfix'>
             <div id='listing-show-user'>
-              <img src={'/images/darth-vader.jpg'} height='100' width='100' />
+              <img src={listing.user_picture.url} height='100' width='100' />
               <div>Anakin</div>
             </div>
 

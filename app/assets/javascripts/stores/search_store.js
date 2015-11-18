@@ -1,10 +1,12 @@
 ( function (root) {
 
-  var _listings = {};
-  var _place = {lat: 0, lng: 0};
-  var _searchValue = "";
-  var LISTINGS_CHANGE = "listings_change";
-  var PLACE_CHANGE = "place_change";
+  var _listings = {},
+      _place = {lat: 0, lng: 0},
+      _searchValue = "",
+      _listingShow = {},
+      LISTINGS_CHANGE = "listings_change",
+      PLACE_CHANGE = "place_change",
+      LISTING_SHOW_CHANGE = "listing_show_change";
 
   var SearchStore = root.SearchStore = $.extend(
     {},
@@ -21,6 +23,9 @@
           case 'search_value':
             SearchStore.updateSearchValue(payLoad.searchValue);
             break;
+          case 'listing_show':
+            SearchStore.updateListingShow(payLoad.listing);
+            break;
         }
       }),
 
@@ -29,7 +34,7 @@
         for (var i in _listings) {
           listings[i] = _listings[i]
         }
-        
+
         return listings.listings;
       },
 
@@ -47,6 +52,15 @@
         return _searchValue.slice();
       },
 
+      getListingShow: function () {
+        var listing = {};
+        for (var j in _listingShow) {
+          listing[j] = _listingShow[j];
+        }
+        
+        return listing;
+      },
+
       updateListings: function (listings) {
         _listings = listings;
         this.emit(LISTINGS_CHANGE);
@@ -62,6 +76,12 @@
         _searchValue = value;
       },
 
+      updateListingShow: function (listing) {
+        _listingShow = listing;
+
+        this.emit(LISTING_SHOW_CHANGE);
+      },
+
       addListingsChangeListener: function (callback) {
         this.on(LISTINGS_CHANGE, callback);
       },
@@ -70,12 +90,20 @@
         this.on(PLACE_CHANGE, callback);
       },
 
+      addListingShowChangeListener: function (callback) {
+        this.on(LISTING_SHOW_CHANGE, callback);
+      },
+
       removeListingsChangeListener: function (callback) {
         this.removeListener(LISTINGS_CHANGE, callback);
       },
 
       removePlaceChangeListener: function (callback) {
         this.removeListener(PLACE_CHANGE, callback);
+      },
+
+      removeListingShowChangeListener: function (callback) {
+        this.removeListener(LISTING_SHOW_CHANGE, callback);
       }
     }
   );

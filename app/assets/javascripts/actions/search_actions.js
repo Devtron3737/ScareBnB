@@ -43,7 +43,7 @@
           console.log('successful listing show ajax');
           console.log(listing);
           Dispatcher.dispatch({
-            actionType: "show_listing",
+            actionType: "listing_show",
             listing: listing
           })
         }
