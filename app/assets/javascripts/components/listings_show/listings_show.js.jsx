@@ -1,5 +1,5 @@
 var ListingsShow = React.createClass({
-  
+
   render: function () {
     var searchBarOptions = {
       indexPage: false,
@@ -24,17 +24,17 @@ var ListingsShow = React.createClass({
 
               <div className='header-amenities clearfix'>
                 <div>
-                  <img src={'/images/tombstone.png'} height='40' />
+                  <img src={'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811048/tombstone_qdota8.png'} height='40' />
                   nearby cemetary
                 </div>
 
                 <div>
-                  <img src={'/images/butler.png'} height='40' />
+                  <img src={'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811038/butler_plmuai.png'} height='40' />
                   creepy butler
                 </div>
 
                 <div>
-                  <img src={'/images/children.png'} height='40' />
+                  <img src={'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811038/children_mc3uu8.png'} height='40' />
                   demented children
                 </div>
               </div>
