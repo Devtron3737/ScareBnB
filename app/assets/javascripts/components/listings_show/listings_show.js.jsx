@@ -37,6 +37,7 @@ var ListingsShow = React.createClass({
               <img id='listing-header-pic' src={listing.pictures[0].url} height='700' />
 
               <section className='listing-header-detail clearfix'>
+
                 <div id='listing-show-user'>
                   <img src={listing.user_picture.url} height='100' width='100' />
                   <div>{listing.ghost.name}</div>
@@ -62,8 +63,22 @@ var ListingsShow = React.createClass({
                       demented children
                     </div>
                   </div>
-
                 </div>
+
+
+
+                <div id='listing-show-rsvp-content'>
+                  <div className='listing-show-rsvp-title clearfix'>
+                    <div id='listing-show-rsvp-toenails'>
+                      <div id='listing-show-rsvp-price'>{listing.toe_nails}</div>
+                      <img className='toenail-pic' src={'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811047/toenail_on49wz.png'} height='25' />
+                      <div id='rsvp-per-night'>per night</div>
+                    </div>
+                  </div>
+
+                  content
+                </div>
+
 
               </section>
             </header>

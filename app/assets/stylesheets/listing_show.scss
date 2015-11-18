@@ -1,10 +1,10 @@
 #listing-header {
   display: block;
+  position: relative;
   // position: absolute;
   // top: 60px;
   // height: 700px;
-  height: auto;
-  padding-bottom: 7px;
+  height: 720px;
   width: 100%;
 }
 
@@ -19,10 +19,13 @@
 .listing-header-detail {
   position: relative;
   display: block;
-  height: 100%;
-  padding-bottom: 30px;
-  margin-left: 300px;
-  margin-right: 300px;
+  height: 170px;
+
+  // margin-left: 300px;
+  // margin-right: 300px;
+  padding-bottom: 0px;
+  // padding-top: 25px;
+  // background: red;
 }
 
 .listing-header-detail > * {
@@ -32,6 +35,7 @@
 
 #listing-show-user {
   // background: yellow;
+  margin-left: 300px;
   width: 100px;
   font-size: 18px;
   color: grey;
@@ -72,6 +76,57 @@
   left: 50%;
   transform: translateX(-50%);
 
+}
+
+// RSVP***********************************
+
+#listing-show-rsvp-content {
+  position: relative;
+  // right: 0%;
+  // bottom: 0%;
+  margin-top: 0px;
+  width: 280px;
+  // background: blue;
+  border-left: 1px solid lightgrey;
+  border-right: 1px solid lightgrey;
+  height: 100%;
+  margin-left: 30px;
+  margin-right: 100px;
+  // padding-left: 15px;
+}
+
+.listing-show-rsvp-title {
+  position: absolute;
+  // top: -20%;
+  // right: 0%;
+  top: -40px;
+  width: 100%;
+  background: rgba(69, 69, 69, 0.87); //transparent grey
+  border-left: 1px solid rgba(69, 69, 69, 0.87);
+  border-right: 1px solid rgba(69, 69, 69, 0.87);
+  color: white;
+  font-size: 24px;
+  // padding-left: 15px;
+  height: 40px;
+}
+
+#listing-show-rsvp-toenails > * {
+  float: left;
+}
+
+#listing-show-rsvp-toenails img {
+  margin-top: 4px;
+}
+
+#listing-show-rsvp-price {
+  margin-left: 15px;
+}
+
+#rsvp-per-night {
+  float: right;
+  font-size: 14px;
+  margin-right: 15px;
+  margin-top: 12px;
 }
 
 .listing-show-content-container {
