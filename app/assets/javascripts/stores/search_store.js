@@ -29,9 +29,7 @@
         for (var i in _listings) {
           listings[i] = _listings[i]
         }
-
-        console.log('in store after dup')
-        console.log(listings.listings)
+        
         return listings.listings;
       },
 

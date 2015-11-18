@@ -3,6 +3,8 @@ json.listings(@listings) do |listing|
   json.toe_nails listing.toe_nails
   json.address listing.address
   json.title listing.title
+  json.lat listing.lat
+  json.lng listing.lng
   json.pictures(listing.pictures) do |picture|
     json.(picture, :url)
   end

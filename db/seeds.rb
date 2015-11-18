@@ -26,6 +26,27 @@ User.create!(name: "Sally", password: "boo")#18
 User.create!(name: "Jack", password: "boo")#19
 User.create!(name: "Darth Vader", password: "boo")#20
 
+Picture.create!(user_id: 1, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447812270/boogy.jpg')
+Picture.create!(user_id: 2, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447812270/casper.jpg')
+Picture.create!(user_id: 3, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447812386/wicked%20witch.jpg')
+Picture.create!(user_id: 4, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447812272/it%20the%20clown.png')
+Picture.create!(user_id: 5, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447812272/frankenstein.gif')
+Picture.create!(user_id: 6, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447812272/headless%20horseman.jpg')
+Picture.create!(user_id: 7, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447812272/hannibal.jpg')
+Picture.create!(user_id: 8, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447812271/scream.jpg')
+Picture.create!(user_id: 9, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447812271/hell%20raiser.jpg')
+Picture.create!(user_id: 10, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447812271/dracula.jpg')
+Picture.create!(user_id: 11, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447812271/freddy.jpg')
+Picture.create!(user_id: 12, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447812271/chucky.jpg')
+Picture.create!(user_id: 13, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447812271/edward.jpg')
+Picture.create!(user_id: 14, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447812271/voldemort.jpg')
+Picture.create!(user_id: 15, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447812270/exorcist.jpg')
+Picture.create!(user_id: 16, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447812270/jason.jpg')
+Picture.create!(user_id: 17, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447812270/ring.jpg')
+Picture.create!(user_id: 18, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447812270/sally.jpg')
+Picture.create!(user_id: 19, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447812270/jack.jpg')
+Picture.create!(user_id: 20, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811040/darth-vader_uuqnnn.jpg')
+
 
 Listing.create!(ghost_id: 1, toe_nails: 25, title: "Lovely victorian home",
   address: "111 Madrid St., San Francsico, CA", description: "Boogys place",
@@ -162,6 +183,7 @@ Picture.create!(listing_id: 20, url: 'http://res.cloudinary.com/dn7rukqow/image/
 Picture.create!(listing_id: 21, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811041/asylum2_ozp9hm.jpg')
 Picture.create!(listing_id: 22, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811038/bathroom_wnjpoj.jpg')
 Picture.create!(listing_id: 23, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811038/bathroom_wnjpoj.jpg')
+
 
 
 Reservation.create!(listing_id: 1, check_in: Date.today,

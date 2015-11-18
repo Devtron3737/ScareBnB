@@ -87,7 +87,9 @@ var Map = React.createClass({
 
   _onListingsChange: function () {
     this.removeCurrentMarkers();
-    listings = SearchStore.getListings();
+    var listings = SearchStore.getListings();
+    console.log('in map')
+    console.log(listings)
     this.dropListingMarkers(listings);
   },
 

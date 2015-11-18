@@ -13,7 +13,6 @@ var ListingBlock = React.createClass({
   render: function () {
     var listing = this.props.listing
     var listingPath = '/listings/' + listing.id
-    console.log(listing)
 
     //change image
     //   params={{listingId: listing.id}}
@@ -27,7 +26,7 @@ var ListingBlock = React.createClass({
             {listing.toe_nails}
             <img className='toenail-pic' src={'/images/toenail.png'} height='40' />
           </div>
-          <img className='listing-user-pic' src={'/images/darth-vader.jpg'} height='60' width='60' />
+          <img className='listing-user-pic' src={listing.user_picture} height='60' width='60' />
       </div>
     )
   }

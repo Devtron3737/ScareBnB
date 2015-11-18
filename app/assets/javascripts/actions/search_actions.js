@@ -15,8 +15,6 @@
     },
 
     placeSearch: function (place) {
-      console.log('dispatching!');
-      console.log(place);
       Dispatcher.dispatch({
         actionType: "place_search",
         place: place
