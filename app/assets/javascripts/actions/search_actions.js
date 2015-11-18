@@ -37,15 +37,15 @@
 
     fetchListing: function (listingId) {
       $.ajax({
-        url: '/api/listing/' + listingId + '.json',
+        url: '/api/listings/' + listingId + '.json',
         method: 'GET',
         success: function (listing) {
           console.log('successful listing show ajax');
           console.log(listing);
-          // Dispatcher.dispatch({
-          //   actionType: "show_listing",
-          //   listing: listing
-          // })
+          Dispatcher.dispatch({
+            actionType: "show_listing",
+            listing: listing
+          })
         }
       });
 
