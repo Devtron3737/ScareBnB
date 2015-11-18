@@ -26,12 +26,13 @@ class Api::ListingsController < ApplicationController
     #listing.ghost_id = current_user.id
     listing.save!
 
+
     if !params[:pictures].empty?
       params[:pictures].each do |picture|
         Picture.create!(listing_id: listing.id, url: picture)
       end
     end
-    
+
     respond_to do |format|
       format.json { render json: {} }
     end

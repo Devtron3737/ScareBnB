@@ -30,8 +30,9 @@
       console.log('in manage actions')
       console.log(listingAttrs)
       $.ajax({
-        url: '/api/listings.json',
+        url: '/api/listings',
         method: 'POST',
+        dataType: "json",
         data: listingAttrs,
         success: function () {
           console.log('successful listing create ajax');

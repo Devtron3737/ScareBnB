@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151117205013) do
+ActiveRecord::Schema.define(version: 20151118013145) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,8 +19,6 @@ ActiveRecord::Schema.define(version: 20151117205013) do
   create_table "listings", force: :cascade do |t|
     t.integer "ghost_id",    null: false
     t.integer "toe_nails",   null: false
-    t.string  "city",        null: false
-    t.string  "state",       null: false
     t.string  "address",     null: false
     t.json    "amenities",   null: false
     t.text    "description", null: false

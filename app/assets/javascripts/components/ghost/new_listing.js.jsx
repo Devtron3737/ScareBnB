@@ -16,18 +16,21 @@ var NewListing = React.createClass({
     var coords = this.getCoords(),
         listingAttrs = {
           title: this.getVal('manage-new-title'),
-          toe_nails: this.getVal('manage-new-toenails'),
+          toe_nails: Number(this.getVal('manage-new-toenails')),
           address: this.getVal('manage-new-address'),
           description: this.getVal('manage-new-description'),
-          ghost_id: this.props.userId,
+          ghost_id: Number(this.props.userId),
           pictures: this.pics,
           lat: coords.lat,
-          lng: coords.lng
+          lng: coords.lng,
+          amenities: JSON.stringify(["amenities"])
         }
+    console.log("in handle submit")
+    console.log(listingAttrs)
 
     ManageActions.createListing(listingAttrs);
 
-    this.pics.length = 0;
+    this.pics = [];
     this.setState({
       picCount: 0,
       value: listingAttrs.address
@@ -74,8 +77,10 @@ var NewListing = React.createClass({
       },
       function (error, result) {
         this.pics.push(result[0].url);
+        console.log("in handlePicUpload")
+        console.log(this.pics)
         this.setState({picCount: this.pics.length});
-      }
+      }.bind(this)
     )
   },
 
