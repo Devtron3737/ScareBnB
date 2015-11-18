@@ -76,7 +76,14 @@ var ListingsShow = React.createClass({
                     </div>
                   </div>
 
-                  content
+                  <DateField type='check_in' />
+                  <DateField type='check_out' />
+                  <button onClick={this.handleReserve}
+                          className='button'
+                          id='listing-show-reserve-button'
+                          type='button'>
+                          Request to Book
+                  </button>
                 </div>
 
 
