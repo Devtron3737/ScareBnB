@@ -3,12 +3,9 @@
 # Table name: users
 #
 #  id       :integer          not null, primary key
-#  fname    :string           not null
-#  lname    :string
 #  email    :string
-#  about    :text
-#  hometown :string
 #  password :string           not null
+#  name     :string
 #
 
 require 'test_helper'

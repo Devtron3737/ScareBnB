@@ -112,7 +112,7 @@ var Map = React.createClass({
 
   markMap: function (listing) {
     var ghostIcon = {
-      url: '/images/marker.png',
+      url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811046/marker_ivmzej.png',
       scaledSize: new google.maps.Size(35, 40),
       anchor: new google.maps.Point(40, 35)
     };

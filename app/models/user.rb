@@ -3,16 +3,13 @@
 # Table name: users
 #
 #  id       :integer          not null, primary key
-#  fname    :string           not null
-#  lname    :string
 #  email    :string
-#  about    :text
-#  hometown :string
 #  password :string           not null
+#  name     :string
 #
 
 class User < ActiveRecord::Base
-  validates :fname, :password, presence: true
+  validates :name, :password, presence: true
 
   has_many :listings, foreign_key: :ghost_id
   has_one :picture
