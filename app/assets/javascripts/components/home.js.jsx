@@ -29,7 +29,7 @@ var Home = React.createClass({
           <nav className='header-nav clearfix'>
             <h1 className='header-logo'>
               <a href="/">
-               <img src={'images/logo_ghost.png'} height='55' />
+               <img name='white logo' src={'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811046/logo_ghost_ceoqts.png'} height='55' />
               </a>
             </h1>
 
@@ -38,9 +38,6 @@ var Home = React.createClass({
               <li className='house-icon'><Link to='user/2/manage'>
                 <h3 className='ghost-text'>Ghost</h3>
                 <img className='house-pic' src={'/images/home_icon.png'} height='45' /></Link></li>
-              <li className='message-icon'><a href="#">
-                <h3 className='message-text'>Message</h3>
-                <img className='message-pic' src={'/images/message_icon.png'} height='42' /></a></li>
 
               <li><a href="#">Account</a></li>
             </ul>
@@ -80,42 +77,42 @@ var Home = React.createClass({
           <ul id='home-listings'>
             <li>
               <Link to='listings/San Francisco, CA'>
-                <img src={'/images/goldengate.jpg'} height='300' width='330' />
+                <img name='goldengate' src={'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811041/goldengate_ywmoe1.jpg'} height='300' width='330' />
                 <div className='home-listings-title'>San Francisco</div>
               </Link>
             </li>
 
             <li>
               <Link to='listings/Oakland, CA'>
-                <img src={'/images/haunted_house.jpg'} height='300' width='330' />
+                <img src={'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811043/haunted_house_n82nxu.jpg'} height='300' width='330' />
                 <div className='home-listings-title'>Oakland</div>
               </Link>
             </li>
 
             <li>
               <Link to='listings/Berkeley, CA'>
-                <img src={'/images/hand.jpg'} height='300' width='330' />
+                <img src={'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811041/hand_aiul9s.jpg'} height='300' width='330' />
                 <div className='home-listings-title'>Berkeley</div>
               </Link>
             </li>
 
             <li>
               <Link to='listings/Marin County, CA'>
-                <img src={'/images/castle.jpg'} height='300' width='330' />
+                <img src={'http://res.cloudinary.com/dn7rukqow/image/upload/v1447794108/imes6dcn5dj7iyteb9pq.jpg'} height='300' width='330' />
                 <div className='home-listings-title'>Marin</div>
               </Link>
             </li>
 
             <li>
               <Link to='listings/Daly City, CA'>
-                <img src={'/images/cemetary3.jpg'} height='300' width='330' />
+                <img src={'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811054/cemetary3_ymuh4q.jpg'} height='300' width='330' />
                 <div className='home-listings-title'>Daly City</div>
               </Link>
             </li>
 
             <li>
               <Link to='listings/South San Francisco, CA'>
-                <img src={'/images/southsanfran.jpg'} height='300' width='330' />
+                <img src={'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811049/southsanfran_g2wdpg.jpg'} height='300' width='330' />
                 <div className='home-listings-title'>South San Francisco</div>
               </Link>
             </li>

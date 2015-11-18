@@ -50,26 +50,3 @@ Reservation.create!(listing_id: 3, check_in: Date.today,
 Reservation.create!(listing_id: 1, check_in: Date.new(2015,11,27), check_out: Date.new(2015,11,29),
   guest_id: 2, status: "approved"
 )
-
-ListingRating.create!(reservation_id: 1, review: "mike reviewing boogys first place",
-  creepiness: 5
-)
-ListingRating.create!(reservation_id: 2, review: "mike reviewing boogys second place",
-  creepiness: 5
-)
-ListingRating.create!(reservation_id: 3, review: "casper reviewing boogys second place",
-  creepiness: 1
-)
-
-UserRating.create!(reservation_id: 1, review: "boogy reviewing mike",
-  creepiness: 5
-)
-UserRating.create!(reservation_id: 2, review: "boogy reviewing mike again",
-  creepiness: 5
-)
-UserRating.create!(reservation_id: 3, review: "boogy reviewing casper",
-  creepiness: 5
-)
-
-Message.create!(from_user: 1, to_user: 2, title: "boogy to casper")
-Message.create!(from_user: 2, to_user: 1, title: "casper to boogy")
