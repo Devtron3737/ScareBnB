@@ -1,11 +1,20 @@
 var ListingsIndex = React.createClass({
   componentDidMount: function () {
-    // console.log(this.props.params.search);
+    SearchStore.addDateChangeListener(this._onDateChange)
+  },
+
+  componentWillUnmount: function () {
+    SearchStore.removeDateChangeListener(this._onDateChange)
   },
 
   handleDateChange: function (type, date) {
     SearchActions.dateChange(type, date)
   },
+
+  _onDateChange: function () {
+    var dates = SearchStore.getDates()
+
+  }
 
   render: function () {
     // <Dates checkIn={this.props.query.checkin}
