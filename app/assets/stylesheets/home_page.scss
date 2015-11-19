@@ -95,8 +95,9 @@
   left: calc(50% - 960px/2);
   top: calc(50% - 20px);
   background: rgba(252, 252, 253, 1); //airbnb offwhite
-  border-top-left-radius: 3%;
-  border-bottom-left-radius: 3%;
+  // border-top-left-radius: 3%;
+  // border-bottom-left-radius: 3%;
+  // border-radius: 7%;
 }
 
 
@@ -128,8 +129,8 @@
 
 #home-search-button {
   float: left;
-  border-top-right-radius: 3%;
-  border-bottom-right-radius: 3%;
+  border-top-right-radius: 7%;
+  border-bottom-right-radius: 7%;
 }
 
 .home-content {

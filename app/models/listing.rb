@@ -56,7 +56,7 @@ class Listing < ActiveRecord::Base
           AND
           listings.lat < :north AND listings.lat > :south
           AND
-          listings.lng < :east AND listings.lng > :west
+          listings.lng > :east AND listings.lng < :west
         ",
         {
           north: options[:north],

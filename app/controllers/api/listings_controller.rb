@@ -4,11 +4,12 @@ class Api::ListingsController < ApplicationController
     #   north: params[:north].to_f,
     #   east: params[:east].to_f,
     #   south: params[:south].to_f,
-    #   west: params[:west].to_f
-    #   check_in: params[:check_in]
+    #   west: params[:west].to_f,
+    #   check_in: params[:check_in],
     #   check_out: params[:check_out]
     # }
-
+    #
+    # @listings = Listing.filter_listings(options)
     @listings = Listing.filter_listings(listing_params)
 
   end
@@ -49,7 +50,7 @@ class Api::ListingsController < ApplicationController
     params.permit(
       :title, :toe_nails, :lat, :lng,
       :address, :ghost_id, :amenities,
-      :description, :check_in, :check_out
+      :description, :check_in, :check_out,
       :north, :east, :south, :west
     )
   end
