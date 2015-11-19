@@ -32,39 +32,40 @@ class Listing < ActiveRecord::Base
     has_many :ratings, through: :reservations, source: :listing_ratings
 
     def self.map_listings(options = {})
-      # options should include north_lat, east_lng, south_lat, west_lng
-                              # check_in and check_out
-      # test with Listing.map_listings(45,-90,30,-97)
-
-      # .joins(:reservations) (add that before .where)
-      Listing.where([
-        "lat < :north AND lat > :south
-        AND
-        lng > :east AND lng < :west",
+      Listing.find_by_sql([
+        "
+          SELECT
+          listings.*
+          FROM
+          listings
+          LEFT OUTER JOIN
+            (
+              SELECT
+              conflicting_listings.*
+              FROM
+              listings AS conflicting_listings
+              JOIN
+              reservations ON conflicting_listings.id = reservations.listing_id
+              WHERE
+              (check_in >= :check_in AND check_in <= :check_out)
+              OR
+              (check_out >= :check_in AND check_out <= :check_out)
+            ) AS conflicts ON listings.id = conflicts.id
+          WHERE
+          conflicts.id IS NULL
+          AND
+          listings.lat < :north AND listings.lat > :south
+          AND
+          listings.lng < :east AND listings.lng > :west
+        ",
         {
           north: options[:north],
           south: options[:south],
           east: options[:east],
-          west: options[:west]
+          west: options[:west],
+          check_in: options[:check_in],
+          check_out: options[:check_out]
         }
       ])
-      # .filter_by_dates(options[check_in], options[check_out])
-
-      # add join for listing pics and user pic
-
-      # add method that filters listings for only ones that are available those dates
     end
-
-    def filter_by_dates(check_in, check_out)
-      # this should query existing results with where
-      self.where([
-        "
-        "
-        ])
-    end
-
-    def avg_creepiness
-      self.ratings.average(:creepiness).to_i
-    end
-
 end

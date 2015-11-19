@@ -186,9 +186,9 @@ Picture.create!(listing_id: 22, url: 'http://res.cloudinary.com/dn7rukqow/image/
 Picture.create!(listing_id: 23, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811041/deathstar_uqekj0.jpg')
 
 
-
-Reservation.create!(listing_id: 1, check_in: Date.today,
-  check_out: Date.tomorrow, guest_id: 4, status: "approved"
+# check_in: Date.new(2015,12,18), check_out: Date.new(2015,12,21))
+Reservation.create!(listing_id: 1, check_in: Date.new(2015,12,18),
+  check_out: Date.new(2015,12,21), guest_id: 4, status: "approved"
 )
 Reservation.create!(listing_id: 2, check_in: Date.today,
   check_out: Date.tomorrow, guest_id: 4, status: "approved"
