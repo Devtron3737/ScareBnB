@@ -31,7 +31,7 @@ class Listing < ActiveRecord::Base
     has_many :reservations
     has_many :ratings, through: :reservations, source: :listing_ratings
 
-    def self.map_listings(options = {})
+    def self.filter_listings(options = {})
       Listing.find_by_sql([
         "
           SELECT

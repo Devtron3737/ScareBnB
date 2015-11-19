@@ -1,13 +1,16 @@
 class Api::ListingsController < ApplicationController
   def index
-    coords = {
-      north: params[:north].to_f,
-      east: params[:east].to_f,
-      south: params[:south].to_f,
-      west: params[:west].to_f
-    }
-    @listings = Listing.map_listings(coords)
-    # @listings = Listing.all
+    # options = {
+    #   north: params[:north].to_f,
+    #   east: params[:east].to_f,
+    #   south: params[:south].to_f,
+    #   west: params[:west].to_f
+    #   check_in: params[:check_in]
+    #   check_out: params[:check_out]
+    # }
+
+    @listings = Listing.filter_listings(listing_params)
+
   end
 
   def show
@@ -44,8 +47,10 @@ class Api::ListingsController < ApplicationController
 
   def listing_params
     params.permit(
-      :title, :toe_nails, :lat, :lng, :address,
-      :ghost_id, :amenities, :description
+      :title, :toe_nails, :lat, :lng,
+      :address, :ghost_id, :amenities,
+      :description, :check_in, :check_out
+      :north, :east, :south, :west
     )
   end
 end
