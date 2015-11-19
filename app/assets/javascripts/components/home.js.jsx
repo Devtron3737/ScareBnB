@@ -15,11 +15,24 @@ var Home = React.createClass({
   handleSubmit: function () {
     event.preventDefault();
 
-    var value = document.getElementById('home-search-field').value;
-    this.history.pushState(null, '/listings/' + value);
+    var address = document.getElementById('home-search-field').value;
+    var dateQuery = {
+      check_in: this.check_in,
+      check_out: this.check_out
+    }
+
+    this.history.pushState(null, '/listings/' + address, dateQuery);
     // need to encompass searchfield, guests, and dates
     // in same <form>. then setup defaults if things are
     // empty
+  },
+
+  onDateChange: function (type, date) {
+    if (type === "check_in") {
+      this.check_in = date
+    } else if (type === "check_out") {
+      this.check_out = date
+    }
   },
 
   render: function () {
@@ -52,8 +65,8 @@ var Home = React.createClass({
               <div id='home-searchbar-container'>
                 <span className='home-searchbar'>
                   <input className='searchbar-items' id='home-search-field' type='text' placeholder='Where do you want to go?'></input>
-                  <DateField type='check_in' />
-                  <DateField type='check_out' />
+                  <DateField onChangeCallback={this.onDateChange} type='check_in' />
+                  <DateField onChangeCallback={this.onDateChange} type='check_out' />
                   <div className='searchbar-items guests'>
                     <select name='guests'>
                       <option value="1" >1 Guest</option>

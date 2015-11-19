@@ -5,8 +5,7 @@ var DateField = React.createClass({
 
   handleChange: function () {
     this.setState({value: event.target.value});
-
-    // create action to retrieve new listings
+    this.props.onChangeCallback(this.props.type, this.state.value)
   },
 
   render: function () {
