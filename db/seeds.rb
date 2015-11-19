@@ -76,87 +76,87 @@ Listing.create!(ghost_id: 2, toe_nails: 302, title: "The hauntedest of the haunt
   amenities: JSON.generate(["stuff"]), lat: 37.763782, lng: -122.476104
 )
 
-Listing.create!(ghost_id: 4, toe_nails: 32, title: "The hauntedest of the haunted",
+Listing.create!(ghost_id: 4, toe_nails: 32, title: "I wonder what's behind that door...",
   address: "535 Florida St., San Francsico, CA", description: "Caspers second place",
   amenities: JSON.generate(["stuff"]), lat: 37.762808, lng: -122.411190
 )
 
-Listing.create!(ghost_id: 5, toe_nails: 35, title: "The hauntedest of the haunted",
+Listing.create!(ghost_id: 5, toe_nails: 35, title: "Did you hear that? ",
   address: "1298 Howard St., San Francsico, CA", description: "Caspers second place",
   amenities: JSON.generate(["stuff"]), lat: 37.775699, lng: -122.413250
 )
 
-Listing.create!(ghost_id: 6, toe_nails: 77, title: "The hauntedest of the haunted",
+Listing.create!(ghost_id: 6, toe_nails: 77, title: "Plenty of things that go bump in the night",
   address: "653 Minna St., San Francsico, CA", description: "Caspers second place",
   amenities: JSON.generate(["stuff"]), lat: 37.763782, lng: -122.476104
 )
 
-Listing.create!(ghost_id: 7, toe_nails: 102, title: "The hauntedest of the haunted",
+Listing.create!(ghost_id: 7, toe_nails: 102, title: "Ghouls, goblins, and zombies",
   address: "1452 Willard St., San Francsico, CA", description: "Caspers second place",
   amenities: JSON.generate(["stuff"]), lat: 37.763351, lng: -122.453933
 )
 
-Listing.create!(ghost_id: 8, toe_nails: 542, title: "The hauntedest of the haunted",
+Listing.create!(ghost_id: 8, toe_nails: 542, title: "You don't want to know what happened here",
   address: "184 20th Ave., San Francsico, CA", description: "Caspers second place",
   amenities: JSON.generate(["stuff"]), lat: 37.784382, lng: -122.479339
 )
 
-Listing.create!(ghost_id: 9, toe_nails: 22, title: "The hauntedest of the haunted",
+Listing.create!(ghost_id: 9, toe_nails: 22, title: "Beware of demon",
   address: "1740 Buchanan St., San Francsico, CA", description: "Caspers second place",
   amenities: JSON.generate(["stuff"]), lat: 37.786256 , lng: -122.429827
 )
 
-Listing.create!(ghost_id: 10, toe_nails: 876, title: "The hauntedest of the haunted",
+Listing.create!(ghost_id: 10, toe_nails: 876, title: "Gate of hell in basement",
   address: "1008 Pacific Ave, San Francsico, CA", description: "Caspers second place",
   amenities: JSON.generate(["stuff"]), lat: 37.796152, lng: -122.412128
 )
 
-Listing.create!(ghost_id: 11, toe_nails: 43, title: "The hauntedest of the haunted",
+Listing.create!(ghost_id: 11, toe_nails: 43, title: "Not one survivor yet",
   address: "1066 Filbert St., San Francsico, CA", description: "Caspers second place",
   amenities: JSON.generate(["stuff"]), lat: 37.800638, lng: -122.417137
 )
 
-Listing.create!(ghost_id: 12, toe_nails: 894, title: "The hauntedest of the haunted",
+Listing.create!(ghost_id: 12, toe_nails: 894, title: "Perfect place to rest for eternity",
   address: "3830 22nd St., San Francsico, CA", description: "Caspers second place",
   amenities: JSON.generate(["stuff"]), lat: 37.754712, lng: -122.433500
 )
 
-Listing.create!(ghost_id: 13, toe_nails: 21, title: "The hauntedest of the haunted",
+Listing.create!(ghost_id: 13, toe_nails: 21, title: "An evil spirits delight",
   address: "598 Fulton St., San Francsico, CA", description: "Caspers second place",
   amenities: JSON.generate(["stuff"]), lat: 37.778470, lng: -122.426488
 )
 
-Listing.create!(ghost_id: 14, toe_nails: 266, title: "The hauntedest of the haunted",
+Listing.create!(ghost_id: 14, toe_nails: 266, title: "Muahahahahaha",
   address: "69 Mary St., San Francsico, CA", description: "Caspers second place",
   amenities: JSON.generate(["stuff"]), lat: 37.781638, lng: -122.406451
 )
 
-Listing.create!(ghost_id: 15, toe_nails: 342, title: "The hauntedest of the haunted",
+Listing.create!(ghost_id: 15, toe_nails: 342, title: "Who is that in the window?",
   address: "2149 Oregon St., Berkeley, CA", description: "Caspers second place",
   amenities: JSON.generate(["stuff"]), lat: 37.858006, lng: -122.264804
 )
 
-Listing.create!(ghost_id: 16, toe_nails: 897, title: "The hauntedest of the haunted",
+Listing.create!(ghost_id: 16, toe_nails: 897, title: "Chainsaw out back",
   address: "2608 9th St., Berkeley, CA", description: "Caspers second place",
   amenities: JSON.generate(["stuff"]), lat: 37.858277, lng: -122.291240
 )
 
-Listing.create!(ghost_id: 17, toe_nails: 133, title: "The hauntedest of the haunted",
+Listing.create!(ghost_id: 17, toe_nails: 133, title: "You'll never make it out alive",
   address: "55 Montell St., Oakland, CA", description: "Caspers second place",
   amenities: JSON.generate(["stuff"]), lat: 37.823980, lng: -122.253474
 )
 
-Listing.create!(ghost_id: 18, toe_nails: 543, title: "The hauntedest of the haunted",
+Listing.create!(ghost_id: 18, toe_nails: 543, title: "A monsters mash",
   address: "2430 Poplar St., Oakland, CA", description: "Caspers second place",
   amenities: JSON.generate(["stuff"]), lat: 37.818285, lng: -122.285918
 )
 
-Listing.create!(ghost_id: 19, toe_nails: 133, title: "The hauntedest of the haunted",
+Listing.create!(ghost_id: 19, toe_nails: 133, title: "Ahhhhh!",
   address: "450 Stow Ave., Oakland, CA", description: "Caspers second place",
   amenities: JSON.generate(["stuff"]), lat: 37.803502, lng: -122.250899
 )
 
-Listing.create!(ghost_id: 20, toe_nails: 111, title: "The hauntedest of the haunted",
+Listing.create!(ghost_id: 20, toe_nails: 111, title: "Beware of full moon",
   address: "110 Frisbie St., Oakland, CA", description: "Caspers second place",
   amenities: JSON.generate(["stuff"]), lat: 37.818963, lng: -122.259139
 )
