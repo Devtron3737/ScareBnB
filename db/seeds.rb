@@ -156,7 +156,7 @@ Listing.create!(ghost_id: 19, toe_nails: 133, title: "Ahhhhh!",
   amenities: JSON.generate(["stuff"]), lat: 37.803502, lng: -122.250899
 )
 
-Listing.create!(ghost_id: 20, toe_nails: 111, title: "Beware of full moon",
+Listing.create!(ghost_id: 20, toe_nails: 111, title: "Concede to the dark side",
   address: "110 Frisbie St., Oakland, CA", description: "Caspers second place",
   amenities: JSON.generate(["stuff"]), lat: 37.818963, lng: -122.259139
 )
