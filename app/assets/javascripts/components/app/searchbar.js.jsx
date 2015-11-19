@@ -21,7 +21,7 @@ var SearchBar = React.createClass({
 
     if (!this.props.search.indexPage) {
       var searchQuery =  document.getElementById('search-field');
-      this.history.pushState(null, '/listings/' + searchQuery.value, );
+      this.history.pushState(null, '/listings/' + searchQuery.value);
       return;
     }
 

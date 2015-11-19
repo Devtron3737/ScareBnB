@@ -6,22 +6,25 @@ var ListingsIndex = React.createClass({
   render: function () {
     // <Dates checkIn={this.props.query.checkin}
     //        checkOut={this.props.query.checkOut}
-    //        guests={this.props.query.guests}
     // />
+    console.log('in listing index')
+    console.log(this.props.params.check_in)
 
     var options = {
       indexPage: true,
-      place: this.props.params.search
+      place: this.props.params.search,
+      check_in: this.props.params.check_in,
+      check_out: this.props.params.check_out
     };
 
     return(
       <div>
         <NavBar search={options} />
         <div className='listing-contents clearfix' >
-          <Dates />
+          <Dates search={options} />
           <ListingsList />
         </div>
-        <Map />
+        <Map  search={options} />
       </div>
     );
   }
