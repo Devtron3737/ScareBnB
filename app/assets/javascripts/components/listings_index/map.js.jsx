@@ -47,7 +47,6 @@ var Map = React.createClass({
     //get bounds while also updating this.map
     var bounds = this.retrieveBounds(place);
     //format for ajax request
-    console.log(bounds);
     var formattedBounds = this.formatBounds(bounds);
 
     this.setState({
