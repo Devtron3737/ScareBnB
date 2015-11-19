@@ -16,9 +16,7 @@ var ManageReservationsBlock = React.createClass({
           <div>{reservation.listing.title}</div>
           <div>
             {
-              reservation.listing.address + sep +
-              reservation.listing.city + sep +
-              reservation.listing.state
+              reservation.listing.address
             }
           </div>
         </div>
