@@ -21,7 +21,15 @@ var ListingsIndex = React.createClass({
       <div>
         <NavBar search={options} />
         <div className='listing-contents clearfix' >
-          <Dates search={options} />
+
+          <div className='dates clearfix'>
+            <div id='dates-title'>Dates</div>
+            <div className='dates-list clearfix'>
+              <DateField type='check_in' />
+              <DateField type='check_out' />
+            </div>
+          </div>
+
           <ListingsList />
         </div>
         <Map  search={options} />
