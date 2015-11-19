@@ -1,7 +1,7 @@
 ( function (root) {
   var SearchActions = root.SearchActions = {
     mapMoved: function (options) {
-      
+
       options.check_in = options.check_in || DateUtil.getDefault("check_in")
       options.check_out = options.check_out || DateUtil.getDefault("check_out")
 
@@ -24,11 +24,21 @@
       });
     },
 
-    searchValue: function (value) {
+    // searchValue: function (value) {
+    //   Dispatcher.dispatch({
+    //     actionType: 'search_value',
+    //     searchValue: value
+    //   });
+    // },
+
+    dateChange: function (type, date) {
       Dispatcher.dispatch({
-        actionType: 'search_value',
-        searchValue: value
-      });
+        actionType: "date_change",
+        payLoad: {
+          type: type,
+          date: date
+        }
+      })
     },
 
     dispatchListings: function (listings) {

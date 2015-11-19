@@ -4,9 +4,14 @@
       _place = {lat: 0, lng: 0},
       _searchValue = "",
       _listingShow = {},
+      _dates = {
+        check_in: DateUtil.getDefault("check_in"),
+        check_out: DateUtil.getDefault("check_out")
+      },
       LISTINGS_CHANGE = "listings_change",
       PLACE_CHANGE = "place_change",
-      LISTING_SHOW_CHANGE = "listing_show_change";
+      LISTING_SHOW_CHANGE = "listing_show_change",
+      DATE_CHANGE = "date_change";
 
   var SearchStore = root.SearchStore = $.extend(
     {},
@@ -20,11 +25,14 @@
           case 'place_search':
             SearchStore.updatePlace(payLoad.place);
             break;
-          case 'search_value':
-            SearchStore.updateSearchValue(payLoad.searchValue);
-            break;
+          // case 'search_value':
+          //   SearchStore.updateSearchValue(payLoad.searchValue);
+          //   break;
           case 'listing_show':
             SearchStore.updateListingShow(payLoad.listing);
+            break;
+          case 'date_change':
+            SearchStore.updateDates(payLoad.type, payLoad.date);
             break;
         }
       }),
@@ -48,16 +56,16 @@
         return placeDup;
       },
 
-      getSearchValue: function () {
-        return _searchValue.slice();
-      },
+      // getSearchValue: function () {
+      //   return _searchValue.slice();
+      // },
 
       getListingShow: function () {
         var listing = {};
         for (var j in _listingShow) {
           listing[j] = _listingShow[j];
         }
-        
+
         return listing;
       },
 
@@ -72,14 +80,24 @@
         this.emit(PLACE_CHANGE);
       },
 
-      updateSearchValue: function (value) {
-        _searchValue = value;
-      },
+      // updateSearchValue: function (value) {
+      //   _searchValue = value;
+      // },
 
       updateListingShow: function (listing) {
         _listingShow = listing;
 
         this.emit(LISTING_SHOW_CHANGE);
+      },
+
+      updateDates: function (type, date) {
+        if (type === "check_in") {
+          _dates.check_in = date;
+        } else {
+          _dates.check_out = date;
+        }
+
+        this.emit(DATE_CHANGE);
       },
 
       addListingsChangeListener: function (callback) {
@@ -94,6 +112,10 @@
         this.on(LISTING_SHOW_CHANGE, callback);
       },
 
+      addDateChangeListener: function (callback) {
+        this.on(DATE_CHANGE, callback);
+      },
+
       removeListingsChangeListener: function (callback) {
         this.removeListener(LISTINGS_CHANGE, callback);
       },
@@ -104,6 +126,10 @@
 
       removeListingShowChangeListener: function (callback) {
         this.removeListener(LISTING_SHOW_CHANGE, callback);
+      },
+
+      removeDateChangeListener: function (callback) {
+        this.removeListener(DATE_CHANGE, callback);
       }
     }
   );

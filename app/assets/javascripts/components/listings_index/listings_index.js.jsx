@@ -3,6 +3,10 @@ var ListingsIndex = React.createClass({
     // console.log(this.props.params.search);
   },
 
+  handleDateChange: function (type, date) {
+    SearchActions.dateChange(type, date)
+  },
+
   render: function () {
     // <Dates checkIn={this.props.query.checkin}
     //        checkOut={this.props.query.checkOut}
@@ -25,8 +29,8 @@ var ListingsIndex = React.createClass({
           <div className='dates clearfix'>
             <div id='dates-title'>Dates</div>
             <div className='dates-list clearfix'>
-              <DateField type='check_in' />
-              <DateField type='check_out' />
+              <DateField onChangeCallback={this.handleDateChange} type='check_in' />
+              <DateField onChangeCallback={this.handleDateChange} type='check_out' />
             </div>
           </div>
 
