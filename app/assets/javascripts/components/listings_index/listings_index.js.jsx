@@ -1,10 +1,10 @@
 var ListingsIndex = React.createClass({
 
-  handleDatesChange: function (check_in, check_out) {
+  handleDatesChange: function (checkIn, checkOut) {
     console.log('in index handleDateChange')
     var dates = {
-      check_in: check_in,
-      check_out: check_out
+      checkIn: checkIn,
+      checkOut: checkOut
     }
 
     SearchActions.dateChange(dates)
@@ -22,13 +22,13 @@ var ListingsIndex = React.createClass({
     //        checkOut={this.props.query.checkOut}
     // />
     // console.log('in listing index')
-    // console.log(this.props.params.check_in)
+    // console.log(this.props.params.checkIn)
 
     var options = {
       indexPage: true,
       place: this.props.params.search,
-      // check_in: this.props.params.check_in,
-      // check_out: this.props.params.check_out
+      // checkIn: this.props.params.checkIn,
+      // checkOut: this.props.params.checkOut
     };
 
     return(

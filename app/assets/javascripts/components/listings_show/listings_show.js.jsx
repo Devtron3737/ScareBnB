@@ -10,8 +10,23 @@ var ListingsShow = React.createClass({
     SearchActions.fetchListing(listingId)
   },
 
-  componenetWillUnmount: function () {
+  componentWillUnmount: function () {
     SearchStore.removeListingShowChangeListener(this._onChange)
+  },
+
+  handleDatesChange: function (checkIn, checkOut) {
+    this.checkIn = checkIn
+    this.checkOut = checkOut
+  },
+
+  handleReserve: function () {
+    reservationDetails = {
+      listingId: this.state.listing.id,
+      checkIn: this.checkIn,
+      checkOut: this.checkOut
+    }
+
+    ManageActions.createReservation()
   },
 
   _onChange: function () {
@@ -76,8 +91,7 @@ var ListingsShow = React.createClass({
                     </div>
                   </div>
 
-                  <DateField type='check_in' />
-                  <DateField type='check_out' />
+                  <Dates onChangeCallback={this.handleDatesChange} />
                   <button onClick={this.handleReserve}
                           className='button'
                           id='listing-show-reserve-button'
