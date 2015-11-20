@@ -1,10 +1,13 @@
 var ListingsIndex = React.createClass({
 
-  handleDatesChange: function (type, date) {
+  handleDatesChange: function (check_in, check_out) {
     console.log('in index handleDateChange')
-    console.log(type)
-    console.log(date)
-    SearchActions.dateChange(type, date)
+    var dates = {
+      check_in: check_in,
+      check_out: check_out
+    }
+
+    SearchActions.dateChange(dates)
     // adjust flux to handle who dates object
     // instead of just one dates
   },

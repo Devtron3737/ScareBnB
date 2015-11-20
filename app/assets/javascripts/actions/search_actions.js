@@ -31,13 +31,10 @@
     //   });
     // },
 
-    dateChange: function (type, date) {
+    dateChange: function (dates) {
       Dispatcher.dispatch({
         actionType: "date_change",
-        dateInfo: {
-          type: type,
-          date: date
-        }
+        dates: dates
       })
     },
 

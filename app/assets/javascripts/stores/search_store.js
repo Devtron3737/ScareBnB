@@ -32,12 +32,14 @@
             SearchStore.updateListingShow(payLoad.listing);
             break;
           case 'date_change':
-            SearchStore.updateDates(payLoad.dateInfo.type, payLoad.dateInfo.date);
+            SearchStore.updateDates(payLoad.dates);
             break;
         }
       }),
 
       getListings: function () {
+        console.log('gets listing called')
+        console.log(_dates)
         var listings = {}
         for (var i in _listings) {
           listings[i] = _listings[i]
@@ -57,6 +59,8 @@
       },
 
       getDates: function () {
+        console.log('gets dates called')
+        console.log(_dates)
         var datesDup = {};
 
         for (var date in _dates) {
@@ -100,13 +104,11 @@
         this.emit(LISTING_SHOW_CHANGE);
       },
 
-      updateDates: function (type, date) {
-        if (type === "check_in") {
-          _dates.check_in = date;
-        } else {
-          _dates.check_out = date;
-        }
+      updateDates: function (dates) {
+        console.log('updating dates')
 
+        _dates = dates;
+        console.log(_dates)
         this.emit(DATE_CHANGE);
       },
 

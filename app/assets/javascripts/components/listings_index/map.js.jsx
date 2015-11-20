@@ -58,6 +58,9 @@ var Map = React.createClass({
         formattedBounds = this.formatBounds(bounds),
         options = {};
 
+        console.log('in map')
+        console.log(dates)
+
     $.extend(options, dates, formattedBounds);
     console.log('in map getting bounds and dates')
     console.log(options);
