@@ -2,8 +2,10 @@ class Api::ReservationsController < ApplicationController
   def create
     reservation = Reservation.new(reservation_params)
 
-    reservation.save!
-
+    reservation_id = reservation.save!
+    @reservation = Reservation.find(reservation_id)
+    
+    render json: @reservation
     # if reservation.save
     #   # cool
     # else
