@@ -1,33 +1,29 @@
 var ListingsIndex = React.createClass({
-  componentDidMount: function () {
-    SearchStore.addDateChangeListener(this._onDateChange)
-  },
-
-  componentWillUnmount: function () {
-    SearchStore.removeDateChangeListener(this._onDateChange)
-  },
 
   handleDateChange: function (type, date) {
+    console.log('in index handleDateChange')
+    console.log(type)
+    console.log(date)
     SearchActions.dateChange(type, date)
   },
 
   _onDateChange: function () {
     var dates = SearchStore.getDates()
 
-  }
+  },
 
   render: function () {
     // <Dates checkIn={this.props.query.checkin}
     //        checkOut={this.props.query.checkOut}
     // />
-    console.log('in listing index')
-    console.log(this.props.params.check_in)
+    // console.log('in listing index')
+    // console.log(this.props.params.check_in)
 
     var options = {
       indexPage: true,
       place: this.props.params.search,
-      check_in: this.props.params.check_in,
-      check_out: this.props.params.check_out
+      // check_in: this.props.params.check_in,
+      // check_out: this.props.params.check_out
     };
 
     return(

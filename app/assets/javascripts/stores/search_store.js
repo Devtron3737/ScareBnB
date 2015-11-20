@@ -5,8 +5,8 @@
       _searchValue = "",
       _listingShow = {},
       _dates = {
-        check_in: DateUtil.getDefault("check_in"),
-        check_out: DateUtil.getDefault("check_out")
+        check_in: "",
+        check_out: ""
       },
       LISTINGS_CHANGE = "listings_change",
       PLACE_CHANGE = "place_change",
@@ -32,7 +32,7 @@
             SearchStore.updateListingShow(payLoad.listing);
             break;
           case 'date_change':
-            SearchStore.updateDates(payLoad.type, payLoad.date);
+            SearchStore.updateDates(payLoad.dateInfo.type, payLoad.dateInfo.date);
             break;
         }
       }),
@@ -54,6 +54,16 @@
         }
 
         return placeDup;
+      },
+
+      getDates: function () {
+        var datesDup = {};
+
+        for (var date in _dates) {
+          datesDup[date] = _dates[date];
+        }
+
+        return datesDup;
       },
 
       // getSearchValue: function () {
@@ -104,32 +114,26 @@
         this.on(LISTINGS_CHANGE, callback);
       },
 
-      addPlaceChangeListener: function (callback) {
+      addSearchChangeListener: function (callback) {
         this.on(PLACE_CHANGE, callback);
+        this.on(DATE_CHANGE, callback)
       },
 
       addListingShowChangeListener: function (callback) {
         this.on(LISTING_SHOW_CHANGE, callback);
       },
 
-      addDateChangeListener: function (callback) {
-        this.on(DATE_CHANGE, callback);
-      },
-
       removeListingsChangeListener: function (callback) {
         this.removeListener(LISTINGS_CHANGE, callback);
       },
 
-      removePlaceChangeListener: function (callback) {
+      removeSearchChangeListener: function (callback) {
         this.removeListener(PLACE_CHANGE, callback);
+        this.removeListener(DATE_CHANGE, callback);
       },
 
       removeListingShowChangeListener: function (callback) {
         this.removeListener(LISTING_SHOW_CHANGE, callback);
-      },
-
-      removeDateChangeListener: function (callback) {
-        this.removeListener(DATE_CHANGE, callback);
       }
     }
   );

@@ -1,4 +1,4 @@
-var DateUtil = {
+window.DateUtil = {
   getDefault: function (type) {
     var today = new Date();
     var day = today.getDate();

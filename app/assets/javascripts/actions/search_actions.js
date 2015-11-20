@@ -34,7 +34,7 @@
     dateChange: function (type, date) {
       Dispatcher.dispatch({
         actionType: "date_change",
-        payLoad: {
+        dateInfo: {
           type: type,
           date: date
         }

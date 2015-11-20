@@ -21,14 +21,15 @@ var Map = React.createClass({
     var place = SearchStore.getPlace();
     this.retrieveBounds(place);
 
-    SearchStore.addPlaceChangeListener(this._onPlaceChange);
+    SearchStore.addSearchChangeListener(this._onSearchChange);
     SearchStore.addListingsChangeListener(this._onListingsChange);
     this.listenForIdle();
   },
 
   componentWillUnmount: function () {
-    SearchStore.removePlaceChangeListener(this._onPlaceChange);
+    SearchStore.removeSearchChangeListener(this._onSearchChange);
     SearchStore.removeListingsChangeListener(this._onListingsChange);
+    SearchStore.removeDateChangeListener(this._onDateChange);
   },
 
   listenForIdle: function () {
@@ -42,18 +43,32 @@ var Map = React.createClass({
     });
   },
 
-  _onPlaceChange: function () {
-    var place = SearchStore.getPlace();
+  _onListingsChange: function () {
+    this.removeCurrentMarkers();
+    var listings = SearchStore.getListings();
+    console.log('in map getting listings')
+    console.log(listings)
+    this.dropListingMarkers(listings);
+  },
+
+  _onSearchChange: function () {
+    var place = SearchStore.getPlace(),
+        dates = SearchStore.getDates(),
     //get bounds while also updating this.map
-    var bounds = this.retrieveBounds(place);
-    //format for ajax request
-    var formattedBounds = this.formatBounds(bounds);
+        bounds = this.retrieveBounds(place),
+    //format bounds for ajax request
+        formattedBounds = this.formatBounds(bounds),
+        options = {};
+
+    $.extend(options, dates, formattedBounds);
+    console.log('in map getting bounds and dates')
+    console.log(options);
 
     this.setState({
       center: place
     });
     // ajax request in the action
-    SearchActions.mapMoved(formattedBounds);
+    // SearchActions.mapMoved(options);
   },
 
   retrieveBounds: function (place) {
@@ -82,14 +97,6 @@ var Map = React.createClass({
         west: parseFloat(boundsArr[3])
       }
     );
-  },
-
-  _onListingsChange: function () {
-    this.removeCurrentMarkers();
-    var listings = SearchStore.getListings();
-    console.log('in map')
-    console.log(listings)
-    this.dropListingMarkers(listings);
   },
 
   removeCurrentMarkers: function () {

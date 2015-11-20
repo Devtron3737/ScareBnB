@@ -18,7 +18,7 @@ var Home = React.createClass({
     event.preventDefault();
 
     var search = document.getElementById('home-search-field').value,
-        path = '/listings/' + search + '/',
+        path = '/listings/' + search + '/';
         // dateQuery = {
         //   check_in: this.check_in,
         //   check_out: this.check_out
