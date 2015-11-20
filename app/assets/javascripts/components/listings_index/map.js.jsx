@@ -29,7 +29,7 @@ var Map = React.createClass({
   componentWillUnmount: function () {
     SearchStore.removeSearchChangeListener(this._onSearchChange);
     SearchStore.removeListingsChangeListener(this._onListingsChange);
-    SearchStore.removeDateChangeListener(this._onDateChange);
+
   },
 
   listenForIdle: function () {
@@ -46,8 +46,6 @@ var Map = React.createClass({
   _onListingsChange: function () {
     this.removeCurrentMarkers();
     var listings = SearchStore.getListings();
-    console.log('in map getting listings')
-    console.log(listings)
     this.dropListingMarkers(listings);
   },
 
@@ -68,7 +66,7 @@ var Map = React.createClass({
       center: place
     });
     // ajax request in the action
-    // SearchActions.mapMoved(options);
+    SearchActions.mapMoved(options);
   },
 
   retrieveBounds: function (place) {

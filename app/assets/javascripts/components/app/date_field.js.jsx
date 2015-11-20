@@ -1,11 +1,10 @@
 var DateField = React.createClass({
   getInitialState: function () {
-    return {value: DateUtil.getDefault(this.props.type)};
+    return {value: this.props.date};
   },
 
   handleChange: function () {
-    this.setState({value: event.target.value});
-    this.props.onChangeCallback(this.props.type, this.state.value)
+    this.props.onChangeCallback(this.props.type, event.target.value)
   },
 
   render: function () {

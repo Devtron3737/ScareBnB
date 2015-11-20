@@ -1,10 +1,12 @@
 var ListingsIndex = React.createClass({
 
-  handleDateChange: function (type, date) {
+  handleDatesChange: function (type, date) {
     console.log('in index handleDateChange')
     console.log(type)
     console.log(date)
     SearchActions.dateChange(type, date)
+    // adjust flux to handle who dates object
+    // instead of just one dates
   },
 
   _onDateChange: function () {
@@ -31,13 +33,7 @@ var ListingsIndex = React.createClass({
         <NavBar search={options} />
         <div className='listing-contents clearfix' >
 
-          <div className='dates clearfix'>
-            <div id='dates-title'>Dates</div>
-            <div className='dates-list clearfix'>
-              <DateField onChangeCallback={this.handleDateChange} type='check_in' />
-              <DateField onChangeCallback={this.handleDateChange} type='check_out' />
-            </div>
-          </div>
+          <Dates onChangeCallback={this.handleDatesChange} />
 
           <ListingsList />
         </div>
