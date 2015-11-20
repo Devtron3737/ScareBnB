@@ -37,9 +37,13 @@ var Map = React.createClass({
     //users done dragging through map
     var that = this;
     google.maps.event.addListener(this.map, 'idle', function() {
-      var bounds = that.map.getBounds();
-      var formattedBounds = that.formatBounds(bounds);
-      SearchActions.mapMoved(formattedBounds);
+      var bounds = that.map.getBounds(),
+          formattedBounds = that.formatBounds(bounds),
+          dates = SearchStore.getDates(),
+          options = {}
+
+      $.extend(options, dates, formattedBounds);
+      SearchActions.mapMoved(options);
     });
   },
 

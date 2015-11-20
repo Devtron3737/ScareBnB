@@ -2,8 +2,8 @@
   var SearchActions = root.SearchActions = {
     mapMoved: function (options) {
 
-      options.check_in = options.check_in || DateUtil.getDefault("check_in")
-      options.check_out = options.check_out || DateUtil.getDefault("check_out")
+      options.check_in = options.checkIn || DateUtil.getDefault("checkIn")
+      options.check_out = options.checkOut || DateUtil.getDefault("checkOut")
 
       $.ajax({
         url: '/api/listings.json',

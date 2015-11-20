@@ -5,8 +5,8 @@
       _searchValue = "",
       _listingShow = {},
       _dates = {
-        check_in: "",
-        check_out: ""
+        checkIn: "",
+        checkOut: ""
       },
       LISTINGS_CHANGE = "listings_change",
       PLACE_CHANGE = "place_change",

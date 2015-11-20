@@ -41,6 +41,22 @@
       });
     },
 
+    createReservation: function (reservationDetails) {
+      reservationDetails.check_in = reservationDetails.checkIn || DateUtil.getDefault("checkIn")
+      reservationDetails.check_out = reservationDetails.checkOut || DateUtil.getDefault("checkOut")
+
+      $.ajax({
+        url: '/api/reservations',
+        method: 'POST',
+        dataType: "json",
+        data: reservationDetails,
+        success: function (reservation) {
+          console.log('successful reservation create ajax');
+          console.log(reservation)
+        }
+      });
+    },
+
     dispatchListingUpdate: function (listings) {
       Dispatcher.dispatch({
         actionType: 'delete_listing',

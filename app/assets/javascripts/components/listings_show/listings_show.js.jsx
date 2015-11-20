@@ -20,13 +20,13 @@ var ListingsShow = React.createClass({
   },
 
   handleReserve: function () {
-    reservationDetails = {
+    var reservationDetails = {
       listingId: this.state.listing.id,
       checkIn: this.checkIn,
       checkOut: this.checkOut
     }
 
-    ManageActions.createReservation()
+    ManageActions.createReservation(reservationDetails)
   },
 
   _onChange: function () {
