@@ -20,6 +20,8 @@ var ListingsShow = React.createClass({
   },
 
   handleReserve: function () {
+    console.log('in handleReserve')
+    console.log(this.state.listing)
     var reservationDetails = {
       listingId: this.state.listing.id,
       checkIn: this.checkIn,
@@ -30,6 +32,7 @@ var ListingsShow = React.createClass({
   },
 
   _onChange: function () {
+
     this.setState({
       listing: SearchStore.getListingShow()
     })

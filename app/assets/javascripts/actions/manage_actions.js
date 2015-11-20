@@ -44,6 +44,12 @@
     createReservation: function (reservationDetails) {
       reservationDetails.check_in = reservationDetails.checkIn || DateUtil.getDefault("checkIn")
       reservationDetails.check_out = reservationDetails.checkOut || DateUtil.getDefault("checkOut")
+      reservationDetails.listing_id = reservationDetails.listingId
+      reservationDetails.guest_id = 2
+
+
+      console.log('in createreservation')
+      console.log(reservationDetails)
 
       $.ajax({
         url: '/api/reservations',

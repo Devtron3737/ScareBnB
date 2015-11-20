@@ -62,7 +62,7 @@ class Reservation < ActiveRecord::Base
     if conflicts.empty?
       true
     else
-      errors.add_to_base("dates not available")
+      errors.add(:check_in, "dates not available")
       false
     end
   end
