@@ -2,15 +2,17 @@ class Api::ReservationsController < ApplicationController
   def create
     reservation = Reservation.new(reservation_params)
 
-    reservation_id = reservation.save!
-    @reservation = Reservation.find(reservation_id)
-    
-    render json: @reservation
+    if reservation.save
+
+      render json: {}
+    else
+      render json: {errors: reservation.errors.full_messages}, status: 422
     # if reservation.save
     #   # cool
     # else
     #   # not cool
     # end
+    end
   end
 
   private

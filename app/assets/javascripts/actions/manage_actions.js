@@ -29,14 +29,32 @@
     createListing: function (listingAttrs) {
       console.log('in manage actions')
       console.log(listingAttrs)
+
       $.ajax({
         url: '/api/listings',
         method: 'POST',
         dataType: "json",
         data: listingAttrs,
         success: function () {
-          console.log('successful listing create ajax');
+          sweetAlert({
+            title: "You've created your haunted residence",
+            text: "Unsuspecting guests should be coming soon.",
+            type: "success",
+            allowOutsideClick: true,
+            confirmButtonColor: "#ff4d4d",
+            confirmButtonText: "Perfect..."
+          })
           ManageActions.getUserInfo(listingAttrs.ghost_id);
+        },
+        error: function (xhr) {
+          sweetAlert({
+            title: "You've created your haunted residence",
+            text: "Unsuspecting guests should be coming soon.",
+            type: "success",
+            allowOutsideClick: true,
+            confirmButtonColor: "#ff4d4d",
+            confirmButtonText: "Perfect..."
+          })
         }
       });
     },
@@ -47,18 +65,31 @@
       reservationDetails.listing_id = reservationDetails.listingId
       reservationDetails.guest_id = 2
 
-
-      console.log('in createreservation')
-      console.log(reservationDetails)
-
       $.ajax({
         url: '/api/reservations',
         method: 'POST',
         dataType: "json",
         data: reservationDetails,
         success: function (reservation) {
-          console.log('successful reservation create ajax');
-          console.log(reservation)
+          sweetAlert({
+            title: "How brave of you",
+            text: "You've successfully reserved a very haunted stay",
+            type: "success",
+            allowOutsideClick: true,
+            confirmButtonColor: "#ff4d4d",
+            confirmButtonText: "Ok"
+          })
+        },
+        error: function (xhr, text, errorThrown) {
+
+          sweetAlert({
+            title: "Ahhh!",
+            text: "Sorry, those " + xhr.responseJSON.errors[0].toLowerCase(),
+            type: "error",
+            allowOutsideClick: true,
+            confirmButtonColor: "#ff4d4d",
+            confirmButtonText: "Let me try again"
+          })
         }
       });
     },

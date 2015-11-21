@@ -1,3 +1,4 @@
+json.id @listing.id
 json.toe_nails @listing.toe_nails
 json.ghost_id @listing.ghost_id
 json.amenities @listing.amenities

@@ -21,4 +21,5 @@
 //= require flux
 //= require react-router
 //= require components
+//= sweetalert.min
 //= require_tree .
