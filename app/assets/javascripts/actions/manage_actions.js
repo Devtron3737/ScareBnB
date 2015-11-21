@@ -48,12 +48,12 @@
         },
         error: function (xhr) {
           sweetAlert({
-            title: "You've created your haunted residence",
-            text: "Unsuspecting guests should be coming soon.",
-            type: "success",
+            title: "Somethings not right...",
+            text: xhr.jsonText.errors[0],
+            type: "error",
             allowOutsideClick: true,
             confirmButtonColor: "#ff4d4d",
-            confirmButtonText: "Perfect..."
+            confirmButtonText: "Ok"
           })
         }
       });
@@ -85,6 +85,36 @@
           sweetAlert({
             title: "Ahhh!",
             text: "Sorry, those " + xhr.responseJSON.errors[0].toLowerCase(),
+            type: "error",
+            allowOutsideClick: true,
+            confirmButtonColor: "#ff4d4d",
+            confirmButtonText: "Let me try again"
+          })
+        }
+      });
+    },
+
+    deleteReservation: function (options) {
+      $.ajax({
+        url: '/api/reservations',
+        method: 'DELETE',
+        data: options.reservationId,
+        success: function () {
+          console.log('successful reservation delete ajax');
+          ManageActions.getUserInfo(options.userId);
+          sweetAlert({
+            title: "See you next time then",
+            text: "",
+            type: "success",
+            allowOutsideClick: true,
+            confirmButtonColor: "#ff4d4d",
+            confirmButtonText: "Ok"
+          })
+        },
+        error: function (xhr) {
+          sweetAlert({
+            title: "Uh oh...",
+            text: xhr.responseJSON.errors[0],
             type: "error",
             allowOutsideClick: true,
             confirmButtonColor: "#ff4d4d",

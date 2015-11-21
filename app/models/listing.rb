@@ -15,8 +15,8 @@
 
 class Listing < ActiveRecord::Base
     validates(
-      :ghost_id, :toe_nails,
-      :address, :amenities, :description,
+      :ghost_id, :toe_nails, :lat, :lng,
+      :address, :amenities, :title, :description,
       presence: true
     )
 
