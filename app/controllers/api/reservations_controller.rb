@@ -15,6 +15,11 @@ class Api::ReservationsController < ApplicationController
     end
   end
 
+  def destroy
+    Reservation.delete(params[:id])
+    render json: {}
+  end
+
   private
 
   def reservation_params

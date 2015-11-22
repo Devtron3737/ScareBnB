@@ -8,7 +8,7 @@ var ManageReservationsBlock = React.createClass({
 
   render: function () {
     var reservation = this.props.reservation;
-    console.log(reservation);
+    
     var sep = ", ";
     return (
       <div className='manage-category-block clearfix'>
