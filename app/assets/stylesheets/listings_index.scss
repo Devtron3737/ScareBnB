@@ -10,14 +10,15 @@
 
 .dates-list {
   position: relative;
-  height: auto;
+  height: 120px;
+  position: relative;
   background: rgba(252, 252, 253, 1); // airbnb offwhite
 }
 
-.dates-list > div {
-  height: 110px;
-  background: rgba(252, 252, 253, 1); // airbnb offwhite
-}
+// .dates-list > div {
+//   height: 110px;
+//   background: rgba(252, 252, 253, 1); // airbnb offwhite
+// }
 
 .dates-list section {
   float: left;
@@ -45,8 +46,6 @@
   // airbnb medium grey #ededed;
 }
 
-
-
 .date-item {
   border: 1px solid lightgrey;
   border-bottom: 3px solid lightgrey;
@@ -57,14 +56,14 @@
   text-align: center;
 }
 
-.date-list-labels {
-  position: absolute;
-  border: 1px black solid;
-}
-
-.date-list-labels * {
-  float: left;
-}
+// .date-list-labels {
+//   position: absolute;
+//   border: 1px black solid;
+// }
+//
+// .date-list-labels * {
+//   float: left;
+// }
 
 #no-listings {
   position: relative;
@@ -94,7 +93,7 @@
 
 // first block is off center for some reason
 .listings-list {
-  width: 800px;
+  width: 780px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
