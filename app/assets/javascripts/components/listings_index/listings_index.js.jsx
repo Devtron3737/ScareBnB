@@ -34,7 +34,7 @@ var ListingsIndex = React.createClass({
     return(
       <div>
         <NavBar search={options} />
-        <div className='listing-contents clearfix' >
+        <div className='listing-contents' >
 
           <Dates onChangeCallback={this.handleDatesChange} />
 

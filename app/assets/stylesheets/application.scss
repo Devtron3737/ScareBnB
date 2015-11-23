@@ -16,7 +16,7 @@
 */
 
 // airbnb light grey #F8F8F8
-// airbnb offwhite rgba(252, 252, 253, 1);
+// rgba(252, 252, 253, 1); // airbnb offwhite 
 // airbnb darkgrey #585858; //dark grey
 // airbnb medium grey #ededed;
 // airbnb red rgba(255, 77, 77, 0.97);
@@ -219,7 +219,7 @@ ul {
 }
 
 .footer-container a:hover {
-  color: rgba(255, 77, 77, 0.97); //red
+  color: rgba(255, 128, 128, 1); //airbnb light red
 }
 
 .footer-container img {

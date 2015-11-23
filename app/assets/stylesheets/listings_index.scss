@@ -1,48 +1,44 @@
 
 
 .listing-contents {
-  width: calc(100% - 550px); // map width = 600px
+  width: calc(100% - 550px); // map width = 550px
   height: 100%;
   position: absolute;
   top: 61px;
   background: #585858; //airbnb darkgrey
 }
 
-.dates {
-  padding: 10px;
-  // border-right: 1px grey solid;
-  font-size: 15px;
-  width: auto;
-  color: #585858; //airbnb darkgrey
-  height: 70px;
-  -webkit-appearance: none;
-  background: rgba(252, 252, 253, 1); // offwhite
-}
-
-#dates-title {
-  float: left;
-  position: relative;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 .dates-list {
-  float: left;
   position: relative;
-  left: 60px;
-  top: 50%;
-  transform: translateY(-50%);
+  height: 400px;
+  background: rgba(252, 252, 253, 1); // airbnb offwhite
 }
+
+.date-field-container {
+  position: relative;
+  top: 15%;
+  width: 180px;
+  margin-bottom: 40px;
+  left: 25%;
+  // margin: 10px;
+}
+
+.dates-title {
+  position: absolute;
+  left: 0;
+  top: -25px;
+  color: #585858; //dark grey
+  // airbnb medium grey #ededed;
+}
+
+
 
 .date-item {
-  float: left;
   border: 1px solid lightgrey;
   border-bottom: 3px solid lightgrey;
   border-radius: 6%;
   height: 30px;
   width: 180px;
-  margin: 10px;
   font-size: 15px;
   text-align: center;
 }
@@ -74,6 +70,8 @@
 .listings-list {
   width: 100%;
   background: #ededed; //airbnb med grey
+  display: block;
+  padding-bottom: 40px;
 }
 
 #no-listings {

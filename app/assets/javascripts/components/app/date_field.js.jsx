@@ -13,15 +13,20 @@ var DateField = React.createClass({
   },
 
   render: function () {
+    var title = (this.props.type === "checkIn") ? "Check In" : "Check Out"
 
     return (
-      <input
-        onChange={this.handleChange}
-        value={this.state.value}
-        required='required'
-        type='date'
-        className='date-item'
-      />
+      <div className='date-field-container'>
+        <div className='dates-title'>{title}</div>
+        <input
+          onChange={this.handleChange}
+          value={this.state.value}
+          required='required'
+          type='date'
+          className='date-item'
+        />
+      </div>
+
     );
   },
 
