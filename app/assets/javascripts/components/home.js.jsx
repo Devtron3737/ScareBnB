@@ -10,14 +10,14 @@ var Home = React.createClass({
     // this.check_in = DateUtil.getDefault('check_in')
     // this.check_out = DateUtil.getDefault('check_out')
     var options = {bounds: defaultBounds},
-        searchField = document.getElementById('home-search-field');
+        searchField = document.getElementById('home-searchfield');
     this.autocomplete = new google.maps.places.Autocomplete(searchField, options);
   },
 
   handleSubmit: function () {
     event.preventDefault();
 
-    var search = document.getElementById('home-search-field').value,
+    var search = document.getElementById('home-searchfield').value,
         path = '/listings/' + search + '/';
         // dateQuery = {
         //   check_in: this.check_in,
@@ -60,19 +60,12 @@ var Home = React.createClass({
         <header className='home-header'>
           <nav className='header-nav clearfix'>
             <h1 className='header-logo'>
-              <a href="/">
+              <a path="/">
                <img name='white logo' src={'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811046/logo_ghost_ceoqts.png'} height='55' />
               </a>
             </h1>
 
-
-            <ul className='header-list'>
-              <li className='house-icon'><Link to='user/2/manage'>
-                <h3 className='ghost-text'>Ghost</h3>
-                <img className='house-pic' src={'/images/home_icon.png'} height='45' /></Link></li>
-
-              <li><a href="#">Account</a></li>
-            </ul>
+            <Link to='user/2/manage'>Account</Link>
 
           </nav>
 
@@ -82,9 +75,9 @@ var Home = React.createClass({
           <div className='home-searchbar-box'>
             <form onSubmit={this.handleSubmit}>
               <div id='home-searchbar-container'>
-                <span className='home-searchbar'>
-                  <input className='searchbar-items' id='home-search-field' type='text' placeholder='The world is your graveyard. Where to?'></input>
-                </span>
+                <div className='home-searchbar'>
+                  <input className='searchbar-items' id='home-searchfield' type='text' placeholder='The world is your graveyard. Where to?'></input>
+                </div>
                 <button onClick={this.handleSubmit} className='searchbar-items button' id='home-search-button' type='button'>Go</button>
               </div>
             </form>

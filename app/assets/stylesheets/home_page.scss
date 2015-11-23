@@ -24,31 +24,29 @@
 }
 
 .header-logo {
-  position: absolute;
-  left: 0px;
-  top: -13px;
+  padding-top: 2px;
 }
 
-.header-list {
-  float: right;
-}
-
-.header-list > li {
-  float: left;
-  margin: 6px;
-}
-
-.header-list > li * {
-  float: left;
-  color: white;
-  font-size: 13px;
-  font-weight: 300;
-}
-
-.house-icon {
-  position: relative;
-  bottom: 16px;
-}
+// .header-list {
+//   float: right;
+// }
+//
+// .header-list > li {
+//   float: left;
+//   margin: 6px;
+// }
+//
+// .header-list > li * {
+//   float: left;
+//   color: white;
+//   font-size: 13px;
+//   font-weight: 300;
+// }
+//
+// .house-icon {
+//   position: relative;
+//   bottom: 16px;
+// }
 
 .message-text {
   position: relative;
@@ -92,9 +90,13 @@
 #home-searchbar-container {
   width: auto;
   position: absolute;
-  left: calc(50% - 960px/2);
+  border: 0;
+  // left: calc(50% - 960px/2);
+  left: 50%;
+  transform: translateX(-50%);
   top: calc(50% - 20px);
-  background: rgba(252, 252, 253, 1); //airbnb offwhite
+  // background: rgba(252, 252, 253, 1); //airbnb offwhite
+  background: transparent;
   // border-top-left-radius: 3%;
   // border-bottom-left-radius: 3%;
   // border-radius: 7%;
@@ -103,8 +105,11 @@
 
 .home-searchbar {
   float: left;
-  width: auto;
+  width: 450px;
   border: 0;
+  background: rgba(252, 252, 253, 1); //airbnb offwhite
+  border-top-left-radius: 3%;
+  border-bottom-left-radius: 3%;
 }
 
 // .searchbar-items {
@@ -115,7 +120,6 @@
   float: left;
   display: block;
   padding: 10px;
-  border-right: 1px grey solid;
   font-size: 15px;
   color: #585858; //airbnb darkgrey
   height: 20px;
@@ -123,7 +127,7 @@
   -webkit-appearance: none;
 }
 
-#home-search-field {
+#home-searchfield {
   width: 320px;
 }
 
