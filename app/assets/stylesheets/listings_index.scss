@@ -2,9 +2,10 @@
 
 .listing-contents {
   width: calc(100% - 550px); // map width = 600px
-  height: 100%px;
+  height: 100%;
   position: absolute;
   top: 61px;
+  background: #585858; //airbnb darkgrey
 }
 
 .dates {
@@ -15,6 +16,7 @@
   color: #585858; //airbnb darkgrey
   height: 70px;
   -webkit-appearance: none;
+  background: rgba(252, 252, 253, 1); // offwhite
 }
 
 #dates-title {
@@ -74,6 +76,51 @@
   background: #ededed; //airbnb med grey
 }
 
+#no-listings {
+  position: relative;
+  display: block;
+  width: 100%;
+  background: #ededed; //airbnb med grey
+  height: 600px;
+}
+
+#no-listings * {
+  color: #585858; //airbnb darkgrey
+  position: relative;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#boo {
+  font-size: 80px;
+  width: 170px;
+}
+
+#no-listing-text {
+  width: 400px;
+  margin-top: 25px;
+}
+
+#index-footer {
+  border-top: 1px solid lightgrey;
+  display: block;
+  background: #585858; //airbnb darkgrey
+  height: 75px;
+}
+
+#index-footer a {
+  color: white;
+  float: left;
+  position: relative;
+  left: 45%;
+  margin-top: 20px;
+  transform: translateX(-50%);
+}
+
+#index-footer a:hover {
+  color: rgba(255, 128, 128, 1); //airbnb light red
+}
 
 // first block is off center for some reason
 .listing-block {
