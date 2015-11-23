@@ -21,6 +21,14 @@
         data: options.listingId,
         success: function () {
           console.log('successful listing delete ajax');
+          sweetAlert({
+            title: "Lock the doors! Close the blinds!",
+            text: "You've deleted your haunted listing.",
+            type: "success",
+            allowOutsideClick: true,
+            confirmButtonColor: "#ff4d4d",
+            confirmButtonText: "Ok"
+          })
           ManageActions.getUserInfo(options.userId);
         }
       });
@@ -98,7 +106,6 @@
       $.ajax({
         url: '/api/reservations/' + options.reservationId,
         method: 'DELETE',
-        data: options.reservationId,
         success: function () {
           console.log('successful reservation delete ajax');
           sweetAlert({
@@ -109,7 +116,8 @@
             confirmButtonColor: "#ff4d4d",
             confirmButtonText: "Ok"
           })
-          ManageActions.getUserInfo(options.userId);
+          console.log(options)
+          ManageActions.getUserInfo(options.guestId);
         },
         error: function (xhr) {
           sweetAlert({

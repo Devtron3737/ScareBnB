@@ -1,7 +1,8 @@
 var ManageReservationsBlock = React.createClass({
   handleReservationDelete: function () {
+
     ManageActions.deleteReservation({
-      userId: this.props.reservation.listing.ghost_id,
+      guestId: this.props.reservation.guest_id,
       reservationId: this.props.reservation.id
     });
   },

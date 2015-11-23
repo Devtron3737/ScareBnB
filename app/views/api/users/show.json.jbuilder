@@ -11,4 +11,5 @@ json.reservations(@reservations) do |reservation|
   json.check_in reservation.check_in
   json.check_out reservation.check_out
   json.listing(reservation.listing, :id, :ghost_id, :address, :title)
+  json.guest_id reservation.guest_id
 end
