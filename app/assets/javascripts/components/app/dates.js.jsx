@@ -16,7 +16,7 @@ var Dates = React.createClass({
     // these are returning before changecallback is done
     switch (type) {
       case "checkIn":
-        if (date > this.state.checkOut) {
+        if (date >= this.state.checkOut) {
           this.setState(
             {
               checkOut: DateUtil.correspondingDay('add', date),
@@ -38,7 +38,7 @@ var Dates = React.createClass({
         }
         break;
       case "checkOut":
-        if (date < this.state.checkIn) {
+        if (date <= this.state.checkIn) {
           this.setState(
             {
               checkIn: DateUtil.correspondingDay('subtract', date),
