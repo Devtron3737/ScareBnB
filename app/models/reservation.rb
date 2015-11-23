@@ -44,9 +44,11 @@ class Reservation < ActiveRecord::Base
     Reservation.where([
       "listing_id = :listing_id
       AND
-      (check_in >= :check_in AND check_in <= :check_out)
-      OR
-      (check_out >= :check_in AND check_out <= :check_out)",
+      (
+        (check_in >= :check_in AND check_in <= :check_out)
+        OR
+        (check_out >= :check_in AND check_out <= :check_out)
+      )",
       { listing_id: self.listing_id, check_in: self.check_in, check_out: self.check_out }
     ])
   end

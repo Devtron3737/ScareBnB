@@ -1,14 +1,14 @@
 var ManageReservationsBlock = React.createClass({
   handleReservationDelete: function () {
     ManageActions.deleteReservation({
-      userId: this.props.reservation.ghost_id,
+      userId: this.props.reservation.listing.ghost_id,
       reservationId: this.props.reservation.id
     });
   },
 
   render: function () {
     var reservation = this.props.reservation;
-    
+
     var sep = ", ";
     return (
       <div className='manage-category-block clearfix'>

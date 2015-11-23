@@ -96,12 +96,11 @@
 
     deleteReservation: function (options) {
       $.ajax({
-        url: '/api/reservations',
+        url: '/api/reservations/' + options.reservationId,
         method: 'DELETE',
         data: options.reservationId,
         success: function () {
           console.log('successful reservation delete ajax');
-          ManageActions.getUserInfo(options.userId);
           sweetAlert({
             title: "See you next time then",
             text: "",
@@ -110,6 +109,7 @@
             confirmButtonColor: "#ff4d4d",
             confirmButtonText: "Ok"
           })
+          ManageActions.getUserInfo(options.userId);
         },
         error: function (xhr) {
           sweetAlert({

@@ -193,6 +193,7 @@ Reservation.create!(listing_id: 1, check_in: Date.new(2015,12,18),
 Reservation.create!(listing_id: 2, check_in: Date.today,
   check_out: Date.tomorrow, guest_id: 4, status: "approved"
 )
+
 Reservation.create!(listing_id: 3, check_in: Date.today,
   check_out: Date.tomorrow, guest_id: 2, status: "approved"
 )
