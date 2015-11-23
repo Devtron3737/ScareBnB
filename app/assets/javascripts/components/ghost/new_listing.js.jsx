@@ -27,14 +27,25 @@ var NewListing = React.createClass({
         }
     console.log("in handle submit")
     console.log(listingAttrs)
+    this.errors = [];
 
-    ManageActions.createListing(listingAttrs);
-
-    this.pics = [];
-    this.setState({
-      picCount: 0,
-      value: listingAttrs.address
-    })
+    if (this.validAttrs(listingAttrs)) {
+      ManageActions.createListing(listingAttrs);
+      this.pics = [];
+      this.setState({
+        picCount: 0,
+        value: listingAttrs.address
+      })
+    } else {
+      sweetAlert({
+        title: "Whoops",
+        text: this.errors,
+        type: "error",
+        allowOutsideClick: true,
+        confirmButtonColor: "#ff4d4d",
+        confirmButtonText: "Ok"
+      })
+    }
   },
 
   getVal: function (id) {
@@ -66,6 +77,10 @@ var NewListing = React.createClass({
     SearchUtil.extractPlace(extractOptions)
 
     return coords;
+  },
+
+  validAttrs: function (attrs) {
+    
   },
 
   handlePicUpload: function () {

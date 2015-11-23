@@ -7,11 +7,6 @@ class Api::ReservationsController < ApplicationController
       render json: {}
     else
       render json: {errors: reservation.errors.full_messages}, status: 422
-    # if reservation.save
-    #   # cool
-    # else
-    #   # not cool
-    # end
     end
   end
 
