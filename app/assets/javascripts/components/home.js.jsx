@@ -60,8 +60,8 @@ var Home = React.createClass({
         <header className='home-header'>
           <nav className='header-nav clearfix'>
             <h1 className='header-logo'>
-              <a path="/">
-               <img name='white logo' src={'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811046/logo_ghost_ceoqts.png'} height='55' />
+              <a href="/">
+               <img name='white logo' src={'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811046/logo_ghost_ceoqts.png'} height='50' />
               </a>
             </h1>
 
