@@ -103,7 +103,7 @@ var Dates = React.createClass({
   render: function () {
 
     return(
-        <div className='dates-list clearfix'>
+        <div>
           <DateField date={this.state.checkIn} onChangeCallback={this.handleDateFieldChange} type='checkIn' />
           <DateField date={this.state.checkOut} onChangeCallback={this.handleDateFieldChange} type='checkOut' />
         </div>

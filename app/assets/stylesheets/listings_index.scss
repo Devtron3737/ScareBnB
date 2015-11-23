@@ -10,17 +10,31 @@
 
 .dates-list {
   position: relative;
-  height: 400px;
+  height: auto;
   background: rgba(252, 252, 253, 1); // airbnb offwhite
 }
 
+.dates-list > div {
+  height: 110px;
+  background: rgba(252, 252, 253, 1); // airbnb offwhite
+}
+
+.dates-list section {
+  float: left;
+  margin-top: 50px;
+  position: relative;
+  margin-right: 75px;
+  left: 35%;
+  transform: translateX(-50%);
+}
+
+
+
 .date-field-container {
   position: relative;
-  top: 15%;
   width: 180px;
   margin-bottom: 40px;
-  left: 25%;
-  // margin: 10px;
+
 }
 
 .dates-title {
@@ -52,28 +66,6 @@
   float: left;
 }
 
-#listings-guest {
-  border: 1px solid lightgrey;
-  border-bottom: 3px solid lightgrey;
-
-  font-size: 15px;
-
-  select {
-    width: 160px;
-    height: 30px;
-    padding-left: 60px;
-  }
-}
-
-
-
-.listings-list {
-  width: 100%;
-  background: #ededed; //airbnb med grey
-  display: block;
-  padding-bottom: 40px;
-}
-
 #no-listings {
   position: relative;
   display: block;
@@ -100,29 +92,25 @@
   margin-top: 25px;
 }
 
-#index-footer {
-  border-top: 1px solid lightgrey;
-  display: block;
-  background: #585858; //airbnb darkgrey
-  height: 75px;
-}
-
-#index-footer a {
-  color: white;
-  float: left;
-  position: relative;
-  left: 45%;
-  margin-top: 20px;
-  transform: translateX(-50%);
-}
-
-#index-footer a:hover {
-  color: rgba(255, 128, 128, 1); //airbnb light red
-}
-
 // first block is off center for some reason
+.listings-list {
+  width: 800px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  padding-bottom: 30px;
+}
+
+#listings-list-container {
+  display: block;
+  width: 100%;
+  background: #ededed; //airbnb med grey
+  position: relative;
+}
+
 .listing-block {
-  float: right;
+  float: left;
   position: relative;
   margin-left: 20px;
   margin-right: 20px;
@@ -192,4 +180,24 @@
   top: 61px;
   width: auto;
   height: auto;
+}
+
+#index-footer {
+  border-top: 1px solid lightgrey;
+  display: block;
+  background: #585858; //airbnb darkgrey
+  height: 75px;
+}
+
+#index-footer a {
+  color: white;
+  float: left;
+  position: relative;
+  left: 45%;
+  margin-top: 20px;
+  transform: translateX(-50%);
+}
+
+#index-footer a:hover {
+  color: rgba(255, 128, 128, 1); //airbnb light red
 }

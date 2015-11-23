@@ -16,7 +16,7 @@ var DateField = React.createClass({
     var title = (this.props.type === "checkIn") ? "Check In" : "Check Out"
 
     return (
-      <div className='date-field-container'>
+      <section className='date-field-container'>
         <div className='dates-title'>{title}</div>
         <input
           onChange={this.handleChange}
@@ -25,7 +25,7 @@ var DateField = React.createClass({
           type='date'
           className='date-item'
         />
-      </div>
+    </section>
 
     );
   },
