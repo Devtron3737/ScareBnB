@@ -27,9 +27,9 @@ var NewListing = React.createClass({
         }
     console.log("in handle submit")
     console.log(listingAttrs)
-    this.errors = [];
+    this.validAttrs(listingAttrs)
 
-    if (this.validAttrs(listingAttrs)) {
+    if (this.errors.length === 0) {
       ManageActions.createListing(listingAttrs);
       this.pics = [];
       this.setState({
@@ -69,8 +69,7 @@ var NewListing = React.createClass({
       },
 
       placeUndefined: function (predictions) {
-        // add alert
-        console.log('please enter a valid address')
+        // handled in this.validAttrs
       }
     }
 
@@ -79,8 +78,22 @@ var NewListing = React.createClass({
     return coords;
   },
 
-  validAttrs: function (attrs) {
-    
+  validAttrs: function (listingAttrs) {
+    this.errors = [];
+    if (!listingAttrs.lat || !listingAttrs.lng) {
+      this.errors.push("Please choose a valid address.")
+      return false;
+    }
+
+    for (var attr in listingAttrs) {
+      if (
+          attr === "ghost_id" || attr === "pictures" ||
+          attr === "lat" || attr === "lng") {
+          continue;
+        } else if (listingAttrs[attr] === "") {
+          this.errors.push(attr + " cannot be blank.")
+      }
+    }
   },
 
   handlePicUpload: function () {

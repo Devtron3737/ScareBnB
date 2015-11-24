@@ -84,10 +84,10 @@ var Home = React.createClass({
           </div>
         </header>
 
-        <main className='home-content clearfix'>
+        <main className='home-content'>
           <h3>Just for a scare</h3>
           <h4>From demented children to creepy butlers, who knows what's waiting for you.</h4>
-          <ul id='home-listings'>
+          <ul className='home-listings clearfix'>
             <li>
               <Link to='listings/San Francisco, CA'>
                 <img name='goldengate' src={'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811041/goldengate_ywmoe1.jpg'} height='300' width='330' />
