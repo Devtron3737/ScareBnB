@@ -10,14 +10,21 @@ var ListingBlock = React.createClass({
   },
 
   render: function () {
-    var listing = this.props.listing
-    var listingPath = '/listings/' + listing.id
+    var listing = this.props.listing,
+        listingPath = '/listings/' + listing.id,
+        listingPictureUrl = (listing.pictures[0]) ?
+                             listing.pictures[0].url :
+                             "http://res.cloudinary.com/dn7rukqow/image/upload/v1448398749/noimage_m03tto.svg",
+        userPictureUrl = (listing.user_picture) ?
+                          listing.user_pictures.url :
+                          "http://res.cloudinary.com/dn7rukqow/image/upload/v1448398749/noimage_m03tto.svg";
+
 
     //change image
     //   params={{listingId: listing.id}}
     return (
       <div className='listing-block' onClick={this.handleClick}>
-          <img className='listing-pic' src={listing.pictures[0].url} height='240' width='350' />
+          <img className='listing-pic' src={listingPictureUrl} height='240' width='350' />
 
           <div id='listing-title'>{listing.title}</div>
           <div id='listing-address'>{listing.address}</div>
