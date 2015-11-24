@@ -47,17 +47,25 @@ var ListingsShow = React.createClass({
     if (!this.state.listing.title) {
       return <div>Loading...</div>
     } else {
-        var listing = this.state.listing
+      console.log('in listing show')
+      console.log(this.state.listing)
+      var listing = this.state.listing,
+          listingPictureUrl = (listing.pictures[0]) ?
+                               listing.pictures[0].url :
+                               "http://res.cloudinary.com/dn7rukqow/image/upload/v1448399595/no_image_available_qhdwk9.jpg",
+          userPictureUrl = (listing.user_picture) ?
+                            listing.user_picture.url :
+                            "http://res.cloudinary.com/dn7rukqow/image/upload/v1448399277/no-profile-img_vqxn7j.gif";
         return(
           <div>
             <NavBar search={searchBarOptions}/>
             <header id='listing-header'>
-              <img id='listing-header-pic' src={listing.pictures[0].url} height='700' />
+              <img id='listing-header-pic' src={listingPictureUrl} height='700' />
 
               <section className='listing-header-detail clearfix'>
 
                 <div id='listing-show-user'>
-                  <img src={listing.user_picture.url} height='100' width='100' />
+                  <img src={userPictureUrl} height='100' width='100' />
                   <div>{listing.ghost.name}</div>
                 </div>
 

@@ -11,7 +11,7 @@ var ManageListingsBlock = React.createClass({
         listingLink = '/listing/' + listing.id,
         listingPictureUrl = (listing.pictures[0]) ?
                              listing.pictures[0].url :
-                             "http://res.cloudinary.com/dn7rukqow/image/upload/v1448398749/noimage_m03tto.svg"
+                             "http://res.cloudinary.com/dn7rukqow/image/upload/v1448399595/no_image_available_qhdwk9.jpg"
 
 
     return (
