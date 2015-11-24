@@ -42,6 +42,12 @@ var DateUtil = {
 
     return (year + '-' + month + '-' + day);
   },
+
+  toString: function (date) {
+    var date = new Date(date)
+
+    return date.toDateString()
+  }
 };
 
 

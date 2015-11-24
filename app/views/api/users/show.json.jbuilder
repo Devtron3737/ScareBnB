@@ -22,8 +22,8 @@ json.reservations(@reservations) do |reservation|
   json.check_in reservation.check_in
   json.check_out reservation.check_out
   json.guest_id reservation.guest_id
-  json.listingDetails(reservation.listing, :id, :ghost_id, :address, :title)
-  json.listing_picture(reservation.listing.pictures) do |picture|
+  json.listing_details(reservation.listing, :id, :ghost_id, :address, :title)
+  json.listing_pictures(reservation.listing.pictures) do |picture|
     json.(picture, :url)
   end
 end

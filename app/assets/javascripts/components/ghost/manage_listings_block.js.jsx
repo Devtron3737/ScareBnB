@@ -14,7 +14,7 @@ var ManageListingsBlock = React.createClass({
       <div className='manage-category-block clearfix'>
         <div className='manage-category-block-info clearfix'>
 
-          <div>
+          <div className='manage-category-block-pic'>
             <Link to={listingLink}>
               <img src={listing.pictures[0].url} height='75' />
             </Link>
@@ -22,9 +22,7 @@ var ManageListingsBlock = React.createClass({
 
           <div>
             <div>{listing.title}</div>
-            <div>
-              {listing.address}
-            </div>
+            <div>{listing.address}</div>
           </div>
 
         </div>
