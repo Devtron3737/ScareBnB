@@ -76,24 +76,9 @@ var SearchUtil = {
       this.placeService = new google.maps.places.PlacesService(searchField);
 
       service.getPlacePredictions(
-        {input: searchField.value},
+        {input: searchField.value || "San Francisco"},
         options.placeUndefined.bind(this)
-        // this.selectFirstPrediction.bind(this)
       );
     }
   }
-
-  // selectFirstPrediction: function (predictions) {
-  //   var predictionId = predictions[0].place_id;
-  //   // console.log('inside selectFirstPrediction, predictions:')
-  //   // console.log(predictions)
-  //   var prediction = ""
-  //   // console.log(this)
-  //   this.placeService.getDetails(
-  //     {placeId: predictionId},
-  //     function (prediction) {
-  //       console.log(predication)
-  //     }
-  //   );
-  // },
 }

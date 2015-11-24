@@ -9,7 +9,14 @@ var NewListing = React.createClass({
   },
 
   handleChange: function () {
-    this.setState({value: event.target.value});
+    this.setState(
+      {value: event.target.value},
+      function () {
+        console.log('in handleChange address')
+        console.log(this.state.value)
+      }
+    );
+
   },
 
   handleSubmit: function () {
@@ -41,7 +48,7 @@ var NewListing = React.createClass({
     } else {
       sweetAlert({
         title: "Whoops",
-        text: this.errors,
+        text: this.errors.join(", "),
         type: "error",
         allowOutsideClick: true,
         confirmButtonColor: "#ff4d4d",
@@ -75,6 +82,11 @@ var NewListing = React.createClass({
       }
     }
 
+    console.log('in get coords')
+    console.log(extractOptions)
+
+
+
     SearchUtil.extractPlace(extractOptions)
 
     return coords;
@@ -84,16 +96,14 @@ var NewListing = React.createClass({
     this.errors = [];
     if (!listingAttrs.lat || !listingAttrs.lng) {
       this.errors.push("Please choose a valid address.")
-      return false;
+      return;
     }
 
     for (var attr in listingAttrs) {
-      if (
-          attr === "ghost_id" || attr === "pictures" ||
-          attr === "lat" || attr === "lng") {
-          continue;
-        } else if (listingAttrs[attr] === "") {
-          this.errors.push(attr + " cannot be blank.")
+      if (attr === "pictures") {
+        continue;
+      } else if (listingAttrs[attr] === "" || listingAttrs[attr] === 0) {
+          this.errors.push(attr + " cannot be blank")
       }
     }
   },
@@ -122,7 +132,7 @@ var NewListing = React.createClass({
         <div className='manage-block-title'>List Your Haunting</div>
 
         <ul id='manage-new-list'>
-          <li className='clearfix'>Title <input type='text' id='manage-new-title' placeholder='ex: Winchester Mystery House' /></li>
+          <li className='clearfix'>Title <input onChange={this.onTitleChange} type='text' id='manage-new-title' placeholder='ex: Winchester Mystery House' /></li>
           <li className='clearfix'>
             Address
             <input type='text'
