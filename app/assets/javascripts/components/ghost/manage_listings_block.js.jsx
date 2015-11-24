@@ -8,7 +8,11 @@ var ManageListingsBlock = React.createClass({
 
   render: function () {
     var listing = this.props.listing,
-        listingLink = '/listing/' + listing.id
+        listingLink = '/listing/' + listing.id,
+        listingPictureUrl = (listing.pictures[0]) ?
+                             listing.pictures[0].url :
+                             "http://res.cloudinary.com/dn7rukqow/image/upload/v1448398749/noimage_m03tto.svg"
+
 
     return (
       <div className='manage-category-block clearfix'>
@@ -16,7 +20,7 @@ var ManageListingsBlock = React.createClass({
 
           <div className='manage-category-block-pic'>
             <Link to={listingLink}>
-              <img src={listing.pictures[0].url} height='75' />
+              <img src={listingPictureUrl} height='75' />
             </Link>
           </div>
 
