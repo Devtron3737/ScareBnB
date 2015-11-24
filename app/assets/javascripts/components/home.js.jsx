@@ -59,13 +59,16 @@ var Home = React.createClass({
       <div>
         <header className='home-header'>
           <nav className='header-nav clearfix'>
-            <h1 className='header-logo'>
+            <h2>
               <a href="/">
                <img name='white logo' src={'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811046/logo_ghost_ceoqts.png'} height='50' />
               </a>
-            </h1>
+            </h2>
 
-            <Link to='user/2/manage'>Account</Link>
+            <h2 id='home-account'>
+                <Link to='user/2/manage'>Account</Link>
+            </h2>
+
 
           </nav>
 

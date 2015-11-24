@@ -11,57 +11,25 @@
 }
 
 .header-nav {
-  margin-left: auto;
-  margin-right: auto;
   height: 30px;
   width: 100%;
   display: block;
 }
 
-.header-nav a {
-  display: block;
-  padding: 10px;
-}
-
-.header-logo {
-  padding-top: 2px;
-}
-
-// .header-list {
-//   float: right;
-// }
-//
-// .header-list > li {
-//   float: left;
-//   margin: 6px;
-// }
-//
-// .header-list > li * {
-//   float: left;
-//   color: white;
-//   font-size: 13px;
-//   font-weight: 300;
-// }
-//
-// .house-icon {
-//   position: relative;
-//   bottom: 16px;
-// }
-
-.message-text {
-  position: relative;
-  bottom: 14px;
-}
-
-.message-pic {
-  position: relative;
-  bottom: 12px;
+#home-account {
+  width: 80px;
+  font-size: 13px;
+  color: white;
+  position: absolute;
+  right: 0px;
+  top: 0px;
 }
 
 .welcome-head {
   position: relative;
   top: 25%;
-  left: calc(50% - 365px);
+  left: 50%;
+  transform: translateX(-50%);
   color: white;
   width: 780px;
   font-size: 60px;
@@ -71,8 +39,9 @@
 .welcome-sub {
   position: relative;
   top: 25%;
-  left: calc(50% - 180px);
-  width: 590px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 380px;
   color: white;
   font-size: 20px;
 }
