@@ -2,7 +2,6 @@ var mapCenter = { lat: 37.7758, lng: -122.435 };
 
 var Map = React.createClass({
   getInitialState: function () {
-
     return {
       center: mapCenter,
     };
@@ -12,15 +11,16 @@ var Map = React.createClass({
     this.markers = [];
 
     var map = React.findDOMNode(this.refs.map),
+        place = SearchStore.getPlace(),
         options = {
           center: this.state.center,
           zoom: 10
         };
+
     this.map = new google.maps.Map(map, options);
-    // install listeners
-    var place = SearchStore.getPlace();
     this.retrieveBounds(place);
 
+    // install listeners
     SearchStore.addSearchChangeListener(this._onSearchChange);
     SearchStore.addListingsChangeListener(this._onListingsChange);
     this.listenForIdle();
@@ -29,7 +29,6 @@ var Map = React.createClass({
   componentWillUnmount: function () {
     SearchStore.removeSearchChangeListener(this._onSearchChange);
     SearchStore.removeListingsChangeListener(this._onListingsChange);
-
   },
 
   listenForIdle: function () {
@@ -40,7 +39,7 @@ var Map = React.createClass({
       var bounds = that.map.getBounds(),
           formattedBounds = that.formatBounds(bounds),
           dates = SearchStore.getDates(),
-          options = {}
+          options = {};
 
       $.extend(options, dates, formattedBounds);
       SearchActions.mapMoved(options);
@@ -62,17 +61,12 @@ var Map = React.createClass({
         formattedBounds = this.formatBounds(bounds),
         options = {};
 
-        console.log('in map')
-        console.log(dates)
-
     $.extend(options, dates, formattedBounds);
-    console.log('in map getting bounds and dates')
-    console.log(options);
 
     this.setState({
       center: place
     });
-    // ajax request in the action
+
     SearchActions.mapMoved(options);
   },
 

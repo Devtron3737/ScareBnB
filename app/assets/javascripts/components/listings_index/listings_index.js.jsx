@@ -1,21 +1,18 @@
 var ListingsIndex = React.createClass({
 
   handleDatesChange: function (checkIn, checkOut) {
-    console.log('in index handleDateChange')
     var dates = {
       checkIn: checkIn,
       checkOut: checkOut
     }
 
     SearchActions.dateChange(dates)
-    // adjust flux to handle who dates object
-    // instead of just one dates
   },
 
-  _onDateChange: function () {
-    var dates = SearchStore.getDates()
-
-  },
+  // _onDateChange: function () {
+  //   var dates = SearchStore.getDates()
+  //
+  // },
 
   render: function () {
     // <Dates checkIn={this.props.query.checkin}
@@ -27,26 +24,27 @@ var ListingsIndex = React.createClass({
     var options = {
       indexPage: true,
       place: this.props.params.search,
-      // checkIn: this.props.params.checkIn,
-      // checkOut: this.props.params.checkOut
     };
+
+    // took search param of options out of Map
 
     return(
       <div>
         <NavBar search={options} />
         <div className='listing-contents' >
 
-        <div className='index-dates-list clearfix'>
-          <Dates onChangeCallback={this.handleDatesChange} />
-        </div>
+          <div className='index-dates-list clearfix'>
+            <Dates onChangeCallback={this.handleDatesChange} />
+          </div>
 
 
-        <div id='listings-list-container'>
-            <ListingsList />
-        </div>
+          <div id='listings-list-container'>
+              <ListingsList />
+          </div>
 
         </div>
-        <Map  search={options} />
+
+        <Map />
       </div>
     );
   }
