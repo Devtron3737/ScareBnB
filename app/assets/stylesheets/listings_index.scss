@@ -74,6 +74,16 @@
   padding-bottom: 65px;
 }
 
+#listings-count {
+  position: absolute;
+  left: 0;
+  top: -20px;
+  font-size: 15px;
+  color: #585858; //airbnb darkgrey
+  width: 800px;
+  // background: red;
+}
+
 #listings-list-container {
   display: block;
   width: 100%;
