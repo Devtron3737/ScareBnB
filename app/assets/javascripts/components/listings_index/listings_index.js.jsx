@@ -9,24 +9,12 @@ var ListingsIndex = React.createClass({
     SearchActions.dateChange(dates)
   },
 
-  // _onDateChange: function () {
-  //   var dates = SearchStore.getDates()
-  //
-  // },
-
   render: function () {
-    // <Dates checkIn={this.props.query.checkin}
-    //        checkOut={this.props.query.checkOut}
-    // />
-    // console.log('in listing index')
-    // console.log(this.props.params.checkIn)
 
     var options = {
       indexPage: true,
       place: this.props.params.search,
     };
-
-    // took search param of options out of Map
 
     return(
       <div>
