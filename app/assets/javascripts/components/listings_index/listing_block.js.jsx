@@ -17,7 +17,7 @@ var ListingBlock = React.createClass({
                              "http://res.cloudinary.com/dn7rukqow/image/upload/v1448398749/noimage_m03tto.svg",
         userPictureUrl = (listing.user_picture) ?
                           listing.user_pictures.url :
-                          "http://res.cloudinary.com/dn7rukqow/image/upload/v1448398749/noimage_m03tto.svg";
+                          "http://res.cloudinary.com/dn7rukqow/image/upload/v1448399277/no-profile-img_vqxn7j.gif";
 
 
     //change image
@@ -32,7 +32,7 @@ var ListingBlock = React.createClass({
             {listing.toe_nails}
             <img className='toenail-pic' src={'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811047/toenail_on49wz.png'} height='40' />
           </div>
-          <img className='listing-user-pic' src={listing.user_picture.url} height='60' width='60' />
+          <img className='listing-user-pic' src={userPictureUrl} height='60' width='60' />
       </div>
     )
   }
