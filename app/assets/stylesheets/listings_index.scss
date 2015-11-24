@@ -8,7 +8,7 @@
   background: #585858; //airbnb darkgrey
 }
 
-.dates-list {
+.index-dates-list {
   position: relative;
   height: 120px;
   position: relative;
@@ -20,40 +20,13 @@
 //   background: rgba(252, 252, 253, 1); // airbnb offwhite
 // }
 
-.dates-list section {
+.index-dates-list section {
   float: left;
   margin-top: 50px;
   position: relative;
   margin-right: 75px;
   left: 35%;
   transform: translateX(-50%);
-}
-
-
-
-.date-field-container {
-  position: relative;
-  width: 180px;
-  margin-bottom: 40px;
-
-}
-
-.dates-title {
-  position: absolute;
-  left: 0;
-  top: -25px;
-  color: #585858; //dark grey
-  // airbnb medium grey #ededed;
-}
-
-.date-item {
-  border: 1px solid lightgrey;
-  border-bottom: 3px solid lightgrey;
-  border-radius: 6%;
-  height: 30px;
-  width: 180px;
-  font-size: 15px;
-  text-align: center;
 }
 
 // .date-list-labels {

@@ -94,7 +94,10 @@ var ListingsShow = React.createClass({
                     </div>
                   </div>
 
-                  <Dates onChangeCallback={this.handleDatesChange} />
+                  <div className='show-dates-list clearfix'>
+                    <Dates onChangeCallback={this.handleDatesChange} />
+                  </div>
+
                   <button onClick={this.handleReserve}
                           className='button'
                           id='listing-show-reserve-button'

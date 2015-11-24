@@ -16,7 +16,7 @@
 */
 
 // airbnb light grey #F8F8F8
-// rgba(252, 252, 253, 1); // airbnb offwhite 
+// rgba(252, 252, 253, 1); // airbnb offwhite
 // airbnb darkgrey #585858; //dark grey
 // airbnb medium grey #ededed;
 // airbnb red rgba(255, 77, 77, 0.97);
@@ -189,6 +189,30 @@ ul {
 .message-pic {
   float: left;
   top: 2px;
+}
+
+.date-field-container {
+  position: relative;
+  width: 180px;
+  margin-bottom: 40px;
+}
+
+.dates-title {
+  position: absolute;
+  left: 0;
+  top: -25px;
+  color: #585858; //dark grey
+  // airbnb medium grey #ededed;
+}
+
+.date-item {
+  border: 1px solid lightgrey;
+  border-bottom: 3px solid lightgrey;
+  border-radius: 6%;
+  height: 30px;
+  width: 180px;
+  font-size: 15px;
+  text-align: center;
 }
 
 // FOOTER-----------------------
