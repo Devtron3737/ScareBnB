@@ -7,15 +7,26 @@ var ManageListingsBlock = React.createClass({
   },
 
   render: function () {
-    var listing = this.props.listing;
-    var sep = ", ";
+    var listing = this.props.listing,
+        listingLink = '/listing/' + listing.id
+
     return (
       <div className='manage-category-block clearfix'>
-        <div className='manage-category-block-info'>
-          <div>{listing.title}</div>
+        <div className='manage-category-block-info clearfix'>
+
           <div>
-            {listing.address}
+            <Link to={listingLink}>
+              <img src={listing.pictures[0].url} height='75' />
+            </Link>
           </div>
+
+          <div>
+            <div>{listing.title}</div>
+            <div>
+              {listing.address}
+            </div>
+          </div>
+
         </div>
 
         <div className='manage-category-block-btns'>

@@ -43,7 +43,7 @@
 .manage-block {
   border: 1px solid lightgrey;
   border-bottom: 0;
-  width: 450px;
+  width: 700px;
   // padding:
 }
 
@@ -61,14 +61,23 @@
   background: rgba(252, 252, 253, 1); // offwhite
   border-bottom: 1px solid lightgrey;
   padding: 20px;
+  // padding-top: 35px;
+  height: 75px;
+
 }
 
 .manage-category-block > div {
   float: left;
+
 }
 
 .manage-category-block-info {
   width: 70%;
+}
+
+.manage-category-block-info > div {
+  float: left;
+  margin-right: 25px;
 }
 
 #reservation-address {
