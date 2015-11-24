@@ -30,6 +30,8 @@ var NewListing = React.createClass({
     this.validAttrs(listingAttrs)
 
     if (this.errors.length === 0) {
+      console.log('after form validation')
+      console.log(listingAttrs)
       ManageActions.createListing(listingAttrs);
       this.pics = [];
       this.setState({

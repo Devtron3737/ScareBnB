@@ -12,13 +12,12 @@ class Api::ListingsController < ApplicationController
 
     #listing.ghost_id = current_user.id
     if listing.save
-
       render json: {}
     else
       render json: {errors: listing.errors.full_messages}, status: 422
     end
 
-    if !params[:pictures].empty?
+    if params[:pictures]
       params[:pictures].each do |picture|
         Picture.create!(listing_id: listing.id, url: picture)
       end
