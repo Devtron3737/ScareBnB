@@ -66,7 +66,7 @@ var Home = React.createClass({
             </h2>
 
             <h2 id='home-account'>
-                <Link to='user/2/manage'>Account</Link>
+                <Link to='/user'>Account</Link>
             </h2>
 
 

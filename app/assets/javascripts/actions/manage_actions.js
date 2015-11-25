@@ -3,9 +3,9 @@
 
     getUserInfo: function (id) {
       $.ajax({
-        url: '/api/users/' + id + '.json',
+        url: '/api/user.json',
         method: 'GET',
-        data: id,
+        // data: id,
         success: function (userInfo) {
           console.log('successful user info ajax');
           console.log(userInfo);

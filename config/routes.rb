@@ -57,7 +57,7 @@ Rails.application.routes.draw do
   root 'home_page#action'
   resource :session, only: [:create, :destroy, :new]
 
-  namespace :api do
+  namespace :api, defaults: {format: :json} do
     resources :listings
     resources :reservations
     resource :user
