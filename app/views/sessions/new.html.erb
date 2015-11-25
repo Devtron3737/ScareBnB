@@ -1,22 +1,16 @@
-<nav>
-  <h1 id='session-nav-logo'>
-    scarebnb
-  </h1>
+<main id='session-main' className='clearfix'>
+  <h1>scarebnb</h1>
+  <a href='#'>Create account</a>
+  
+  <section id='session-section'>
+    <img id='session-main-logo' src='http://res.cloudinary.com/dn7rukqow/image/upload/v1447811046/logo_ghost_ceoqts.png' height='45' />
+    <h3>Enter, if you dare...</h3>
 
-  <div id='session-nav-list' >
-    <a href="#">Create account</a>
-    <a href="#">Log in</a>
-  </div>
-</nav>
+    <form action='/session' method='POST'>
+      <input type='text' class='input-field' name='user[username]' id='user_username' placeholder='username'/>
+      <input type='password' class='input-field' name='user[username]' id='user_password' placeholder='password'/>
 
-<main id='session-main'>
-  <img id='session-main-logo' src='http://res.cloudinary.com/dn7rukqow/image/upload/v1447811046/logo_red_yi6mz8.png' height='45' />
-  <h3>Enter, if you dare...</h3>
-
-  <form action='/session' method='POST'>
-    <input type='text' class='input-field' name='user[username]' id='user_username' placeholder='username'/>
-    <input type='password' class='input-field' name='user[username]' id='user_password' placeholder='password'/>
-
-    <input type='submit' class='button' id='session-submit' value='Log in!' />
-  </form>
+      <input type='submit' class='button' id='session-submit' value='Log in!' />
+    </form>
+  </section>
 </main>

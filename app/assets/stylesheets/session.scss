@@ -1,0 +1,50 @@
+#session-main {
+  background: rgba(255, 77, 77, 0.97);
+  content: "";
+  height: 100vh;
+  width: 100%;
+}
+
+
+#session-section {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 400px;
+  width: 400px;
+  border: 5px solid rgba(255, 128, 128, 1); //airbnb light red
+  background: rgba(252, 252, 253, 1); // airbnb offwhite
+  border-radius: 3%;
+}
+
+#session-section > h3 {
+  color: #585858; //dark grey
+  font-family: 'Shadows Into Light', cursive;
+  
+}
+
+#session-section input {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#user_username {
+  width: 250px;
+  background: rgba(252, 252, 253, 1); // airbnb offwhite
+
+}
+
+#user_password {
+  width: 250px;
+  background: rgba(252, 252, 253, 1); // airbnb offwhite
+}
+
+#session-submit {
+  border-radius: 3%;
+  padding: 5px;
+  font-size: 15px;
+  background: white;
+  color: #585858; //dark grey
+}
