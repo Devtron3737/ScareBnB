@@ -68,7 +68,7 @@
 }
 
 #signup-section {
-  height: 430px;
+  height: 470px;
 }
 
 #user_username {
@@ -81,13 +81,34 @@
   background: rgba(252, 252, 253, 1); // airbnb offwhite
 }
 
-#session-submit {
+#userpic-upload {
+  border-radius: 6%;
+  width: 120px;
+  padding: 5px;
+  font-size: 15px;
+  border: 1px solid lightgrey;
+  background: rgba(252, 252, 253, 1); // airbnb offwhite
+  color: #585858; //dark grey
+  border-bottom: 2px solid lightgrey;
+}
+
+#userpic-upload:hover {
+  border: 1px solid rgba(255, 77, 77, 0.97); //airbnb red
+  border-bottom: 2px solid rgba(255, 77, 77, 0.97); //airbnb red
+  // color: rgba(255, 77, 77, 0.97); //airbnb red
+}
+
+.session-submit {
   border-radius: 6%;
   width: 100px;
   padding: 5px;
   font-size: 15px;
   background: rgba(255, 77, 77, 0.97); //airbnb red
   color: rgba(252, 252, 253, 1); // airbnb offwhite
+}
+
+#session-submit-signup {
+  width: 200px;
 }
 
 #session-demo {
