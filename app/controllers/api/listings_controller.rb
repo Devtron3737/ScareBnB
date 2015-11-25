@@ -25,6 +25,7 @@ class Api::ListingsController < ApplicationController
   end
 
   def destroy
+    # check that listing belongs to current_user
     Listing.delete(params[:id])
     render json: {}
   end

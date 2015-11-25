@@ -1,7 +1,7 @@
 ( function (root) {
   var ManageActions = root.ManageActions = {
 
-    getUserInfo: function (id) {
+    getUserInfo: function () {
       $.ajax({
         url: '/api/user.json',
         method: 'GET',
@@ -18,7 +18,7 @@
       $.ajax({
         url: '/api/listings/' + options.listingId + '.json',
         method: 'DELETE',
-        data: options.listingId,
+        // data: options.listingId,
         success: function () {
           console.log('successful listing delete ajax');
           sweetAlert({
@@ -29,7 +29,7 @@
             confirmButtonColor: "#ff4d4d",
             confirmButtonText: "Ok"
           })
-          ManageActions.getUserInfo(options.userId);
+          ManageActions.getUserInfo();
         }
       });
     },
