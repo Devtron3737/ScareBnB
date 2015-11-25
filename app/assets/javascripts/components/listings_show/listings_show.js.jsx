@@ -66,7 +66,7 @@ var ListingsShow = React.createClass({
 
                 <div id='listing-show-user'>
                   <img src={userPictureUrl} height='100' width='100' />
-                  <div>{listing.ghost.name}</div>
+                  <div>{listing.ghost.username}</div>
                 </div>
 
                 <div id='listing-header-info'>
