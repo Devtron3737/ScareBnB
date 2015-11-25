@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   end
 
   def new
-    # signup
+    # signup/#login
   end
 
   def destroy
