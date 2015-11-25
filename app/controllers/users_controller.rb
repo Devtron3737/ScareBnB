@@ -6,5 +6,7 @@ class UsersController < ApplicationController
   def create
     # if valid user creation, then
     # log new user in and direct to homepage
+
+    
   end
 end
