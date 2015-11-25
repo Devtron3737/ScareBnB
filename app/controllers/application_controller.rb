@@ -3,6 +3,25 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   # protect_from_forgery with: :exception
   def current_user
+    return nil if session[:user_id].nil?
     User.find(session[:user_id])
+  end
+
+  def logged_in?
+    # check that user is logged in
+    false
+  end
+
+  def login!(user)
+    session[:user_id] = user.id
+    # log user in
+  end
+
+  def logout!
+    session[:user_id] = nil
+  end
+
+  def logout!
+    # log user out
   end
 end

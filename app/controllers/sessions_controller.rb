@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     # no user with that username!
     render :new
     else
-      session[:user_id] = @user.id
+      log_in!(@user)
       redirect_to user_url
     end
   end
