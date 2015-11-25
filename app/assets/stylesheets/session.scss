@@ -33,6 +33,18 @@
   border-radius: 3%;
 }
 
+.session-section > h2 {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 45px;
+  // background: blue;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  width: 300px;
+  color: rgba(255, 77, 77, 0.97); //airbnb red
+}
+
 #session-section-logo {
   position: relative;
   left: 50%;
@@ -56,7 +68,7 @@
 }
 
 #signup-section {
-  height: 460px;
+  height: 430px;
 }
 
 #user_username {

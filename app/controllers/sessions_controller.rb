@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
     if @user.nil?
 
     # no user with that username!
-    render :new
+    render template: 'users/new'
     else
       log_in!(@user)
       redirect_to user_url
