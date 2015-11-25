@@ -87,8 +87,8 @@ Listing.create!(ghost_id: 5, toe_nails: 35, title: "Did you hear that? ",
 )
 
 Listing.create!(ghost_id: 6, toe_nails: 77, title: "Plenty of things that go bump in the night",
-  address: "653 Minna St., San Francsico, CA", description: "Caspers second place",
-  amenities: JSON.generate(["stuff"]), lat: 37.763782, lng: -122.476104
+  address: "65 Alpine Ave., Daly City, CA", description: "Caspers second place",
+  amenities: JSON.generate(["stuff"]), lat: 37.686377, lng: -122.486442
 )
 
 Listing.create!(ghost_id: 7, toe_nails: 102, title: "Ghouls, goblins, and zombies",

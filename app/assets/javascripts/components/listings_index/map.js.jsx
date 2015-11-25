@@ -56,7 +56,7 @@ var Map = React.createClass({
     this.markers[listingId].setIcon({
       url: "http://res.cloudinary.com/dn7rukqow/image/upload/v1448408326/marker_happy_o0l16m.png",
       scaledSize: new google.maps.Size(26, 37),
-      anchor: new google.maps.Point(40, 35)
+      anchor: new google.maps.Point(15, 37)
     })
     this.markers[listingId].setAnimation(google.maps.Animation.BOUNCE);
   },
@@ -67,7 +67,7 @@ var Map = React.createClass({
     this.markers[listingId].setIcon({
       url: "http://res.cloudinary.com/dn7rukqow/image/upload/v1448408321/marker_sad_izdnuc.png",
       scaledSize: new google.maps.Size(27, 37),
-      anchor: new google.maps.Point(40, 35)
+      anchor: new google.maps.Point(15, 37)
     })
     this.markers[listingId].setAnimation(null);
   },
@@ -156,7 +156,7 @@ var Map = React.createClass({
     var ghostIcon = {
       url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1448408321/marker_sad_izdnuc.png',
       scaledSize: new google.maps.Size(27, 37),
-      anchor: new google.maps.Point(40, 35)
+      anchor: new google.maps.Point(15, 37)
     };
 
     var position = new google.maps.LatLng(listing.lat, listing.lng),

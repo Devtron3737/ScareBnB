@@ -94,8 +94,6 @@
       },
 
       getListingHover: function () {
-        console.log('in listing hover store')
-        console.log(_listingHover)
         return _listingHover.toString().slice()
       },
 
