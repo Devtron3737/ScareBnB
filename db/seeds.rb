@@ -5,26 +5,26 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-User.create!(name: "Boogy", password: "boo") #1
-User.create!(name: "Casper", password: "boo")#2
-User.create!(name: "Wicked Witch", password: "boo")#3
-User.create!(name: "It", password: "boo")#4
-User.create!(name: "Frankenstein", password: "boo")#5
-User.create!(name: "Headless Horseman", password: "boo")#6
-User.create!(name: "Hannibal", password: "boo")#7
-User.create!(name: "Scream", password: "boo")#8
-User.create!(name: "Hell Raiser", password: "boo")#9
-User.create!(name: "Dracula", password: "boo")#10
-User.create!(name: "Freddy", password: "boo")#11
-User.create!(name: "Chucky", password: "boo")#12
-User.create!(name: "Edward", password: "boo")#13
-User.create!(name: "Voldemort", password: "boo")#14
-User.create!(name: "Exorcist", password: "boo")#15
-User.create!(name: "Jason", password: "boo")#16
-User.create!(name: "Ring Girl", password: "boo")#17
-User.create!(name: "Sally", password: "boo")#18
-User.create!(name: "Jack", password: "boo")#19
-User.create!(name: "Darth Vader", password: "boo")#20
+User.create!(username: "Boogy", password: "boo") #1
+User.create!(username: "Casper", password: "boo")#2
+User.create!(username: "Wicked Witch", password: "boo")#3
+User.create!(username: "It", password: "boo")#4
+User.create!(username: "Frankenstein", password: "boo")#5
+User.create!(username: "Headless Horseman", password: "boo")#6
+User.create!(username: "Hannibal", password: "boo")#7
+User.create!(username: "Scream", password: "boo")#8
+User.create!(username: "Hell Raiser", password: "boo")#9
+User.create!(username: "Dracula", password: "boo")#10
+User.create!(username: "Freddy", password: "boo")#11
+User.create!(username: "Chucky", password: "boo")#12
+User.create!(username: "Edward", password: "boo")#13
+User.create!(username: "Voldemort", password: "boo")#14
+User.create!(username: "Exorcist", password: "boo")#15
+User.create!(username: "Jason", password: "boo")#16
+User.create!(username: "Ring Girl", password: "boo")#17
+User.create!(username: "Sally", password: "boo")#18
+User.create!(username: "Jack", password: "boo")#19
+User.create!(username: "Darth Vader", password: "boo")#20
 
 
 Picture.create!(user_id: 1, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447812270/boogy.jpg')
