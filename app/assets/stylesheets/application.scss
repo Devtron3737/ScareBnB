@@ -176,20 +176,20 @@ ul {
   float: left;
 
 }
-
-.house-pic {
-  float: left;
-}
-
-.message-text {
-  float: left;
-  top: 2px;
-}
-
-.message-pic {
-  float: left;
-  top: 2px;
-}
+//
+// .house-pic {
+//   float: left;
+// }
+//
+// .message-text {
+//   float: left;
+//   top: 2px;
+// }
+//
+// .message-pic {
+//   float: left;
+//   top: 2px;
+// }
 
 .date-field-container {
   position: relative;
@@ -213,6 +213,14 @@ ul {
   width: 180px;
   font-size: 15px;
   text-align: center;
+}
+
+.input-field {
+  border: lightgrey 1px solid;
+  border-radius: 6%;
+  color: #585858; //dark grey
+  font-size: 15px;
+  padding: 6px;
 }
 
 // FOOTER-----------------------
