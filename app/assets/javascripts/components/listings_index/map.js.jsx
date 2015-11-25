@@ -8,7 +8,7 @@ var Map = React.createClass({
   },
 
   componentDidMount: function () {
-    this.markers = [];
+    this.markers = {};
 
     var map = React.findDOMNode(this.refs.map),
         place = SearchStore.getPlace(),
@@ -23,12 +23,16 @@ var Map = React.createClass({
     // install listeners
     SearchStore.addSearchChangeListener(this._onSearchChange);
     SearchStore.addListingsChangeListener(this._onListingsChange);
+    SearchStore.addListingHoverChangeListener(this._onListingHover);
+    SearchStore.addListingLeaveChangeListener(this._onListingLeave);
     this.listenForIdle();
   },
 
   componentWillUnmount: function () {
     SearchStore.removeSearchChangeListener(this._onSearchChange);
     SearchStore.removeListingsChangeListener(this._onListingsChange);
+    SearchStore.removeListingHoverChangeListener(this._onListingHover);
+    SearchStore.removeListingLeaveChangeListener(this._onListingLeave);
   },
 
   listenForIdle: function () {
@@ -44,6 +48,28 @@ var Map = React.createClass({
       $.extend(options, dates, formattedBounds);
       SearchActions.mapMoved(options);
     });
+  },
+
+  _onListingHover: function () {
+    var listingId = SearchStore.getListingHover()
+
+    this.markers[listingId].setIcon({
+      url: "http://res.cloudinary.com/dn7rukqow/image/upload/v1448408326/marker_happy_o0l16m.png",
+      scaledSize: new google.maps.Size(26, 37),
+      anchor: new google.maps.Point(40, 35)
+    })
+    this.markers[listingId].setAnimation(google.maps.Animation.BOUNCE);
+  },
+
+  _onListingLeave: function () {
+    var listingId = SearchStore.getListingLeave()
+
+    this.markers[listingId].setIcon({
+      url: "http://res.cloudinary.com/dn7rukqow/image/upload/v1448408321/marker_sad_izdnuc.png",
+      scaledSize: new google.maps.Size(27, 37),
+      anchor: new google.maps.Point(40, 35)
+    })
+    this.markers[listingId].setAnimation(null);
   },
 
   _onListingsChange: function () {
@@ -99,28 +125,37 @@ var Map = React.createClass({
   },
 
   removeCurrentMarkers: function () {
-    this.markers.forEach( function (marker) {
-      // this is google api way of removing marker
-      // from map
-      marker.setMap(null);
-    });
-    // remove old markers from this.markers
-    this.markers.length = 0;
+    // this.markers.forEach( function (marker) {
+    //   // this is google api way of removing marker
+    //   // from map
+    //   marker.setMap(null);
+    // });
+    // // remove old markers from this.markers
+    // this.markers.length = 0;
+
+    for (var marker in this.markers) {
+      if (this.markers.hasOwnProperty(marker)) {
+        this.markers[marker].setMap(null)
+      }
+    }
+
+    this.markers = {};
   },
 
   dropListingMarkers: function (listings) {
     //iterate through fetched listings, adding
     //a marker per listing
     for (var l = 0; l < listings.length; l++) {
-      var marker = this.markMap(listings[l]);
-      this.markers.push(marker);
+      var marker = this.markMap(listings[l]),
+          listingId = listings[l].id;
+      this.markers[listingId] = marker;
     }
   },
 
   markMap: function (listing) {
     var ghostIcon = {
-      url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811046/marker_ivmzej.png',
-      scaledSize: new google.maps.Size(35, 40),
+      url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1448408321/marker_sad_izdnuc.png',
+      scaledSize: new google.maps.Size(27, 37),
       anchor: new google.maps.Point(40, 35)
     };
 

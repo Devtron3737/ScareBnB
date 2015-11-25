@@ -9,6 +9,15 @@ var ListingBlock = React.createClass({
     this.history.pushState(null, listingPath)
   },
 
+  handleHover: function () {
+    console.log('in handle hover')
+    SearchActions.listingHover(this.props.listing.id)
+  },
+
+  handleLeave: function () {
+    SearchActions.listingLeave(this.props.listing.id)
+  },
+
   render: function () {
     var listing = this.props.listing,
         listingPath = '/listings/' + listing.id,
@@ -23,7 +32,11 @@ var ListingBlock = React.createClass({
     //change image
     //   params={{listingId: listing.id}}
     return (
-      <div className='listing-block' onClick={this.handleClick}>
+      <div className='listing-block'
+           onClick={this.handleClick}
+           onMouseOver={this.handleHover}
+           onMouseLeave={this.handleLeave}
+      >
           <img className='listing-pic' src={listingPictureUrl} height='240' width='350' />
 
           <div id='listing-title'>{listing.title}</div>

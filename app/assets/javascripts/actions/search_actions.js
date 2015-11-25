@@ -58,8 +58,20 @@
           })
         }
       });
+    },
 
+    listingHover: function (listingId) {
+      Dispatcher.dispatch({
+        actionType: "listing_hover",
+        listingId: listingId
+      })
+    },
 
+    listingLeave: function (listingId) {
+      Dispatcher.dispatch({
+        actionType: "listing_leave",
+        listingId: listingId
+      })
     }
   };
 })(this);

@@ -8,10 +8,14 @@
         checkIn: "",
         checkOut: ""
       },
+      _listingHover = "",
+      _listingLeave = "",
       LISTINGS_CHANGE = "listings_change",
       PLACE_CHANGE = "place_change",
       LISTING_SHOW_CHANGE = "listing_show_change",
-      DATE_CHANGE = "date_change";
+      DATE_CHANGE = "date_change",
+      LISTING_HOVER_CHANGE = "listing_hover",
+      LISTING_LEAVE_CHANGE = "listing_leave";
 
   var SearchStore = root.SearchStore = $.extend(
     {},
@@ -33,6 +37,12 @@
             break;
           case 'date_change':
             SearchStore.updateDates(payLoad.dates);
+            break;
+          case 'listing_hover':
+            SearchStore.updateListingHover(payLoad.listingId)
+            break;
+          case 'listing_leave':
+            SearchStore.updateListingLeave(payLoad.listingId)
             break;
         }
       }),
@@ -83,6 +93,16 @@
         return listing;
       },
 
+      getListingHover: function () {
+        console.log('in listing hover store')
+        console.log(_listingHover)
+        return _listingHover.toString().slice()
+      },
+
+      getListingLeave: function () {
+        return _listingLeave.toString().slice()
+      },
+
       updateListings: function (listings) {
         _listings = listings;
         this.emit(LISTINGS_CHANGE);
@@ -112,6 +132,18 @@
         this.emit(DATE_CHANGE);
       },
 
+      updateListingHover: function (listingId) {
+        _listingHover = listingId;
+
+        this.emit(LISTING_HOVER_CHANGE);
+      },
+
+      updateListingLeave: function (listingId) {
+        _listingLeave = listingId;
+
+        this.emit(LISTING_LEAVE_CHANGE);
+      },
+
       addListingsChangeListener: function (callback) {
         this.on(LISTINGS_CHANGE, callback);
       },
@@ -125,6 +157,14 @@
         this.on(LISTING_SHOW_CHANGE, callback);
       },
 
+      addListingHoverChangeListener: function (callback) {
+        this.on(LISTING_HOVER_CHANGE, callback);
+      },
+
+      addListingLeaveChangeListener: function (callback) {
+        this.on(LISTING_LEAVE_CHANGE, callback);
+      },
+
       removeListingsChangeListener: function (callback) {
         this.removeListener(LISTINGS_CHANGE, callback);
       },
@@ -136,6 +176,14 @@
 
       removeListingShowChangeListener: function (callback) {
         this.removeListener(LISTING_SHOW_CHANGE, callback);
+      },
+
+      removeListingHoverChangeListener: function (callback) {
+        this.removeListener(LISTING_HOVER_CHANGE, callback);
+      },
+
+      removeListingLeaveChangeListener: function (callback) {
+        this.removeListener(LISTING_LEAVE_CHANGE, callback);
       }
     }
   );
