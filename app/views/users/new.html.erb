@@ -1,0 +1,16 @@
+<main id='session-main' className='clearfix'>
+  <h1>scarebnb</h1>
+  <a href='/session/new'>Log in</a>
+
+  <section id='signup-section' class='session-section'>
+    <img id='session-section-logo' src='http://res.cloudinary.com/dn7rukqow/image/upload/v1447811046/logo_red_yi6mz8.png' height='130' />
+
+    <form action='/session' method='POST'>
+      <input type='text' class='input-field' name='user[username]' id='user_username' placeholder='username'/>
+      <input type='text' class='input-field' name='user[email]' id='user_email' placeholder='email'/>
+      <input type='password' class='input-field' name='user[username]' id='user_password' placeholder='password'/>
+
+      <input type='submit' class='button' id='session-submit' value='Sign up!' />
+    </form>
+  </section>
+</main>

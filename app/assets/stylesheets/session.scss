@@ -21,7 +21,7 @@
   font-size: 18px;
 }
 
-#session-section {
+.session-section {
   position: absolute;
   top: 10%;
   left: 50%;
@@ -47,17 +47,21 @@
 //
 // }
 
-#session-section input {
+.session-section input {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
   margin-bottom: 30px;
+  width: 250px;
+}
+
+#signup-section {
+  height: 460px;
 }
 
 #user_username {
   width: 250px;
   background: rgba(252, 252, 253, 1); // airbnb offwhite
-
 }
 
 #user_password {
@@ -67,6 +71,7 @@
 
 #session-submit {
   border-radius: 6%;
+  width: 100px;
   padding: 5px;
   font-size: 15px;
   background: rgba(255, 77, 77, 0.97); //airbnb red
