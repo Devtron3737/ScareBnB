@@ -7,7 +7,8 @@ class SessionsController < ApplicationController
     # no user with that username!
     render :new
     else
-      redirect_to user_url(@user)
+      session[:user_id] = @user.id
+      redirect_to user_url
     end
   end
 
@@ -18,5 +19,11 @@ class SessionsController < ApplicationController
 
   def destroy
     # log out
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:username, :password)
   end
 end
