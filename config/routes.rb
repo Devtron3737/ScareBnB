@@ -60,6 +60,6 @@ Rails.application.routes.draw do
   namespace :api do
     resources :listings
     resources :reservations
-    resources :users
+    resource :user
   end
 end
