@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def create
-    session[:session_token] = 
+    @user = User.find_by(username: )
     # log user in
   end
 
