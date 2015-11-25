@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  root 'home_page#action'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -54,8 +54,8 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  resources :sessions
-
+  root 'home_page#action'
+  resource :session, only: [:create, :destroy, :new]
 
   namespace :api do
     resources :listings
