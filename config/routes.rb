@@ -56,6 +56,7 @@ Rails.application.routes.draw do
   #   end
   root 'home_page#action'
   resource :session, only: [:create, :destroy, :new]
+  resource :user, only: [:new]
 
   namespace :api, defaults: {format: :json} do
     resources :listings

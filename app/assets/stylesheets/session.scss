@@ -1,10 +1,25 @@
 #session-main {
-  background: rgba(255, 77, 77, 0.97);
+  background: rgba(255, 77, 77, 0.97); //airbnb red
   content: "";
   height: 100vh;
   width: 100%;
 }
 
+#session-main > h1 {
+  position: absolute;
+  left: 1%;
+  top: 1%;
+  font-size: 20px;
+  color: rgba(252, 252, 253, 1); // airbnb offwhite
+}
+
+#session-main > a {
+  position: absolute;
+  right: 1%;
+  top: 1%;
+  color: rgba(252, 252, 253, 1); // airbnb offwhite
+  font-size: 18px;
+}
 
 #session-section {
   position: absolute;
@@ -18,16 +33,25 @@
   border-radius: 3%;
 }
 
-#session-section > h3 {
-  color: #585858; //dark grey
-  font-family: 'Shadows Into Light', cursive;
-  
+#session-section-logo {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 30px;
+  margin-bottom: 40px;
 }
+
+// #session-section > h3 {
+//   color: #585858; //dark grey
+//   font-family: 'Shadows Into Light', cursive;
+//
+// }
 
 #session-section input {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  margin-bottom: 30px;
 }
 
 #user_username {
@@ -42,9 +66,23 @@
 }
 
 #session-submit {
-  border-radius: 3%;
+  border-radius: 6%;
   padding: 5px;
   font-size: 15px;
-  background: white;
-  color: #585858; //dark grey
+  background: rgba(255, 77, 77, 0.97); //airbnb red
+  color: rgba(252, 252, 253, 1); // airbnb offwhite
+}
+
+#session-demo {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  width: 330px;
+}
+
+#session-demo > a {
+  display: inline;
+  color: rgba(255, 77, 77, 0.97); //airbnb red
 }
