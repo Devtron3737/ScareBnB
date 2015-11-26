@@ -5,8 +5,8 @@ class SessionsController < ApplicationController
     if @user.nil?
 
     # no user with that username!
-    flash.now[:errors] = "Invalid username/password"
-    render template: 'users/new'
+    flash.now[:errors] = ["Invalid username/password"]
+    render :new
     else
       login!(@user)
     end
