@@ -7,8 +7,6 @@ var GhostPage = React.createClass({
   },
 
   componentDidMount: function () {
-    // var userId = this.props.params.userId;
-    console.log('in ghost page mounting, id: ' + userId);
     ManageStore.addUserChangeListener(this._onChange);
     ManageActions.getUserInfo();
   },

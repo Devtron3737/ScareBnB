@@ -1,5 +1,5 @@
 .manage-container {
-  background: #F8F8F8; //light grey
+  background: rgba(255, 77, 77, 0.97); // airbnb red
   // background-image: image-url('redpattern.jpg');
   // background-size: cover;
   display: block;
@@ -14,53 +14,67 @@
 }
 
 .manage-category {
-  margin-left: 20%;
+  padding-top: 10px;
+  margin-left: 10%;
+  margin-right: 80px;
   width: 250px;
+  border-right: 1px solid rgba(252, 252, 253, 1); // airbnb offwhite
 }
 
 .manage-category > section {
-  margin-top: 30px;
-  width: 200px;
-  border-bottom: 1px solid lightgrey;
+  margin-bottom: 30px;
+  // width: 200px;
+  // background: blue;
+  // border-bottom: 1px solid lightgrey;
   font-size: 18px;
-  padding-left: 5px;
-  color: #585858; //dark grey
+  // padding-left: 5px;
+  color: rgba(252, 252, 253, 1); // airbnb offwhite
 }
 
-#manage-listing-addlisting {
-  padding: 5px;
-  border-radius: 7%;
-  font-size: 13px;
-  margin-top: 30px;
-  margin-left: 20px;
-}
+// #manage-listing-addlisting {
+//   padding: 5px;
+//   background: rgba(255, 128, 128, 1); //airbnb light red
+//
+//   border-radius: 7%;
+//   font-size: 13px;
+//   margin-top: 30px;
+//   // margin-left: 20px;
+//   border: 1px solid rgba(252, 252, 253, 1); // airbnb offwhite
+//   border-bottom: 1px solid rgba(252, 252, 253, 1); // airbnb offwhite
+//   color: #585858; //dark grey
+// }
 
 .manage-category > section:hover {
   // background: rgba(255, 77, 77, 0.97);
+  color: rgba(255, 128, 128, 1); //airbnb light red
   cursor: pointer;
 }
 
 .manage-block {
-  border: 1px solid lightgrey;
+  // border: 1px solid lightgrey;
+  // border: 4px solid rgba(255, 128, 128, 1); //airbnb light red
   border-bottom: 0;
   width: 700px;
   // padding:
 }
 
 .manage-block-title {
-  background: #ededed; // medium grey
-  border-bottom: 1px solid lightgrey;
-  color: #585858; //dark grey
-  padding: 10px;
-  padding-left: 20px;
-  font-size: 20px;
-  // margin-left: 50px;
+  background: rgba(255, 128, 128, 1); //airbnb light red
+  text-align: center;
+  color: rgba(252, 252, 253, 1); // airbnb offwhite
+  // padding: 10px;
+  // padding-left: 20px;
+  padding: 5px;
+  font-size: 25px;
+  font-weight: 300;
+  margin-bottom: 30px;
 }
 
 .manage-category-block {
   background: rgba(252, 252, 253, 1); // offwhite
-  border-bottom: 1px solid lightgrey;
+  border: 4px solid rgba(255, 128, 128, 1); //airbnb light red
   padding: 20px;
+  margin-bottom: 20px;
   // padding-top: 35px;
   height: 75px;
 

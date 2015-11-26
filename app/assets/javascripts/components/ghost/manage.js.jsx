@@ -56,12 +56,9 @@ var Manage = React.createClass({
             Your Reservations
           </section>
 
-          <button onClick={this.toAddListing}
-                  className='button'
-                  id='manage-listing-addlisting'
-                  type='button'>
-                  Add Listing
-          </button>
+          <section onClick={this.toAddListing} id='manage-listing-addlisting'>
+            Add Listing
+          </section>
 
         </div>
 
