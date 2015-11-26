@@ -35,6 +35,10 @@ var Home = React.createClass({
     // empty
   },
 
+  handleLogOut: function () {
+    SessionUtil.logOut()
+  },
+
   // onDateChange: function (type, date) {
   //   if (type === "check_in") {
   //     this.check_in = date
@@ -70,6 +74,8 @@ var Home = React.createClass({
             <h2 id='home-account'>
                 <Link to='/user'>Account</Link>
             </h2>
+
+            <h2  id='logout' onClick={this.handleLogOut}>Log out</h2>
 
 
           </nav>

@@ -59,7 +59,7 @@
 //
 // }
 
-.session-section input {
+.session-input {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -110,16 +110,31 @@
   width: 200px;
 }
 
-#session-demo {
+.session-demo {
   position: absolute;
   bottom: 2%;
   left: 50%;
   transform: translateX(-50%);
   font-size: 14px;
-  width: 330px;
+  width: 360px;
 }
 
-#session-demo > a {
-  display: inline;
+.session-demo > * {
+  float: left;
+}
+
+.session-demo-user {
+  // display: inline;
   color: rgba(255, 77, 77, 0.97); //airbnb red
+  width: 90px;
+  font-size: 14px;
+  // float: left;
+}
+
+#dracula {
+  width: 55px;
+}
+
+.session-demo-user:hover {
+  cursor: pointer;
 }

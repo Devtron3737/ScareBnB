@@ -18,11 +18,12 @@ class ApplicationController < ActionController::Base
 
   def logged_in?
     # check that user is logged in
-    !session[:user_id].nil?
+    !current_user.nil?
   end
 
   def login!(user)
     session[:user_id] = user.id
+    redirect_to root_url
     # log user in
   end
 
@@ -30,7 +31,4 @@ class ApplicationController < ActionController::Base
     session[:user_id] = nil
   end
 
-  def logout!
-    # log user out
-  end
 end

@@ -8,7 +8,6 @@ class SessionsController < ApplicationController
     render template: 'users/new'
     else
       login!(@user)
-      redirect_to :root
     end
   end
 
@@ -18,7 +17,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    # log out
+    logout!
+    render json: {}
   end
 
   private
