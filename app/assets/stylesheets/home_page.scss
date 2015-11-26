@@ -3,7 +3,7 @@
 .home-header {
   display: block;
   position: relative;
-  background-image: image-url('gothic.jpg');
+  background-image: url('http://res.cloudinary.com/dn7rukqow/image/upload/v1447735691/qckxjk1iadqmllqsbcrz.jpg');
   background-size: cover;
   width: 100%;
   height: 600px;
@@ -33,7 +33,7 @@
   color: white;
   width: 780px;
   font-size: 60px;
-  font-weight: 800;
+  font-weight: 400;
 }
 
 .welcome-sub {
@@ -42,6 +42,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 380px;
+  font-weight: 400;
   color: white;
   font-size: 20px;
 }
@@ -121,13 +122,13 @@
 
   h3 {
     font-size: 30px;
-    font-weight: 800;
+    font-weight: 400;
     margin: 0;
   }
 
   h4 {
     font-size: 15px;
-    font-weight: 800;
+    font-weight: 400;
     margin-top: 15px;
   }
 }

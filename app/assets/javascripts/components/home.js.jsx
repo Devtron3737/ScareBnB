@@ -1,3 +1,5 @@
+var Link = ReactRouter.Link
+
 var Home = React.createClass({
   mixins: [ReactRouter.History],
 

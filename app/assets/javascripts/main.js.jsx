@@ -1,9 +1,8 @@
 $( function () {
   var root = document.getElementById('app'),
-      Router = ReactRouter.Router,
-      Route = ReactRouter.Route,
-      IndexRoute = ReactRouter.IndexRoute,
-      Link = ReactRouter.Link;
+    Router = ReactRouter.Router,
+    Route = ReactRouter.Route,
+    IndexRoute = ReactRouter.IndexRoute;
 
   var App = React.createClass({
     mixins: [ReactRouter.History],
@@ -22,11 +21,11 @@ $( function () {
       <IndexRoute name='home' component={Home} />
       <Route name='listings-index' component={ListingsIndex} path="listings/:search" />
       <Route component={ListingsShow} path="listing/:listingId"/>
-      <Route component={GhostPage} path="user" />
+      <Route component={GhostPage} path="/user" />
     </Route>
   );
 
   if (root) {
-    React.render(<Router>{routes}</Router>, root);
-  }  
-});
+      React.render(<Router>{routes}</Router>, root);
+  }
+})

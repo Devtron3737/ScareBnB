@@ -1,14 +1,14 @@
 class SessionsController < ApplicationController
   def create
-    @user = User.find_by(username: params[:user][:username])
 
+    @user = User.find_by(username: params[:user][:username])
     if @user.nil?
 
     # no user with that username!
     render template: 'users/new'
     else
-      log_in!(@user)
-      redirect_to user_url
+      login!(@user)
+      redirect_to :root
     end
   end
 

@@ -51,9 +51,8 @@ ActiveRecord::Schema.define(version: 20151125233559) do
 
   create_table "users", force: :cascade do |t|
     t.string "email"
-    t.string "pwd_digest",     null: false
+    t.string "pwd_digest", null: false
     t.string "username"
-    t.string "sesssion_token", null: false
   end
 
 end
