@@ -4,11 +4,8 @@ class ApplicationController < ActionController::Base
   # protect_from_forgery with: :exception
   def find_by_credentials(credentials)
     user = User.find_by(username: credentials['username'])
-
-    return nil if user.nil?
-
-    pwd_digest = Digest::Sha2(credentials['password'])
-    user.pwd_digest == pwd_digest ? user : nil
+    return false if user.nil?
+    user.authenticate(credentials['password'])
   end
 
   def current_user
