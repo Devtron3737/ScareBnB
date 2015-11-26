@@ -2,12 +2,12 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   # protect_from_forgery with: :exception
-  def find_by_credentials(username, password)
-    user = User.find_by(username: username)
+  def find_by_credentials(credentials)
+    user = User.find_by(username: credentials['username'])
 
     return nil if user.nil?
 
-    pwd_digest = Digest::Sha2(password)
+    pwd_digest = Digest::Sha2(credentials['password'])
     user.pwd_digest == pwd_digest ? user : nil
   end
 

@@ -9,7 +9,9 @@
 #
 
 class User < ActiveRecord::Base
-  validates :username, :pwd_digest, presence: true
+  validates :username, presence: true
+  has_secure_password
+
 
   has_many :listings, foreign_key: :ghost_id
   has_one :picture

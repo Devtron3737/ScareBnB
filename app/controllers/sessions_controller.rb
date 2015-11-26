@@ -1,14 +1,15 @@
 class SessionsController < ApplicationController
   def create
 
-    @user = User.find_by(username: params[:user][:username])
-    if @user.nil?
+    # user = User.find_by(username: params[:user][:username])
+    user = find_by_credentials(credentials)
+    if user.nil?
 
     # no user with that username!
     flash.now[:errors] = ["Invalid username/password"]
     render :new
     else
-      login!(@user)
+      login!(user)
     end
   end
 
@@ -24,7 +25,7 @@ class SessionsController < ApplicationController
 
   private
 
-  def user_params
+  def credentials
     params.require(:user).permit(:username, :password)
   end
 end
