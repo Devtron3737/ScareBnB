@@ -26,7 +26,7 @@ var Account = React.createClass({
     return(
       <h2 id='nav-account'>
           <Link to='/user'>
-            <img src={userPicUrl} id='nav-userPic' height='90' width='90' />
+            <img src={userPicUrl} id='nav-userPic' height='50' width='50' />
           </Link>
       </h2>
     )

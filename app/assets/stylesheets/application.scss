@@ -118,8 +118,12 @@ ul {
 }
 
 .search-field-container {
-  width: 750px;
+  // width: 750px;
+  width: 90%;
   float:left;
+  border-right: 1px solid lightgrey;
+  // background: blue;
+  height: 100%;
 }
 
 .search-field-container > * {
@@ -158,37 +162,18 @@ ul {
   }
 }
 
-.navbar-list {
-  float: right;
-  height: 100%;
+#nav-account {
+  position: absolute;
+  right: 0.5%;
+  top: 1%;
 }
 
-.navbar-list-item {
-  border-left: 1px solid lightgrey;
-  padding-right: 25px;
-  padding-left: 25px;
-  height: 100%;
-  float: left;
+#nav-userPic {
+  border-radius: 50%;
+  border: 2px solid rgba(252, 252, 253, 1); // airbnb offwhite
 }
 
-.ghost-text {
-  float: left;
-
-}
-//
-// .house-pic {
-//   float: left;
-// }
-//
-// .message-text {
-//   float: left;
-//   top: 2px;
-// }
-//
-// .message-pic {
-//   float: left;
-//   top: 2px;
-// }
+// DATES--------------------------
 
 .date-field-container {
   position: relative;
