@@ -1,8 +1,8 @@
 ( function (root) {
 
-  var _listings = {},
+  var _userPic = {},
+      _listings = {},
       _place = {lat: 0, lng: 0},
-      _searchValue = "",
       _listingShow = {},
       _dates = {
         checkIn: "",
@@ -29,9 +29,6 @@
           case 'place_search':
             SearchStore.updatePlace(payLoad.place);
             break;
-          // case 'search_value':
-          //   SearchStore.updateSearchValue(payLoad.searchValue);
-          //   break;
           case 'listing_show':
             SearchStore.updateListingShow(payLoad.listing);
             break;
@@ -79,10 +76,6 @@
 
         return datesDup;
       },
-
-      // getSearchValue: function () {
-      //   return _searchValue.slice();
-      // },
 
       getListingShow: function () {
         var listing = {};

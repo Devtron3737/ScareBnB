@@ -7,6 +7,6 @@ Rails.application.routes.draw do
     resources :listings
     resources :reservations
     resource :user
-    resources :pictures, only: [:show]
+    resource :picture, only: [:show]
   end
 end

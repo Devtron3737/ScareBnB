@@ -60,6 +60,21 @@
       });
     },
 
+    fetchUserPic: function () {
+      $.ajax({
+        url: '/api/picture.json'
+        method: 'GET',
+        success: function (userPic) {
+          console.log('successful userPic ajax');
+          console.log(userPic);
+          Dispatcher.dispatch({
+            actionType: "user_pic",
+            userPic: userPic
+          })
+        }
+      });
+    },
+
     listingHover: function (listingId) {
       Dispatcher.dispatch({
         actionType: "listing_hover",
