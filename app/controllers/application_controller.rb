@@ -3,9 +3,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   # protect_from_forgery with: :exception
   def find_by_credentials(credentials)
-    user = User.find_by(username: credentials['username'])
-    return false if user.nil?
-    user.authenticate(credentials['password'])
+    User.find_by(username: credentials['username'])
+        .try(:authenticate, credentials['password'])
   end
 
   def current_user
