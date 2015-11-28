@@ -5,9 +5,14 @@ class UsersController < ApplicationController
 
   def create
 
-    # if valid user creation, then
-    # log new user in and direct to homepage
-    # create picture if picture
+    user = User.new(user_params)
+
+    if user.save
+      login!(user)
+    else
+      flash.now[:errors] = user.errors.full_messages
+      render :new
+    end
   end
 
   def show
