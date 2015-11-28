@@ -7,10 +7,8 @@ var Home = React.createClass({
     var defaultBounds = new google.maps.LatLngBounds(
       new google.maps.LatLng(37.54025472421631, -122.6264275146484),
       new google.maps.LatLng(37.97454774677482, -122.2487724853516)
-      //make default sf
     );
-    // this.check_in = DateUtil.getDefault('check_in')
-    // this.check_out = DateUtil.getDefault('check_out')
+
     var options = {bounds: defaultBounds},
         searchField = document.getElementById('home-searchfield');
     this.autocomplete = new google.maps.places.Autocomplete(searchField, options);
@@ -21,45 +19,15 @@ var Home = React.createClass({
 
     var search = document.getElementById('home-searchfield').value,
         path = '/listings/' + search + '/';
-        // dateQuery = {
-        //   check_in: this.check_in,
-        //   check_out: this.check_out
-        // }
-
-    // console.log(dateQuery)
-    // console.log(this.history.createPath(path, dateQuery))
 
     this.history.pushState(null, path);
-    // need to encompass searchfield, guests, and dates
-    // in same <form>. then setup defaults if things are
-    // empty
   },
 
   handleLogOut: function () {
     SessionUtil.logOut()
   },
 
-  // onDateChange: function (type, date) {
-  //   if (type === "check_in") {
-  //     this.check_in = date
-  //   } else if (type === "check_out") {
-  //     this.check_out = date
-  //   }
-  // },
-
   render: function () {
-    // <DateField onChangeCallback={this.onDateChange} type='check_in' />
-    // <DateField onChangeCallback={this.onDateChange} type='check_out' />
-    // <div className='searchbar-items guests'>
-    //   <select name='guests'>
-    //     <option value="1" >1 Guest</option>
-    //     <option value="2" >2 Guests</option>
-    //     <option value="3" >3 Guests</option>
-    //     <option value="4" >4 Guests</option>
-    //     <option value="5" >5 Guests</option>
-    //     <option value="6" >6 Guests</option>
-    //   </select>
-    // </div>
 
     return(
       <div>
