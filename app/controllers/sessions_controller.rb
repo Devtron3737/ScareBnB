@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
   end
 
   def new
-    # signup/#login
+    # login
     render :new
   end
 

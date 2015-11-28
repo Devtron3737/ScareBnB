@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user
+    # add session token
     return nil if session[:user_id].nil?
     User.find(session[:user_id])
   end
