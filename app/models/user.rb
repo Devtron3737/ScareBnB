@@ -21,4 +21,7 @@ class User < ActiveRecord::Base
     class_name: "Reservation",
     foreign_key: :guest_id
   )
+
+  def username=(val)
+    write_attribute(:username, val.downcase)
 end
