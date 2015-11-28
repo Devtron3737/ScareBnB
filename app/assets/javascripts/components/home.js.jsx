@@ -3,25 +3,15 @@ var Link = ReactRouter.Link
 var Home = React.createClass({
   mixins: [ReactRouter.History],
 
-  getInitialState: function () {
-    return {userPic: ""}
-  },
-
   componentDidMount: function () {
     var defaultBounds = new google.maps.LatLngBounds(
       new google.maps.LatLng(37.54025472421631, -122.6264275146484),
       new google.maps.LatLng(37.97454774677482, -122.2487724853516)
     );
 
-
     var options = {bounds: defaultBounds},
         searchField = document.getElementById('home-searchfield');
     this.autocomplete = new google.maps.places.Autocomplete(searchField, options);
-    SearchActions.fetchUserPic();
-  },
-
-  _onUserPicChange: function () {
-    this.setState {userPic: SearchStore.getUserPic()}
   },
 
   handleSubmit: function () {
@@ -39,10 +29,6 @@ var Home = React.createClass({
 
   render: function () {
 
-    var userPicUrl = (this.state.userPic) ?
-                      this.state.userPic.url :
-                      "http://res.cloudinary.com/dn7rukqow/image/upload/v1448399277/no-profile-img_vqxn7j.gif"
-
     return(
       <div>
         <header className='home-header'>
@@ -53,11 +39,7 @@ var Home = React.createClass({
               </a>
             </h2>
 
-            <h2 id='home-account'>
-                <Link to='/user'>
-                  <img src={userPicUrl} id='nav-userPic' height='45' /}
-                </Link>
-            </h2>
+            <Account />
 
             <h2  id='logout' onClick={this.handleLogOut}>Log out</h2>
 

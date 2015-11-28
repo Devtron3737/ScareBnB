@@ -15,7 +15,8 @@
       LISTING_SHOW_CHANGE = "listing_show_change",
       DATE_CHANGE = "date_change",
       LISTING_HOVER_CHANGE = "listing_hover",
-      LISTING_LEAVE_CHANGE = "listing_leave";
+      LISTING_LEAVE_CHANGE = "listing_leave",
+      USER_PIC_CHANGE = "user_pic_change";
 
   var SearchStore = root.SearchStore = $.extend(
     {},
@@ -40,6 +41,9 @@
             break;
           case 'listing_leave':
             SearchStore.updateListingLeave(payLoad.listingId)
+            break;
+          case 'user_pic':
+            SearchStore.updateUserPic(payLoad.userPic)
             break;
         }
       }),
@@ -94,6 +98,15 @@
         return _listingLeave.toString().slice()
       },
 
+      getUserPic: function () {
+        var userPic = {};
+        for (var j in _userPic) {
+          userPic[j] = _userPic[j];
+        }
+
+        return userPic;
+      },
+
       updateListings: function (listings) {
         _listings = listings;
         this.emit(LISTINGS_CHANGE);
@@ -135,6 +148,12 @@
         this.emit(LISTING_LEAVE_CHANGE);
       },
 
+      updateUserPic: function (userPic) {
+        _userPic = userPic;
+
+        this.emit(USER_PIC_CHANGE)
+      },
+
       addListingsChangeListener: function (callback) {
         this.on(LISTINGS_CHANGE, callback);
       },
@@ -156,6 +175,10 @@
         this.on(LISTING_LEAVE_CHANGE, callback);
       },
 
+      addUserPicChangeListener: function (callback) {
+        this.on(USER_PIC_CHANGE, callback)
+      },
+
       removeListingsChangeListener: function (callback) {
         this.removeListener(LISTINGS_CHANGE, callback);
       },
@@ -175,8 +198,10 @@
 
       removeListingLeaveChangeListener: function (callback) {
         this.removeListener(LISTING_LEAVE_CHANGE, callback);
-      }
-    }
-  );
+      },
 
+      removeUserPicChangeListener: function (callback) {
+        this.removeListener(USER_PIC_CHANGE, callback)
+      }
+  });
 })(this);

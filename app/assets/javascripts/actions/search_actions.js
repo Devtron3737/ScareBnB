@@ -62,7 +62,7 @@
 
     fetchUserPic: function () {
       $.ajax({
-        url: '/api/picture.json'
+        url: '/api/picture.json',
         method: 'GET',
         success: function (userPic) {
           console.log('successful userPic ajax');
