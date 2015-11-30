@@ -55,7 +55,7 @@ var Account = React.createClass({
 
     return(
       <div id='nav-account' onMouseEnter={this.handleHover} onMouseLeave={this.handleLeave}>
-        <img src={userPicUrl} id='nav-userPic' height='50' width='50' />
+        <img src={userPicUrl} id='nav-userPic' height='45' width='45' />
         {dropDown}
       </div>
 
