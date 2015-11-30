@@ -9,9 +9,10 @@
 #
 
 class User < ActiveRecord::Base
-  validates :username, presence: true, uniqueness: true
+  validates :username, :session_token, presence: true, uniqueness: true
   has_secure_password
 
+  before_validation :ensure_sesssion_token
 
   has_many :listings, foreign_key: :ghost_id
   has_one :picture
@@ -24,5 +25,9 @@ class User < ActiveRecord::Base
 
   def username=(val)
     write_attribute(:username, val.downcase)
+  end
+
+  def ensure_sesssion_token
+    self.session_token ||= SecureRandom::urlsafe_base64
   end
 end
