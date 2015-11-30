@@ -4,7 +4,7 @@ var ManageListings = React.createClass({
     var listings;
 
     if (this.props.listings.length === 0) {
-      listings = <div id='nolistings'> You currently don't have any listings.</div>
+      listings = <div id='nocategory'> You currently don't have any listings.</div>
     } else {
       listings = (
         this.props.listings.map(function (listing, index) {
