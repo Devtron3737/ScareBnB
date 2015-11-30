@@ -26,7 +26,6 @@ var NewListing = React.createClass({
           toe_nails: Number(this.getVal('manage-new-toenails')),
           address: this.getVal('manage-new-address'),
           description: this.getVal('manage-new-description'),
-          ghost_id: Number(this.props.userId),
           pictures: this.pics,
           lat: coords.lat,
           lng: coords.lng,

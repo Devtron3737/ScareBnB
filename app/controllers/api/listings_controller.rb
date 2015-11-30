@@ -9,8 +9,8 @@ class Api::ListingsController < ApplicationController
 
   def create
     listing = Listing.new(listing_params)
+    listing.ghost_id = current_user.id
 
-    #listing.ghost_id = current_user.id
     if listing.save
       render json: {}
     else
