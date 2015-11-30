@@ -127,6 +127,14 @@
   position: absolute;
   bottom: -50px;
   left: 10px;
+  width: 250px;
+  overflow: scroll;
+}
+
+#listing-address {
+  width: 250px;
+  overflow: scroll;
+  height: 20px;
 }
 
 .listing-toe-nail {
