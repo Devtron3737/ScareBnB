@@ -107,6 +107,13 @@
   font-size: 13px;
 }
 
+#nocategory {
+  background: rgba(252, 252, 253, 1); // offwhite
+  border: 4px solid rgba(255, 128, 128, 1); //airbnb light red
+  text-align: center;
+  padding: 20px;
+}
+
 #manage-new-container {
   border-bottom: 1px solid lightgrey;
 }
