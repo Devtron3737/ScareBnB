@@ -25,6 +25,21 @@ var Account = React.createClass({
     })
   },
 
+  handlePicUpload: function () {
+    cloudinary.openUploadWidget(
+      {
+        cloud_name: window.CLOUDINARY_CLOUD_NAME,
+        upload_preset: window.CLOUDINARY_UPLOAD_PRESET,
+        theme: 'white'
+      },
+      function (error, result) {
+        console.log(result[0].url)
+
+        ManageActions.addUserPic({url: result[0].url})
+      }
+    )
+  },
+
   handleLeave: function () {
     this.setState({
       dropDown: false
@@ -47,7 +62,7 @@ var Account = React.createClass({
       dropDown = (
         <ul className='account-dropdown-list'>
           <li><Link to='/user'>Manage listings and reservations</Link></li>
-          <li onClick={this.toUploadUserPic}>Upload user picture</li>
+          <li onClick={this.handlePicUpload}>Upload user picture</li>
           <li onClick={this.handleLogOut}>Log out</li>
         </ul>
       )

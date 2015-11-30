@@ -14,6 +14,18 @@
       });
     },
 
+    addUserPic: function (url) {
+      $.ajax({
+        url: '/api/picture.json',
+        method: 'POST',
+        data: url,
+        success: function () {
+          console.log('successful user pic ajax');
+          SearchActions.fetchUserPic();
+        }
+      });
+    },
+
     deleteListing: function (options) {
       $.ajax({
         url: '/api/listings/' + options.listingId + '.json',
