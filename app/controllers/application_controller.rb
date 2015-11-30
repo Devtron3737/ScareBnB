@@ -9,23 +9,29 @@ class ApplicationController < ActionController::Base
 
   def current_user
     # add session token
-    return nil if session[:user_id].nil?
-    User.find(session[:user_id])
+    return nil if session[:session_token].nil?
+    User.find_by(session_token: session[:session_token])
   end
 
   def logged_in?
-    # check that user is logged in
     !current_user.nil?
   end
 
   def login!(user)
-    session[:user_id] = user.id
+    # force log out other clients
+    user.reset_session_token!
+    # log this client in
+    session[:session_token] = user.session_token
     redirect_to root_url
     # log user in
   end
 
   def logout!
-    session[:user_id] = nil
+    session[:session_token] = nil
+  end
+
+  def reset_session_token!
+    self.session_token = SecureRandom::urlsafe_base64
   end
 
 end
