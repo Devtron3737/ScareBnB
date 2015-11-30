@@ -38,12 +38,7 @@ var Home = React.createClass({
                <img name='white logo' src={'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811046/logo_ghost_ceoqts.png'} height='50' />
               </a>
             </h2>
-
             <Account />
-
-            <h2  id='logout' onClick={this.handleLogOut}>Log out</h2>
-
-
           </nav>
 
           <h2 className='welcome-head'>We've been expecting you...</h2>

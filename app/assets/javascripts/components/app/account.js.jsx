@@ -1,6 +1,9 @@
 var Account = React.createClass({
   getInitialState: function () {
-    return {userPic: ""}
+    return {
+      userPic: "",
+      dropDown: false
+    }
   },
 
   componentDidMount: function () {
@@ -16,19 +19,46 @@ var Account = React.createClass({
     this.setState({userPic: SearchStore.getUserPic()})
   },
 
+  handleHover: function () {
+    this.setState({
+      dropDown: true
+    })
+  },
+
+  handleLeave: function () {
+    this.setState({
+      dropDown: false
+    })
+  },
+
+  handleLogOut: function () {
+    SessionUtil.logOut()
+  },
+
   render: function () {
     // changed h2 id from home-accout to nav-account
     // adjust stylesheet
-    var userPicUrl = (this.state.userPic) ?
+    var dropDown,
+        userPicUrl = (this.state.userPic) ?
                       this.state.userPic.url :
                       "http://res.cloudinary.com/dn7rukqow/image/upload/v1448399277/no-profile-img_vqxn7j.gif"
 
+    if (this.state.dropDown) {
+      dropDown = (
+        <ul className='account-dropdown-list'>
+          <li><Link to='/user'>Manage listings and reservations</Link></li>
+          <li onClick={this.toUploadUserPic}>Upload user picture</li>
+          <li onClick={this.handleLogOut}>Log out</li>
+        </ul>
+      )
+    }
+
     return(
-      <h2 id='nav-account'>
-          <Link to='/user'>
-            <img src={userPicUrl} id='nav-userPic' height='50' width='50' />
-          </Link>
-      </h2>
+      <div id='nav-account' onMouseEnter={this.handleHover} onMouseLeave={this.handleLeave}>
+        <img src={userPicUrl} id='nav-userPic' height='50' width='50' />
+        {dropDown}
+      </div>
+
     )
   }
 })
