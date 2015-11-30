@@ -22,10 +22,10 @@ var ManageReservationsBlock = React.createClass({
           </div>
 
           <div>
-            <div>{reservation.listing_details.title}</div>
-            <div>{reservation.listing_details.address}</div>
+            <div className='category-details'>{reservation.listing_details.title}</div>
+            <div className='category-details'>{reservation.listing_details.address}</div>
 
-            <div className='manage-category-dates'>
+            <div className='manage-category-dates category-details'>
               {DateUtil.toString(reservation.check_in) + ' to ' + DateUtil.toString(reservation.check_out)}
             </div>
           </div>

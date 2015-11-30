@@ -25,8 +25,8 @@ var ManageListingsBlock = React.createClass({
           </div>
 
           <div>
-            <div>{listing.title}</div>
-            <div>{listing.address}</div>
+            <div className='category-details'>{listing.title}</div>
+            <div className='category-details'>{listing.address}</div>
           </div>
 
         </div>
