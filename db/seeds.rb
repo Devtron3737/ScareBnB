@@ -50,11 +50,11 @@ Picture.create!(user_id: 20, url: 'http://res.cloudinary.com/dn7rukqow/image/upl
 
 
 Listing.create!(ghost_id: 1, toe_nails: 25, title: "Lovely victorian home",
-  address: "111 Madrid St., San Francsico, CA", description: "Boogys place",
+  address: "111 Madrid St., San Francisco, CA", description: "Boogys place",
   amenities: JSON.generate(["stuff"]), lat: 37.727635, lng: -122.428021
 )
 Listing.create!(ghost_id: 1, toe_nails: 75, title: "Rotten abode near the coast",
-  address: "2762 40th Ave., San Francsico, CA", description: "Boogys 2nd place",
+  address: "2762 40th Ave., San Francisco, CA", description: "Boogys 2nd place",
   amenities: JSON.generate(["stuff"]), lat: 37.735323, lng: -122.497367
 )
 Listing.create!(ghost_id: 2, toe_nails: 21, title: "Large space full of spirits",
@@ -67,22 +67,22 @@ Listing.create!(ghost_id: 3, toe_nails: 29, title: "A home away from home",
 )
 
 Listing.create!(ghost_id: 3, toe_nails: 41, title: "Secluded abode near a dark park",
-  address: "222 Willard North, San Francsico, CA", description: "Dorothys second place",
+  address: "222 Willard North, San Francisco, CA", description: "Dorothys second place",
   amenities: JSON.generate(["stuff"]), lat: 37.776441, lng: -122.456654
 )
 
 Listing.create!(ghost_id: 2, toe_nails: 302, title: "The hauntedest of the haunted",
-  address: "1700 Irving St., San Francsico, CA", description: "Caspers second place",
+  address: "1700 Irving St., San Francisco, CA", description: "Caspers second place",
   amenities: JSON.generate(["stuff"]), lat: 37.763782, lng: -122.476104
 )
 
 Listing.create!(ghost_id: 4, toe_nails: 32, title: "I wonder what's behind that door...",
-  address: "535 Florida St., San Francsico, CA", description: "Caspers second place",
+  address: "535 Florida St., San Francisco, CA", description: "Caspers second place",
   amenities: JSON.generate(["stuff"]), lat: 37.762808, lng: -122.411190
 )
 
 Listing.create!(ghost_id: 5, toe_nails: 35, title: "Did you hear that? ",
-  address: "1298 Howard St., San Francsico, CA", description: "Caspers second place",
+  address: "1298 Howard St., San Francisco, CA", description: "Caspers second place",
   amenities: JSON.generate(["stuff"]), lat: 37.775699, lng: -122.413250
 )
 
@@ -92,42 +92,42 @@ Listing.create!(ghost_id: 6, toe_nails: 77, title: "Plenty of things that go bum
 )
 
 Listing.create!(ghost_id: 7, toe_nails: 102, title: "Ghouls, goblins, and zombies",
-  address: "1452 Willard St., San Francsico, CA", description: "Caspers second place",
+  address: "1452 Willard St., San Francisco, CA", description: "Caspers second place",
   amenities: JSON.generate(["stuff"]), lat: 37.763351, lng: -122.453933
 )
 
 Listing.create!(ghost_id: 8, toe_nails: 542, title: "You don't want to know what happened here",
-  address: "184 20th Ave., San Francsico, CA", description: "Caspers second place",
+  address: "184 20th Ave., San Francisco, CA", description: "Caspers second place",
   amenities: JSON.generate(["stuff"]), lat: 37.784382, lng: -122.479339
 )
 
 Listing.create!(ghost_id: 9, toe_nails: 22, title: "Beware of demon",
-  address: "1740 Buchanan St., San Francsico, CA", description: "Caspers second place",
+  address: "1740 Buchanan St., San Francisco, CA", description: "Caspers second place",
   amenities: JSON.generate(["stuff"]), lat: 37.786256 , lng: -122.429827
 )
 
 Listing.create!(ghost_id: 10, toe_nails: 876, title: "Gate of hell in basement",
-  address: "1008 Pacific Ave, San Francsico, CA", description: "Caspers second place",
+  address: "1008 Pacific Ave, San Francisco, CA", description: "Caspers second place",
   amenities: JSON.generate(["stuff"]), lat: 37.796152, lng: -122.412128
 )
 
 Listing.create!(ghost_id: 11, toe_nails: 43, title: "Not one survivor yet",
-  address: "1066 Filbert St., San Francsico, CA", description: "Caspers second place",
+  address: "1066 Filbert St., San Francisco, CA", description: "Caspers second place",
   amenities: JSON.generate(["stuff"]), lat: 37.800638, lng: -122.417137
 )
 
 Listing.create!(ghost_id: 12, toe_nails: 894, title: "Perfect place to rest for eternity",
-  address: "3830 22nd St., San Francsico, CA", description: "Caspers second place",
+  address: "3830 22nd St., San Francisco, CA", description: "Caspers second place",
   amenities: JSON.generate(["stuff"]), lat: 37.754712, lng: -122.433500
 )
 
 Listing.create!(ghost_id: 13, toe_nails: 21, title: "An evil spirits delight",
-  address: "598 Fulton St., San Francsico, CA", description: "Caspers second place",
+  address: "598 Fulton St., San Francisco, CA", description: "Caspers second place",
   amenities: JSON.generate(["stuff"]), lat: 37.778470, lng: -122.426488
 )
 
 Listing.create!(ghost_id: 14, toe_nails: 266, title: "Muahahahahaha",
-  address: "69 Mary St., San Francsico, CA", description: "Caspers second place",
+  address: "69 Mary St., San Francisco, CA", description: "Caspers second place",
   amenities: JSON.generate(["stuff"]), lat: 37.781638, lng: -122.406451
 )
 
