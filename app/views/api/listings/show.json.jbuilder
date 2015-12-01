@@ -6,7 +6,9 @@ json.description @listing.description
 json.address @listing.address
 json.title @listing.title
 json.ghost(@listing.ghost, :username)
-json.user_picture(@listing.ghost_picture, :url)
+if @listing.ghost_picture
+  json.user_picture(@listing.ghost_picture, :url)
+end
 json.pictures(@listing.pictures) do |picture|
   json.(picture, :url)
 end
