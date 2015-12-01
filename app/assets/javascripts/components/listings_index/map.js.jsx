@@ -21,7 +21,8 @@ var Map = React.createClass({
     this.retrieveBounds(place);
 
     // install listeners
-    SearchStore.addSearchChangeListener(this._onSearchChange);
+    SearchStore.addPlaceChangeListener(this._onPlaceChange);
+    SearchStore.addDatesChangeListener(this._onDatesChange);
     SearchStore.addListingsChangeListener(this._onListingsChange);
     SearchStore.addListingHoverChangeListener(this._onListingHover);
     SearchStore.addListingLeaveChangeListener(this._onListingLeave);
@@ -29,7 +30,9 @@ var Map = React.createClass({
   },
 
   componentWillUnmount: function () {
-    SearchStore.removeSearchChangeListener(this._onSearchChange);
+    SearchStore.removePlaceChangeListener(this._onPlaceChange);
+    SearchStore.removeDatesChangeListener(this._onDatesChange);
+    SearchStore.removePlaceChangeListener(this._onPlaceChange);
     SearchStore.removeListingsChangeListener(this._onListingsChange);
     SearchStore.removeListingHoverChangeListener(this._onListingHover);
     SearchStore.removeListingLeaveChangeListener(this._onListingLeave);
@@ -78,7 +81,7 @@ var Map = React.createClass({
     this.dropListingMarkers(listings);
   },
 
-  _onSearchChange: function () {
+  _onPlaceChange: function () {
     var place = SearchStore.getPlace(),
         dates = SearchStore.getDates(),
     //get bounds while also updating this.map
@@ -92,6 +95,19 @@ var Map = React.createClass({
     this.setState({
       center: place
     });
+
+    SearchActions.mapMoved(options);
+  },
+
+  _onDatesChange: function () {
+    var dates = SearchStore.getDates(),
+        //format bounds for ajax request
+        formattedBounds = this.formatBounds(this.map.getBounds()),
+        options = {};
+
+    $.extend(options, dates, formattedBounds);
+
+    this.forceUpdate();
 
     SearchActions.mapMoved(options);
   },

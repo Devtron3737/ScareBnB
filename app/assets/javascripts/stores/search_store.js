@@ -158,8 +158,11 @@
         this.on(LISTINGS_CHANGE, callback);
       },
 
-      addSearchChangeListener: function (callback) {
+      addPlaceChangeListener: function (callback) {
         this.on(PLACE_CHANGE, callback);
+      },
+
+      addDatesChangeListener: function (callback) {
         this.on(DATE_CHANGE, callback)
       },
 
@@ -183,8 +186,11 @@
         this.removeListener(LISTINGS_CHANGE, callback);
       },
 
-      removeSearchChangeListener: function (callback) {
+      removePlaceChangeListener: function (callback) {
         this.removeListener(PLACE_CHANGE, callback);
+      },
+
+      removeDatesChangeListener: function (callback) {
         this.removeListener(DATE_CHANGE, callback);
       },
 
