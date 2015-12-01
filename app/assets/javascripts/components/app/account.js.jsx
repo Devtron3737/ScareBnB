@@ -54,10 +54,9 @@ var Account = React.createClass({
     // changed h2 id from home-accout to nav-account
     // adjust stylesheet
     var dropDown,
-        userPicUrl = (this.state.userPic) ?
-                      this.state.userPic.url :
-                      "http://res.cloudinary.com/dn7rukqow/image/upload/v1448399277/no-profile-img_vqxn7j.gif"
+        userPicUrl = this.state.userPic.url || "http://res.cloudinary.com/dn7rukqow/image/upload/v1448399277/no-profile-img_vqxn7j.gif"
 
+    console.log(this.state.userPic)
     if (this.state.dropDown) {
       dropDown = (
         <ul className='account-dropdown-list'>
