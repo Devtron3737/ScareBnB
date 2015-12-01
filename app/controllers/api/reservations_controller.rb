@@ -2,7 +2,7 @@ class Api::ReservationsController < ApplicationController
   def create
     reservation = Reservation.new(reservation_params)
     reservation.guest_id = current_user.id
-    
+
     if reservation.save
 
       render json: {}
@@ -12,8 +12,12 @@ class Api::ReservationsController < ApplicationController
   end
 
   def destroy
-    Reservation.delete(params[:id])
-    render json: {}
+    if current_user.reservations_as_guest.find(params[:id])
+      Reservation.delete(params[:id])
+      render json: {}
+    else
+      render json: {errors: "Reservation doesnt belong to current user"}
+    end
   end
 
   private
