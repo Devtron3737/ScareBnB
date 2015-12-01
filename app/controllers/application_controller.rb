@@ -23,7 +23,6 @@ class ApplicationController < ActionController::Base
     # log this client in
     session[:session_token] = user.session_token
     redirect_to root_url
-    # log user in
   end
 
   def logout!
