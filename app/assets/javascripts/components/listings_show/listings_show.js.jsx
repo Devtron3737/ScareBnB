@@ -122,7 +122,7 @@ var ListingsShow = React.createClass({
             <main className='listing-show-content-container'>
               <div id='listing-show-content-title'>About this listing</div>
               <p className='listing-show-content'>
-                woodyfsddfgfdgefsdfdsf
+                {listing.description}
               </p>
 
               <p className='listing-show-content'>
