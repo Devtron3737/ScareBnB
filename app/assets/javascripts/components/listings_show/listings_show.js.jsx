@@ -126,15 +126,24 @@ var ListingsShow = React.createClass({
               </p>
 
               <p className='listing-show-content'>
-                woodyfsddfgfdgsadsdf
+                <div className='listing-show-section-title'>Amenities</div>
+                <ul>
+                  <li>poor lighting</li>
+                  <li>victorian-era self-portraits</li>
+                  <li>healthy crow population</li>
+                  <li>abundant cob webs</li>
+                  <li>TV with static channel</li>
+                  <li>secret basement</li>
+                  <li>abandoned water well</li>
+                  <li>resident psycho</li>
+                  <li>creeky floorboards</li>
+                  <li>demented children</li>
+                </ul>
               </p>
 
               <p className='listing-show-content'>
-                woodyfsddfgfdgsdfdsf
-              </p>
+                <div className='listing-show-section-title'>Availability</div>
 
-              <p className='listing-show-content'>
-                woodyfsddfgfdgsdfdsfd
               </p>
             </main>
 
