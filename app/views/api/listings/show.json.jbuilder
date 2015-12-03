@@ -7,8 +7,8 @@ json.address @listing.address
 json.title @listing.title
 json.ghost(@listing.ghost, :username)
 
-if !@listing.reservations.empty?
-  json.reservations(@listing.reservations) do |reservation|
+if !@listing.upcoming_reservations.empty?
+  json.reservations(@listing.upcoming_reservations) do |reservation|
     json.(reservation, :check_in, :check_out)
   end
 end
