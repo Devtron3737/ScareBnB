@@ -29,10 +29,11 @@ var ListingsShow = React.createClass({
     }
 
     ManageActions.createReservation(reservationDetails)
+    SearchActions.fetchListing(this.props.params.listingId)
   },
 
   _onChange: function () {
-
+    console.log('in listingshow onchange')
     this.setState({
       listing: SearchStore.getListingShow()
     })

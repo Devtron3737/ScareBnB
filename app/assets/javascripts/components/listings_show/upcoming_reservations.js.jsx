@@ -10,16 +10,16 @@ var UpcomingReservations = React.createClass({
   render: function () {
     if (this.props.reservations) {
       return(
-        <ul>
+        <ul id='upcoming-reservations-list'>
           {this.props.reservations.map( function (reservation) {
             return(
-              <li>{reservation.check_in} to {reservation.check_out}</li>
+              <li>{DateUtil.toString(reservation.check_in) + ' to ' + DateUtil.toString(reservation.check_out)}</li>
             )
           })}
         </ul>
       )
     } else {
-      return <div>There are no upcoming reservations for this listing.</div>
+      return <div id='upcoming-reservations-list'>There are no upcoming reservations for this listing.</div>
     }
 
   }
