@@ -32,7 +32,7 @@ class Listing < ActiveRecord::Base
     has_many :ratings, through: :reservations, source: :listing_ratings
 
     def upcoming_reservations
-      self.reservations.where(["check_in >= ?", Date.today])
+      self.reservations.where(["check_in >= ?", Date.today]).order(:check_in)
     end
 
     def self.filter_listings(options = {})
