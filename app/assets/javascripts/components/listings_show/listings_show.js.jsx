@@ -122,9 +122,7 @@ var ListingsShow = React.createClass({
             <main className='listing-show-content-container'>
               <div id='listing-show-content-title'>About this listing</div>
               <div className='listing-show-content'>
-                {
-
-                }
+                {listing.description}
               </div>
 
               <div className='listing-show-content'>
@@ -145,7 +143,7 @@ var ListingsShow = React.createClass({
 
               <div className='listing-show-content'>
                 <div className='listing-show-section-title'>Upcoming Reservations</div>
-                <UpcomingReservations reservations={listing.reservations} />
+                <UpcomingReservations reservations={listing.reservations}/>
               </div>
             </main>
 
