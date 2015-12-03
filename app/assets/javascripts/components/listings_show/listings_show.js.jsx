@@ -142,7 +142,7 @@ var ListingsShow = React.createClass({
               </div>
 
               <div className='listing-show-content'>
-                <div className='listing-show-section-title'>Availability</div>
+                <div className='listing-show-section-title'>Upcoming Reservations</div>
 
               </div>
             </main>

@@ -205,12 +205,12 @@
   column-count: 2;
   -moz-column-count: 3;
   -webkit-column-count: 3;
-  -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
-  -moz-column-gap: 40px;
-  column-gap: 40px;
-  -webkit-column-width: 200px; /* Chrome, Safari, Opera */
-  -moz-column-width: 200px; /* Firefox */
-  column-width: 200px;
+  -webkit-column-gap: 30px; /* Chrome, Safari, Opera */
+  -moz-column-gap: 30px;
+  column-gap: 30px;
+  -webkit-column-width: 190px; /* Chrome, Safari, Opera */
+  -moz-column-width: 190px; /* Firefox */
+  column-width: 190px;
 }
 
 #amenities-list > li {
