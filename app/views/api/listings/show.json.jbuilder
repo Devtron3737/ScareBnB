@@ -7,17 +7,20 @@ json.address @listing.address
 json.title @listing.title
 json.ghost(@listing.ghost, :username)
 
-json.reservations(@listing.reservations) do |reservation|
-  json.(reservation, :check_in, :check_out)
+if !@listing.reservations.empty?
+  json.reservations(@listing.reservations) do |reservation|
+    json.(reservation, :check_in, :check_out)
+  end
 end
 
 if @listing.ghost_picture
   json.user_picture(@listing.ghost_picture, :url)
 end
 
-json.pictures(@listing.pictures) do |picture|
-  json.(picture, :url)
+if !@listing.pictures.empty?
+  json.pictures(@listing.pictures) do |picture|
+    json.(picture, :url)
+  end
 end
-
 
 # add reservations
