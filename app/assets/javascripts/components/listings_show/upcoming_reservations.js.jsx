@@ -8,16 +8,18 @@ var UpcomingReservations = React.createClass({
   },
 
   render: function () {
-    if (reservations) {
+    if (this.props.reservations) {
       return(
         <ul>
-          {reservations.map( function (reservation) {
+          {this.props.reservations.map( function (reservation) {
             return(
               <li>{reservation.check_in} to {reservation.check_out}</li>
             )
           })}
         </ul>
       )
+    } else {
+      return <div>There are no upcoming reservations for this listing.</div>
     }
 
   }
