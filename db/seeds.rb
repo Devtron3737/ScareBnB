@@ -52,7 +52,7 @@ Picture.create!(user_id: 20, url: 'http://res.cloudinary.com/dn7rukqow/image/upl
 Listing.create!(ghost_id: 1, toe_nails: 25, title: "Lovely victorian home",
   address: "111 Madrid St., San Francisco, CA",
   amenities: JSON.generate(["stuff"]), lat: 37.727635, lng: -122.428021,
-  description: "Bloodstained carpets, creaky floorboards, and constantly flickering lightbulbs are just some of the wonderful amenities this property boasts. If guests get bored, feel free to explore the mysterious catacombs underneath the property. It is said there is a lost torture chamber down there. Just beware, the neighboring resident psycho often finds his way into the house at odd hours of the night. Wouldn’t want to run into him now!"
+  description: "Bloodstained carpets, creaky floorboards, and constantly flickering lightbulbs are just some of the wonderful amenities this property boasts. If guests get bored, feel free to explore the mysterious catacombs underneath the property. It is said there is a lost torture chamber down there. Just beware, the neighboring resident psycho often finds his way down there from time to time. Wouldn’t want to run into him now!"
 )
 Listing.create!(ghost_id: 1, toe_nails: 75, title: "Rotten abode near the coast",
   address: "2762 40th Ave., San Francisco, CA",
@@ -67,7 +67,7 @@ Listing.create!(ghost_id: 2, toe_nails: 21, title: "Large space full of spirits"
 Listing.create!(ghost_id: 3, toe_nails: 29, title: "A home away from home",
   address: "824 54th St., Oakland, CA",
   amenities: JSON.generate(["stuff"]), lat: 37.839046, lng: -122.270618,
-  description: "Bloodstained carpets, creaky floorboards, and constantly flickering lightbulbs are just some of the wonderful amenities this property boasts. If guests get bored, feel free to explore the mysterious catacombs underneath the property. It is said there is a lost torture chamber down there. Just beware, the neighboring resident psycho often finds his way into the house at odd hours of the night. Wouldn’t want to run into him now!"
+  description: "Bloodstained carpets, creaky floorboards, and constantly flickering lightbulbs are just some of the wonderful amenities this property boasts. If guests get bored, feel free to explore the mysterious catacombs underneath the property. It is said there is a lost torture chamber down there. Just beware, the neighboring resident psycho often finds his way down there from time to time. Wouldn’t want to run into him now!"
 )
 
 Listing.create!(ghost_id: 3, toe_nails: 41, title: "Secluded abode near a dark park",
@@ -85,7 +85,7 @@ Listing.create!(ghost_id: 2, toe_nails: 302, title: "The hauntedest of the haunt
 Listing.create!(ghost_id: 4, toe_nails: 32, title: "I wonder what's behind that door...",
   address: "535 Florida St., San Francisco, CA",
   amenities: JSON.generate(["stuff"]), lat: 37.762808, lng: -122.411190,
-  description: "Bloodstained carpets, creaky floorboards, and constantly flickering lightbulbs are just some of the wonderful amenities this property boasts. If guests get bored, feel free to explore the mysterious catacombs underneath the property. It is said there is a lost torture chamber down there. Just beware, the neighboring resident psycho often finds his way into the house at odd hours of the night. Wouldn’t want to run into him now!"
+  description: "Bloodstained carpets, creaky floorboards, and constantly flickering lightbulbs are just some of the wonderful amenities this property boasts. If guests get bored, feel free to explore the mysterious catacombs underneath the property. It is said there is a lost torture chamber down there. Just beware, the neighboring resident psycho often finds his way down there from time to time. Wouldn’t want to run into him now!"
 )
 
 Listing.create!(ghost_id: 5, toe_nails: 35, title: "Did you hear that? ",
@@ -103,7 +103,7 @@ Listing.create!(ghost_id: 6, toe_nails: 77, title: "Plenty of things that go bum
 Listing.create!(ghost_id: 7, toe_nails: 102, title: "Ghouls, goblins, and zombies",
   address: "1452 Willard St., San Francisco, CA",
   amenities: JSON.generate(["stuff"]), lat: 37.763351, lng: -122.453933,
-  description: "Bloodstained carpets, creaky floorboards, and constantly flickering lightbulbs are just some of the wonderful amenities this property boasts. If guests get bored, feel free to explore the mysterious catacombs underneath the property. It is said there is a lost torture chamber down there. Just beware, the neighboring resident psycho often finds his way into the house at odd hours of the night. Wouldn’t want to run into him now!"
+  description: "Bloodstained carpets, creaky floorboards, and constantly flickering lightbulbs are just some of the wonderful amenities this property boasts. If guests get bored, feel free to explore the mysterious catacombs underneath the property. It is said there is a lost torture chamber down there. Just beware, the neighboring resident psycho often finds his way down there from time to time. Wouldn’t want to run into him now!"
 )
 
 Listing.create!(ghost_id: 8, toe_nails: 542, title: "You don't want to know what happened here",
@@ -121,7 +121,7 @@ Listing.create!(ghost_id: 9, toe_nails: 22, title: "Beware of demon",
 Listing.create!(ghost_id: 10, toe_nails: 876, title: "Gate of hell in basement",
   address: "1008 Pacific Ave, San Francisco, CA",
   amenities: JSON.generate(["stuff"]), lat: 37.796152, lng: -122.412128,
-  description: "Bloodstained carpets, creaky floorboards, and constantly flickering lightbulbs are just some of the wonderful amenities this property boasts. If guests get bored, feel free to explore the mysterious catacombs underneath the property. It is said there is a lost torture chamber down there. Just beware, the neighboring resident psycho often finds his way into the house at odd hours of the night. Wouldn’t want to run into him now!"
+  description: "Bloodstained carpets, creaky floorboards, and constantly flickering lightbulbs are just some of the wonderful amenities this property boasts. If guests get bored, feel free to explore the mysterious catacombs underneath the property. It is said there is a lost torture chamber down there. Just beware, the neighboring resident psycho often finds his way down there from time to time. Wouldn’t want to run into him now!"
 )
 
 Listing.create!(ghost_id: 11, toe_nails: 43, title: "Not one survivor yet",
@@ -139,7 +139,7 @@ Listing.create!(ghost_id: 12, toe_nails: 894, title: "Perfect place to rest for 
 Listing.create!(ghost_id: 13, toe_nails: 21, title: "An evil spirits delight",
   address: "598 Fulton St., San Francisco, CA",
   amenities: JSON.generate(["stuff"]), lat: 37.778470, lng: -122.426488,
-  description: "Bloodstained carpets, creaky floorboards, and constantly flickering lightbulbs are just some of the wonderful amenities this property boasts. If guests get bored, feel free to explore the mysterious catacombs underneath the property. It is said there is a lost torture chamber down there. Just beware, the neighboring resident psycho often finds his way into the house at odd hours of the night. Wouldn’t want to run into him now!"
+  description: "Bloodstained carpets, creaky floorboards, and constantly flickering lightbulbs are just some of the wonderful amenities this property boasts. If guests get bored, feel free to explore the mysterious catacombs underneath the property. It is said there is a lost torture chamber down there. Just beware, the neighboring resident psycho often finds his way down there from time to time. Wouldn’t want to run into him now!"
 )
 
 Listing.create!(ghost_id: 14, toe_nails: 266, title: "Muahahahahaha",
@@ -157,7 +157,7 @@ Listing.create!(ghost_id: 15, toe_nails: 342, title: "Who is that in the window?
 Listing.create!(ghost_id: 16, toe_nails: 897, title: "Chainsaw out back",
   address: "2608 9th St., Berkeley, CA",
   amenities: JSON.generate(["stuff"]), lat: 37.858277, lng: -122.291240,
-  description: "Bloodstained carpets, creaky floorboards, and constantly flickering lightbulbs are just some of the wonderful amenities this property boasts. If guests get bored, feel free to explore the mysterious catacombs underneath the property. It is said there is a lost torture chamber down there. Just beware, the neighboring resident psycho often finds his way into the house at odd hours of the night. Wouldn’t want to run into him now!"
+  description: "Bloodstained carpets, creaky floorboards, and constantly flickering lightbulbs are just some of the wonderful amenities this property boasts. If guests get bored, feel free to explore the mysterious catacombs underneath the property. It is said there is a lost torture chamber down there. Just beware, the neighboring resident psycho often finds his way down there from time to time. Wouldn’t want to run into him now!"
 )
 
 Listing.create!(ghost_id: 17, toe_nails: 133, title: "You'll never make it out alive",
@@ -175,7 +175,7 @@ Listing.create!(ghost_id: 18, toe_nails: 543, title: "A monsters mash",
 Listing.create!(ghost_id: 19, toe_nails: 133, title: "Ahhhhh!",
   address: "450 Stow Ave., Oakland, CA",
   amenities: JSON.generate(["stuff"]), lat: 37.803502, lng: -122.250899,
-  description: "Bloodstained carpets, creaky floorboards, and constantly flickering lightbulbs are just some of the wonderful amenities this property boasts. If guests get bored, feel free to explore the mysterious catacombs underneath the property. It is said there is a lost torture chamber down there. Just beware, the neighboring resident psycho often finds his way into the house at odd hours of the night. Wouldn’t want to run into him now!"
+  description: "Bloodstained carpets, creaky floorboards, and constantly flickering lightbulbs are just some of the wonderful amenities this property boasts. If guests get bored, feel free to explore the mysterious catacombs underneath the property. It is said there is a lost torture chamber down there. Just beware, the neighboring resident psycho often finds his way down there from time to time. Wouldn’t want to run into him now!"
 )
 
 Listing.create!(ghost_id: 20, toe_nails: 111, title: "Concede to the dark side",
