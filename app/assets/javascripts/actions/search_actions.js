@@ -24,13 +24,6 @@
       });
     },
 
-    // searchValue: function (value) {
-    //   Dispatcher.dispatch({
-    //     actionType: 'search_value',
-    //     searchValue: value
-    //   });
-    // },
-
     dateChange: function (dates) {
       Dispatcher.dispatch({
         actionType: "date_change",
