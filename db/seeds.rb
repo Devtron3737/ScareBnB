@@ -83,8 +83,8 @@ Listing.create!(ghost_id: 2, toe_nails: 302, title: "The hauntedest of the haunt
 )
 
 Listing.create!(ghost_id: 4, toe_nails: 32, title: "I wonder what's behind that door...",
-  address: "535 Florida St., San Francisco, CA",
-  amenities: JSON.generate(["stuff"]), lat: 37.762808, lng: -122.411190,
+  address: "1032 2nd St., Novato, CA",
+  amenities: JSON.generate(["stuff"]), lat: 38.109179, lng: -122.571868,
   description: "Bloodstained carpets, creaky floorboards, and constantly flickering lightbulbs are just some of the wonderful amenities this property boasts. If guests get bored, feel free to explore the mysterious catacombs underneath the property. It is said there is a lost torture chamber down there. Just beware, the neighboring resident psycho finds his way down there from time to time. Wouldn’t want to run into him now!"
 )
 
@@ -107,14 +107,14 @@ Listing.create!(ghost_id: 7, toe_nails: 102, title: "Ghouls, goblins, and zombie
 )
 
 Listing.create!(ghost_id: 8, toe_nails: 542, title: "You don't want to know what happened here",
-  address: "184 20th Ave., San Francisco, CA",
-  amenities: JSON.generate(["stuff"]), lat: 37.784382, lng: -122.479339,
+  address: "18 Rowe Ranch Way, Novato, CA",
+  amenities: JSON.generate(["stuff"]), lat: 38.071136, lng: -122.543495,
   description: "Don’t mind the banging coming from the upstairs attic, that has been going on for some time now. As a matter of fact, I would’t dwell too much on any of the unexplainable noises coming from property. The last guest that did pay some mind to it actually ended up losing their mind. We wouldn't want that to happen. Please be sure to leave a nice review at the end of you’re stay."
 )
 
 Listing.create!(ghost_id: 9, toe_nails: 22, title: "Beware of demon",
-  address: "1740 Buchanan St., San Francisco, CA",
-  amenities: JSON.generate(["stuff"]), lat: 37.786256 , lng: -122.429827,
+  address: "185 El Rancho Dr., Daly City, CA",
+  amenities: JSON.generate(["stuff"]), lat: 37.659941, lng: -122.453407,
   description: "This very haunted space is frequented by quite the upset spirit. It is said that if you’re up deep enough into the night, the howls of La Llorona can clearly be heard from the property. And careful not to be alone on the grounds during nightfall, as several guests have already disappeared due to the Llorona mistaking them for her lost children. The house also has a lovely kitchen."
 )
 
@@ -131,8 +131,8 @@ Listing.create!(ghost_id: 11, toe_nails: 43, title: "Not one survivor yet",
 )
 
 Listing.create!(ghost_id: 12, toe_nails: 894, title: "Perfect place to rest for eternity",
-  address: "3830 22nd St., San Francisco, CA",
-  amenities: JSON.generate(["stuff"]), lat: 37.754712, lng: -122.433500,
+  address: "740 Cottonwood, South San Francisco, CA",
+  amenities: JSON.generate(["stuff"]), lat: 37.661013, lng: -122.423487,
   description: "This very haunted space is frequented by quite the upset spirit. It is said that if you’re up deep enough into the night, the howls of La Llorona can clearly be heard from the property. And careful not to be alone on the grounds during nightfall, as several guests have already disappeared due to the Llorona mistaking them for her lost children. The house also has a lovely kitchen."
 )
 
@@ -143,8 +143,8 @@ Listing.create!(ghost_id: 13, toe_nails: 21, title: "An evil spirits delight",
 )
 
 Listing.create!(ghost_id: 14, toe_nails: 266, title: "Muahahahahaha",
-  address: "69 Mary St., San Francisco, CA",
-  amenities: JSON.generate(["stuff"]), lat: 37.781638, lng: -122.406451,
+  address: "28 Sonora Ave., South San Francisco, CA",
+  amenities: JSON.generate(["stuff"]), lat: 37.645214, lng: -122.425114, 
   description: "Don’t mind the banging coming from the upstairs attic, that has been going on for some time now. As a matter of fact, I would’t dwell too much on any of the unexplainable noises coming from property. The last guest that did pay some mind to it actually ended up losing their mind. We wouldn't want that to happen. Please be sure to leave a nice review at the end of you’re stay."
 )
 
