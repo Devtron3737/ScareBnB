@@ -39,12 +39,6 @@ var Manage = React.createClass({
         break;
     }
 
-    // if (this.state.section === "listings") {
-    //   section = <ManageListings listings={listings} />;
-    // } else {
-    //   section = <ManageReservations reservations={reservations} />;
-    // }
-
     return(
       <div className='manage-container clearfix'>
         <div className='manage-category'>
