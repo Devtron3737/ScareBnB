@@ -5,26 +5,26 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-User.create!(username: "Boogy", password: "boo", session_token: nil) #1
-User.create!(username: "Casper", password: "boo", session_token: nil)#2
-User.create!(username: "Wicked Witch", password: "boo", session_token: nil)#3
-User.create!(username: "It", password: "boo", session_token: nil)#4
-User.create!(username: "Frankenstein", password: "boo", session_token: nil)#5
-User.create!(username: "Headless Horseman", password: "boo", session_token: nil)#6
-User.create!(username: "Hannibal", password: "boo", session_token: nil)#7
-User.create!(username: "Scream", password: "boo", session_token: nil)#8
-User.create!(username: "Hell Raiser", password: "boo", session_token: nil)#9
-User.create!(username: "Dracula", password: "boo", session_token: nil)#10
-User.create!(username: "Freddy", password: "boo", session_token: nil)#11
-User.create!(username: "Chucky", password: "boo", session_token: nil)#12
-User.create!(username: "Edward", password: "boo", session_token: nil)#13
-User.create!(username: "Voldemort", password: "boo", session_token: nil)#14
-User.create!(username: "Exorcist", password: "boo", session_token: nil)#15
-User.create!(username: "Jason", password: "boo", session_token: nil)#16
-User.create!(username: "Ring Girl", password: "boo", session_token: nil)#17
-User.create!(username: "Sally", password: "boo", session_token: nil)#18
-User.create!(username: "Jack", password: "boo", session_token: nil)#19
-User.create!(username: "Darth Vader", password: "boo", session_token: nil)#20
+User.create!(username: "Boogy", password: "boo", session_token: nil)
+User.create!(username: "Casper", password: "boo", session_token: nil)
+User.create!(username: "Wicked Witch", password: "boo", session_token: nil)
+User.create!(username: "It", password: "boo", session_token: nil)
+User.create!(username: "Frankenstein", password: "boo", session_token: nil)
+User.create!(username: "Headless Horseman", password: "boo", session_token: nil)
+User.create!(username: "Hannibal", password: "boo", session_token: nil)
+User.create!(username: "Scream", password: "boo", session_token: nil)
+User.create!(username: "Hell Raiser", password: "boo", session_token: nil)
+User.create!(username: "Dracula", password: "boo", session_token: nil)
+User.create!(username: "Freddy", password: "boo", session_token: nil)
+User.create!(username: "Chucky", password: "boo", session_token: nil)
+User.create!(username: "Edward", password: "boo", session_token: nil)
+User.create!(username: "Voldemort", password: "boo", session_token: nil)
+User.create!(username: "Exorcist", password: "boo", session_token: nil)
+User.create!(username: "Jason", password: "boo", session_token: nil)
+User.create!(username: "Ring Girl", password: "boo", session_token: nil)
+User.create!(username: "Sally", password: "boo", session_token: nil)
+User.create!(username: "Jack", password: "boo", session_token: nil)
+User.create!(username: "Darth Vader", password: "boo", session_token: nil)
 
 
 Picture.create!(user_id: 1, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447812270/boogy.jpg')
@@ -208,10 +208,6 @@ Picture.create!(listing_id: 21, url: 'http://res.cloudinary.com/dn7rukqow/image/
 Picture.create!(listing_id: 22, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811038/bathroom_wnjpoj.jpg')
 Picture.create!(listing_id: 23, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811041/deathstar_uqekj0.jpg')
 
-# dracula is 10
-#wicked witch is 3
-
-# check_in: Date.new(2015,12,18), check_out: Date.new(2015,12,21))
 Reservation.create!(listing_id: 1, check_in: Date.new(2015,12,18),
   check_out: Date.new(2015,12,21), guest_id: 10
 )
