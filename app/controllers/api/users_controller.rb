@@ -6,7 +6,7 @@ class Api::UsersController < ApplicationController
       logout!
       redirect_to root_url
     else
-      @reservations = current_user.reservations_as_guest
+      @reservations = current_user.upcoming_reservations_as_guest
       @listings = current_user.listings
     end
   end

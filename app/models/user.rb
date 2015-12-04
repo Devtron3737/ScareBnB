@@ -23,6 +23,10 @@ class User < ActiveRecord::Base
     foreign_key: :guest_id
   )
 
+  def upcoming_reservations_as_guest
+    self.reservations_as_guest.where(["check_in > ?", Date.today]).order(:check_in)
+  end
+
   def username=(val)
     write_attribute(:username, val.downcase)
   end
