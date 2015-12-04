@@ -22,5 +22,3 @@ if !@listing.pictures.empty?
     json.(picture, :url)
   end
 end
-
-# add reservations
