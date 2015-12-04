@@ -130,7 +130,7 @@ Listing.create!(ghost_id: 11, toe_nails: 43, title: "Not one survivor yet",
   description: "Don’t mind the banging coming from the upstairs attic, that has been going on for some time now. As a matter of fact, I would’t dwell too much on any of the unexplainable noises coming from property. The last guest that did pay some mind to it actually ended up losing their mind. We wouldn't want that to happen. Please be sure to leave a nice review at the end of you’re stay."
 )
 
-Listing.create!(ghost_id: 12, toe_nails: 894, title: "Perfect place to rest for eternity",
+Listing.create!(ghost_id: 10, toe_nails: 894, title: "Perfect place to rest for eternity",
   address: "740 Cottonwood, South San Francisco, CA",
   amenities: JSON.generate(["stuff"]), lat: 37.661013, lng: -122.423487,
   description: "This very haunted space is frequented by quite the upset spirit. It is said that if you’re up deep enough into the night, the howls of La Llorona can clearly be heard from the property. And careful not to be alone on the grounds during nightfall, as several guests have already disappeared due to the Llorona mistaking them for her lost children. The house also has a lovely kitchen."
@@ -144,7 +144,7 @@ Listing.create!(ghost_id: 13, toe_nails: 21, title: "An evil spirits delight",
 
 Listing.create!(ghost_id: 14, toe_nails: 266, title: "Muahahahahaha",
   address: "28 Sonora Ave., South San Francisco, CA",
-  amenities: JSON.generate(["stuff"]), lat: 37.645214, lng: -122.425114, 
+  amenities: JSON.generate(["stuff"]), lat: 37.645214, lng: -122.425114,
   description: "Don’t mind the banging coming from the upstairs attic, that has been going on for some time now. As a matter of fact, I would’t dwell too much on any of the unexplainable noises coming from property. The last guest that did pay some mind to it actually ended up losing their mind. We wouldn't want that to happen. Please be sure to leave a nice review at the end of you’re stay."
 )
 
@@ -208,19 +208,45 @@ Picture.create!(listing_id: 21, url: 'http://res.cloudinary.com/dn7rukqow/image/
 Picture.create!(listing_id: 22, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811038/bathroom_wnjpoj.jpg')
 Picture.create!(listing_id: 23, url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1447811041/deathstar_uqekj0.jpg')
 
+# dracula is 10
+#wicked witch is 3
 
 # check_in: Date.new(2015,12,18), check_out: Date.new(2015,12,21))
 Reservation.create!(listing_id: 1, check_in: Date.new(2015,12,18),
-  check_out: Date.new(2015,12,21), guest_id: 4, status: "approved"
+  check_out: Date.new(2015,12,21), guest_id: 10
 )
 Reservation.create!(listing_id: 2, check_in: Date.today,
-  check_out: Date.tomorrow, guest_id: 4, status: "approved"
+  check_out: Date.tomorrow, guest_id: 4
 )
 
 Reservation.create!(listing_id: 3, check_in: Date.today,
-  check_out: Date.tomorrow, guest_id: 2, status: "approved"
+  check_out: Date.tomorrow, guest_id: 2
 )
 
-Reservation.create!(listing_id: 1, check_in: Date.new(2015,11,27), check_out: Date.new(2015,11,29),
-  guest_id: 2, status: "approved"
+Reservation.create!(listing_id: 13, check_in: Date.new(2016, 02, 27), check_out: Date.new(2016, 03, 03),
+  guest_id: 3
+)
+
+Reservation.create!(listing_id: 10, check_in: Date.new(2016, 03, 27), check_out: Date.new(2016, 04, 02),
+  guest_id: 10
+)
+
+Reservation.create!(listing_id: 13, check_in: Date.today, check_out: Date.tomorrow,
+  guest_id: 12
+)
+
+Reservation.create!(listing_id: 17, check_in: Date.new(2016, 01, 21), check_out: Date.new(2016, 01, 23),
+  guest_id: 3
+)
+
+Reservation.create!(listing_id: 9, check_in: Date.new(2015,12,16), check_out: Date.new(2015,12,21),
+  guest_id: 8
+)
+
+Reservation.create!(listing_id: 16, check_in: Date.new(2016,01,15), check_out: Date.new(2016,01,20),
+  guest_id: 9
+)
+
+Reservation.create!(listing_id: 17, check_in: Date.new(2016,02,15), check_out: Date.new(2016,02,25),
+  guest_id: 2
 )

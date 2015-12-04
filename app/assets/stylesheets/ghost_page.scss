@@ -74,8 +74,7 @@
   padding: 20px;
   margin-bottom: 20px;
   // padding-top: 35px;
-  height: 75px;
-
+  min-height: 75px;
 }
 
 .manage-category-block > div {
@@ -101,6 +100,7 @@
 .category-details {
   width: 250px;
   overflow: scroll;
+  // background: red;
 }
 
 #manage-category-remove {
