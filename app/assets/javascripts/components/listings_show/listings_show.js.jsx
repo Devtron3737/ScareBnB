@@ -20,8 +20,6 @@ var ListingsShow = React.createClass({
   },
 
   handleReserve: function () {
-    console.log('in handleReserve')
-    console.log(this.state.listing)
     var reservationDetails = {
       listingId: this.state.listing.id,
       checkIn: this.checkIn,
@@ -33,7 +31,6 @@ var ListingsShow = React.createClass({
   },
 
   _onChange: function () {
-    console.log('in listingshow onchange')
     this.setState({
       listing: SearchStore.getListingShow()
     })
@@ -48,8 +45,6 @@ var ListingsShow = React.createClass({
     if (!this.state.listing.title) {
       return <div>Loading...</div>
     } else {
-      console.log('in listing show')
-      console.log(this.state.listing)
       var listing = this.state.listing,
           listingPictureUrl = (listing.pictures[0]) ?
                                listing.pictures[0].url :
