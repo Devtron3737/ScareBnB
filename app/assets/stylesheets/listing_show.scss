@@ -1,32 +1,21 @@
 #listing-header {
   display: block;
   position: relative;
-  // position: absolute;
-  // top: 60px;
-  // height: 700px;
   height: 770px;
   width: 100%;
 }
 
 #listing-header-pic {
   display: block;
-  // background-image: image-url('deathstar.jpg');
   width: 100%;
   height: 550px;
-  // overflow: visible;
 }
 
 .listing-header-detail {
   position: relative;
   display: block;
   height: 220px;
-  // background: red;
-
-  // margin-left: 300px;
-  // margin-right: 300px;
   padding-bottom: 0px;
-  // padding-top: 25px;
-  // background: red;
 }
 
 .listing-header-detail > * {
@@ -35,7 +24,6 @@
 }
 
 #listing-show-user {
-  // background: yellow;
   margin-left: 20%;
   width: 100px;
   font-size: 18px;
@@ -90,7 +78,6 @@
   transform: translateX(-50%);
   height: 120px;
   background: rgba(252, 252, 253, 1); // airbnb offwhite
-  // background: red;
   width: 180px;
 }
 
@@ -106,24 +93,16 @@
 
 #listing-show-rsvp-content {
   position: relative;
-  // right: 0%;
-  // bottom: 0%;
   margin-top: 0px;
   width: 280px;
-  // background: blue;
   border-left: 1px solid lightgrey;
   border-right: 1px solid lightgrey;
   height: 100%;
-  // margin-left: 30px;
-  // margin-right: 100px;
   margin-left: 3%;
-  // padding-left: 15px;
 }
 
 .listing-show-rsvp-title {
   position: absolute;
-  // top: -20%;
-  // right: 0%;
   top: -40px;
   width: 100%;
   background: rgba(69, 69, 69, 0.87); //transparent grey
@@ -131,7 +110,6 @@
   border-right: 1px solid rgba(69, 69, 69, 0.87);
   color: white;
   font-size: 24px;
-  // padding-left: 15px;
   height: 40px;
 }
 
