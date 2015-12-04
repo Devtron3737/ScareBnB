@@ -29,7 +29,6 @@ class Listing < ActiveRecord::Base
     has_many :pictures
     has_one :ghost_picture, through: :ghost, source: :picture
     has_many :reservations
-    has_many :ratings, through: :reservations, source: :listing_ratings
 
     def upcoming_reservations
       self.reservations.where(["check_in > ?", Date.today]).order(:check_in)
