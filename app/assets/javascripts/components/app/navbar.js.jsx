@@ -1,9 +1,5 @@
 var NavBar = React.createClass({
   render: function () {
-    // <span className='navbar-list clearfix'>
-    //
-    //   <div className='navbar-list-item'>Account</div>
-    // </span>
     return(
       <nav className='nav-container clearfix'>
         <div id='home-logo'>
