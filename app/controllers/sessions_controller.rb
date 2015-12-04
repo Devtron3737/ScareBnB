@@ -10,7 +10,6 @@ class SessionsController < ApplicationController
   end
 
   def new
-    # login
     render :new
   end
 
