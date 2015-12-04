@@ -1,7 +1,6 @@
 var ManageListingsBlock = React.createClass({
   handleListingDelete: function () {
     ManageActions.deleteListing({
-      // userId: this.props.listing.ghost_id,
       listingId: this.props.listing.id
     });
   },

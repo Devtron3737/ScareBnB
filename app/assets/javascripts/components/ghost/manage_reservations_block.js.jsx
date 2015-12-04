@@ -10,8 +10,6 @@ var ManageReservationsBlock = React.createClass({
   render: function () {
     var reservation = this.props.reservation,
         listingLink = '/listings/' + reservation.listing_details.id
-    console.log('in manange rsvp')
-    console.log(this.props.reservation)
     return (
       <div className='manage-category-block clearfix'>
         <div className='manage-category-block-info clearfix'>
