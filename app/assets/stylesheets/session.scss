@@ -38,7 +38,6 @@
   left: 50%;
   transform: translateX(-50%);
   font-size: 45px;
-  // background: blue;
   margin-top: 60px;
   margin-bottom: 40px;
   width: 300px;
@@ -56,7 +55,6 @@
 .session-error {
   color: white;
   background: rgba(255, 128, 128, .6); //airbnb light red
-  // background: lightgrey;
   text-align: center;
   padding: 10px;
   font-weight: 300;
@@ -67,12 +65,6 @@
   left: 50%;
   transform: translateX(-50%);
 }
-
-// #session-section > h3 {
-//   color: #585858; //dark grey
-//   font-family: 'Shadows Into Light', cursive;
-//
-// }
 
 .session-input {
   position: relative;
@@ -110,7 +102,6 @@
 #userpic-upload:hover {
   border: 1px solid rgba(255, 77, 77, 0.97); //airbnb red
   border-bottom: 2px solid rgba(255, 77, 77, 0.97); //airbnb red
-  // color: rgba(255, 77, 77, 0.97); //airbnb red
 }
 
 .session-submit {
@@ -140,11 +131,9 @@
 }
 
 .session-demo-user {
-  // display: inline;
   color: rgba(255, 77, 77, 0.97); //airbnb red
   width: 90px;
   font-size: 14px;
-  // float: left;
 }
 
 #dracula {
