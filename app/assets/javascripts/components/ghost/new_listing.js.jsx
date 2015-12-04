@@ -12,8 +12,6 @@ var NewListing = React.createClass({
     this.setState(
       {value: event.target.value},
       function () {
-        console.log('in handleChange address')
-        console.log(this.state.value)
       }
     );
 
@@ -31,13 +29,9 @@ var NewListing = React.createClass({
           lng: coords.lng,
           amenities: JSON.stringify(["amenities"])
         }
-    console.log("in handle submit")
-    console.log(listingAttrs)
     this.validAttrs(listingAttrs)
 
     if (this.errors.length === 0) {
-      console.log('after form validation')
-      console.log(listingAttrs)
       ManageActions.createListing(listingAttrs);
       this.pics = [];
       this.setState({
@@ -81,11 +75,6 @@ var NewListing = React.createClass({
       }
     }
 
-    console.log('in get coords')
-    console.log(extractOptions)
-
-
-
     SearchUtil.extractPlace(extractOptions)
 
     return coords;
@@ -116,8 +105,6 @@ var NewListing = React.createClass({
       },
       function (error, result) {
         this.pics.push(result[0].url);
-        console.log("in handlePicUpload")
-        console.log(this.pics)
         this.setState({picCount: this.pics.length});
       }.bind(this)
     )
