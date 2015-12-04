@@ -3,14 +3,12 @@ var ListingBlock = React.createClass({
   mixins: [ReactRouter.History],
 
   handleClick: function () {
-    // event.preventDefault()
     var listingPath = '/listing/' + this.props.listing.id
 
     this.history.pushState(null, listingPath)
   },
 
   handleHover: function () {
-    console.log('in handle hover')
     SearchActions.listingHover(this.props.listing.id)
   },
 
@@ -28,9 +26,6 @@ var ListingBlock = React.createClass({
                           listing.user_picture.url :
                           "http://res.cloudinary.com/dn7rukqow/image/upload/v1448399277/no-profile-img_vqxn7j.gif";
 
-
-    //change image
-    //   params={{listingId: listing.id}}
     return (
       <div className='listing-block'
            onClick={this.handleClick}
