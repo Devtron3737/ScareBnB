@@ -49,8 +49,6 @@
       }),
 
       getListings: function () {
-        console.log('gets listing called')
-        console.log(_dates)
         var listings = {}
         for (var i in _listings) {
           listings[i] = _listings[i]
@@ -70,8 +68,6 @@
       },
 
       getDates: function () {
-        console.log('gets dates called')
-        console.log(_dates)
         var datesDup = {};
 
         for (var date in _dates) {
@@ -129,10 +125,7 @@
       },
 
       updateDates: function (dates) {
-        console.log('updating dates')
-
         _dates = dates;
-        console.log(_dates)
         this.emit(DATE_CHANGE);
       },
 
