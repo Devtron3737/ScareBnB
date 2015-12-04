@@ -13,11 +13,6 @@
   background: rgba(252, 252, 253, 1); // airbnb offwhite
 }
 
-// .dates-list > div {
-//   height: 110px;
-//   background: rgba(252, 252, 253, 1); // airbnb offwhite
-// }
-
 .index-dates-list section {
   float: left;
   margin-top: 50px;
@@ -26,15 +21,6 @@
   left: 35%;
   transform: translateX(-50%);
 }
-
-// .date-list-labels {
-//   position: absolute;
-//   border: 1px black solid;
-// }
-//
-// .date-list-labels * {
-//   float: left;
-// }
 
 #no-listings {
   position: relative;
@@ -62,7 +48,6 @@
   margin-top: 25px;
 }
 
-// first block is off center for some reason
 .listings-list {
   width: 780px;
   position: relative;
@@ -72,27 +57,10 @@
   padding-bottom: 65px;
 }
 
-// #listings-count {
-//   display: inline;
-//   height: 20px;
-//   // position: absolute;
-//   // left: 0;
-//   // top: -20px;
-//   font-size: 15px;
-//   color: #585858; //airbnb darkgrey
-//   width: 800px;
-//   background: red;
-// }
-
-// #listings-count > div {
-//   display: inline;
-// }
-
 #listings-list-container {
   display: block;
   width: 100%;
   background: #ededed; //airbnb med grey
-  // background: rgba(255, 77, 77, 0.97); // airbnb red
   position: relative;
 }
 
@@ -123,7 +91,6 @@
 
 #listing-title {
   color: #585858;
-  // color: white;
   position: absolute;
   bottom: -50px;
   left: 10px;
@@ -148,7 +115,6 @@
   font-size: 30px;
   font-weight: 800;
   background: rgba(41, 41, 41, 0.72);
-  // width: 65px;
   height: 30px;
 }
 
