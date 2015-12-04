@@ -141,13 +141,6 @@ var Map = React.createClass({
   },
 
   removeCurrentMarkers: function () {
-    // this.markers.forEach( function (marker) {
-    //   // this is google api way of removing marker
-    //   // from map
-    //   marker.setMap(null);
-    // });
-    // // remove old markers from this.markers
-    // this.markers.length = 0;
 
     for (var marker in this.markers) {
       if (this.markers.hasOwnProperty(marker)) {
