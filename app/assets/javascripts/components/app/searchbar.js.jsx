@@ -62,8 +62,6 @@ var SearchBar = React.createClass({
           </input>
         </form>
       </div>
-
-
     );
   }
 });
