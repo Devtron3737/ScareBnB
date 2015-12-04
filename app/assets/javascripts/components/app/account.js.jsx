@@ -33,8 +33,6 @@ var Account = React.createClass({
         theme: 'white'
       },
       function (error, result) {
-        console.log(result[0].url)
-
         ManageActions.addUserPic({url: result[0].url})
       }
     )
