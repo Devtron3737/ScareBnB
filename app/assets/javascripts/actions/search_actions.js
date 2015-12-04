@@ -10,8 +10,6 @@
         method: 'GET',
         data: options,
         success: function (listings) {
-          console.log('successful listings ajax');
-          console.log(listings);
           SearchActions.dispatchListings(listings);
         }
       });
@@ -43,8 +41,6 @@
         url: '/api/listings/' + listingId + '.json',
         method: 'GET',
         success: function (listing) {
-          console.log('successful listing show ajax');
-          console.log(listing);
           Dispatcher.dispatch({
             actionType: "listing_show",
             listing: listing
@@ -58,8 +54,6 @@
         url: '/api/picture.json',
         method: 'GET',
         success: function (userPic) {
-          console.log('successful userPic ajax');
-          console.log(userPic);
           Dispatcher.dispatch({
             actionType: "user_pic",
             userPic: userPic
