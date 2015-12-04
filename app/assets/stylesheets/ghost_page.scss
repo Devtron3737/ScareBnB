@@ -1,7 +1,5 @@
 .manage-container {
   background: rgba(255, 77, 77, 0.97); // airbnb red
-  // background-image: image-url('redpattern.jpg');
-  // background-size: cover;
   display: block;
   width: 100%;
   position: relative;
@@ -23,39 +21,17 @@
 
 .manage-category > section {
   margin-bottom: 30px;
-  // width: 200px;
-  // background: blue;
-  // border-bottom: 1px solid lightgrey;
   font-size: 18px;
-  // padding-left: 5px;
   color: rgba(252, 252, 253, 1); // airbnb offwhite
 }
 
-// #manage-listing-addlisting {
-//   padding: 5px;
-//   background: rgba(255, 128, 128, 1); //airbnb light red
-//
-//   border-radius: 7%;
-//   font-size: 13px;
-//   margin-top: 30px;
-//   // margin-left: 20px;
-//   border: 1px solid rgba(252, 252, 253, 1); // airbnb offwhite
-//   border-bottom: 1px solid rgba(252, 252, 253, 1); // airbnb offwhite
-//   color: #585858; //dark grey
-// }
-
 .manage-category > section:hover {
-  // background: rgba(255, 77, 77, 0.97);
   color: rgba(255, 128, 128, 1); //airbnb light red
   cursor: pointer;
 }
 
 .manage-block {
-  // border: 1px solid lightgrey;
-  // border: 4px solid rgba(255, 128, 128, 1); //airbnb light red
-  // border-bottom: 0;
   width: 700px;
-  // padding:
 }
 
 .manage-block-title {
@@ -73,13 +49,11 @@
   border: 4px solid rgba(255, 128, 128, 1); //airbnb light red
   padding: 20px;
   margin-bottom: 20px;
-  // padding-top: 35px;
   min-height: 75px;
 }
 
 .manage-category-block > div {
   float: left;
-
 }
 
 .manage-category-block-info {
@@ -100,7 +74,6 @@
 .category-details {
   width: 250px;
   overflow: scroll;
-  // background: red;
 }
 
 #manage-category-remove {
@@ -118,7 +91,6 @@
 }
 
 #manage-new-content > input {
-  // background: rgba(252, 252, 253, 1); // offwhite
   border-bottom: 3px solid rgba(255, 128, 128, 1); //airbnb light red
   position: relative;
   margin-bottom: 20px;
@@ -147,11 +119,9 @@
 #manage-new-content > button {
   background: rgba(255, 128, 128, 1); //airbnb light red
   padding: 8px;
-  // border: 2px solid rgba(255, 128, 128, 1); //airbnb light red
   border-radius: 7%;
   font-size: 15px;
   font-weight: 400;
-  // color: #585858; //dark grey
   color: white;
   position: relative;
   left: 50%;
