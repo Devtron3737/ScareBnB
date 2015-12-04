@@ -5,10 +5,7 @@
       $.ajax({
         url: '/api/user.json',
         method: 'GET',
-        // data: id,
         success: function (userInfo) {
-          console.log('successful user info ajax');
-          console.log(userInfo);
           ManageActions.dispatchUser(userInfo);
         }
       });
@@ -20,7 +17,6 @@
         method: 'POST',
         data: url,
         success: function () {
-          console.log('successful user pic ajax');
           SearchActions.fetchUserPic();
         }
       });
@@ -30,9 +26,7 @@
       $.ajax({
         url: '/api/listings/' + options.listingId + '.json',
         method: 'DELETE',
-        // data: options.listingId,
         success: function () {
-          console.log('successful listing delete ajax');
           sweetAlert({
             title: "Lock the doors! Close the blinds!",
             text: "You've deleted your haunted listing.",
@@ -47,9 +41,6 @@
     },
 
     createListing: function (listingAttrs) {
-      console.log('in manage actions')
-      console.log(listingAttrs)
-
       $.ajax({
         url: '/api/listings',
         method: 'POST',
@@ -118,7 +109,6 @@
         url: '/api/reservations/' + options.reservationId,
         method: 'DELETE',
         success: function () {
-          console.log('successful reservation delete ajax');
           sweetAlert({
             title: "See you next time then",
             text: "",
@@ -127,7 +117,6 @@
             confirmButtonColor: "#ff4d4d",
             confirmButtonText: "Ok"
           })
-          console.log(options)
           ManageActions.getUserInfo(options.guestId);
         },
         error: function (xhr) {
