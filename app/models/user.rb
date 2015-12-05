@@ -26,7 +26,7 @@ class User < ActiveRecord::Base
   )
 
   def upcoming_reservations_as_guest
-    self.reservations_as_guest.where(["check_in > ?", Date.today]).order(:check_in)
+    self.reservations_as_guest.where(["check_in >= ?", Date.today]).order(:check_in)
   end
 
   def username=(val)
