@@ -27,7 +27,7 @@ Scarebnb is a horror movie themed site allowing users to list, find, and rent lo
  * jbuilder view used to reduce AJAX requests to the server.
 ![alt tag](docs/screenshots/jbuilder.png)
 
- * SQL query to efficiently filter listings by their availability on given dates.
+ * SQL query to efficiently filter listings by their coordinates and availability on given dates.
 ![alt tag](docs/screenshots/sql.png)
 
 ### To-Do
