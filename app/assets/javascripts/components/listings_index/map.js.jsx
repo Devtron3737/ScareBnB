@@ -30,6 +30,7 @@ var Map = React.createClass({
   },
 
   componentWillUnmount: function () {
+    // remove listeners
     SearchStore.removePlaceChangeListener(this._onPlaceChange);
     SearchStore.removeDatesChangeListener(this._onDatesChange);
     SearchStore.removePlaceChangeListener(this._onPlaceChange);
@@ -163,7 +164,7 @@ var Map = React.createClass({
 
   markMap: function (listing) {
     var ghostIcon = {
-      url: 'http://res.cloudinary.com/dn7rukqow/image/upload/v1448408321/marker_sad_izdnuc.png',
+      url: 'http://res.cloudinary.com/' + window.CLOUDINARY_CLOUD_NAME + '/image/upload/v1448408321/marker_sad_izdnuc.png',
       scaledSize: new google.maps.Size(27, 37),
       anchor: new google.maps.Point(15, 37)
     };

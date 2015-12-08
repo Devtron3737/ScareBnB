@@ -1,4 +1,0 @@
-== README
-
-* this is a bulletpoint
- this is some code example
