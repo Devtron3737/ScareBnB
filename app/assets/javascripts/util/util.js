@@ -80,6 +80,16 @@ var SearchUtil = {
         options.placeUndefined.bind(this)
       );
     }
+  },
+
+  getAutocompleteOptions: function () {
+    // set default for san francisco
+    var defaultBounds = new google.maps.LatLngBounds(
+      new google.maps.LatLng(37.54025472421631, -122.6264275146484),
+      new google.maps.LatLng(37.97454774677482, -122.2487724853516)
+    );
+
+    return {bounds: defaultBounds}
   }
 }
 

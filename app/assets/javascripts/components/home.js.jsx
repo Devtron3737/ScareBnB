@@ -4,13 +4,8 @@ var Home = React.createClass({
   mixins: [ReactRouter.History],
 
   componentDidMount: function () {
-    var defaultBounds = new google.maps.LatLngBounds(
-      new google.maps.LatLng(37.54025472421631, -122.6264275146484),
-      new google.maps.LatLng(37.97454774677482, -122.2487724853516)
-    );
-
-    var options = {bounds: defaultBounds},
-        searchField = document.getElementById('home-searchfield');
+    var searchField = document.getElementById('home-searchfield'),
+        options = SearchUtil.getAutocompleteOptions();
     this.autocomplete = new google.maps.places.Autocomplete(searchField, options);
   },
 
