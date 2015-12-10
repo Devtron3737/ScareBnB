@@ -26,9 +26,6 @@ var Account = React.createClass({
   },
 
   handlePicUpload: function () {
-    console.log('in picupload')
-    console.log(this.state.userPic)
-
     if (this.state.userPic.url) {
       sweetAlert({
         title: "Oops",
