@@ -9,10 +9,23 @@
 
 
     <form action='/session' method='POST'>
-      <input type='text' class='input-field session-input' name='user[username]' id='user_username' placeholder='username'/>
-      <input type='password' class='input-field session-input' name='user[password]' id='user_password' placeholder='password'/>
+      <input type='hidden' 
+             name='authenticity_token'
+             value=" <%= form_authenticity_token %>" >
+      <input type='text'
+             class='input-field session-input'
+             name='user[username]'
+             id='user_username'
+             placeholder='username'/>
+      <input type='password'
+             class='input-field session-input'
+             name='user[password]'
+             id='user_password'
+             placeholder='password'/>
 
-      <input type='submit' class='button session-submit session-input' value='Log in!' />
+      <input type='submit'
+             class='button session-submit session-input'
+             value='Log in!' />
     </form>
 
     <div class='session-demo clearfix'>
@@ -47,7 +60,10 @@
             <input type="hidden"
               name="user[password]"
               value="boo">
-            <input type="submit" class="session-demo-user" id='dracula' value="Dracula">
+            <input type="submit"
+                   class="session-demo-user"
+                   id='dracula'
+                   value="Dracula">
         </form>
       </div>
     </div>
