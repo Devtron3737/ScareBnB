@@ -4,9 +4,7 @@ var Home = React.createClass({
   mixins: [ReactRouter.History],
 
   componentDidMount: function () {
-    var searchField = document.getElementById('home-searchfield'),
-        options = SearchUtil.getAutocompleteOptions();
-    this.autocomplete = new google.maps.places.Autocomplete(searchField, options);
+    this.autocomplete = SearchUtil.createGoogleAutocomplete('home-searchfield')
   },
 
   handleSubmit: function () {
