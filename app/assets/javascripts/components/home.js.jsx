@@ -16,10 +16,6 @@ var Home = React.createClass({
     this.history.pushState(null, path);
   },
 
-  handleLogOut: function () {
-    SessionUtil.logOut()
-  },
-
   render: function () {
 
     return(
