@@ -6,7 +6,6 @@
 #  ghost_id    :integer          not null
 #  toe_nails   :integer          not null
 #  address     :string           not null
-#  amenities   :json             not null
 #  description :text             not null
 #  lat         :float
 #  lng         :float
@@ -16,7 +15,7 @@
 class Listing < ActiveRecord::Base
     validates(
       :ghost_id, :toe_nails, :lat, :lng,
-      :address, :amenities, :title, :description,
+      :address, :title, :description,
       presence: true
     )
 

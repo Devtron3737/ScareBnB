@@ -44,10 +44,6 @@ var Account = React.createClass({
     })
   },
 
-  handleLogOut: function () {
-    SessionUtil.logOut()
-  },
-
   render: function () {
     var dropDown;
 
@@ -56,7 +52,7 @@ var Account = React.createClass({
         <ul className='account-dropdown-list'>
           <li><Link to='/user'>Manage listings and reservations</Link></li>
           <li onClick={this.handlePicUpload}>Upload user picture</li>
-          <li onClick={this.handleLogOut}>Log out</li>
+          <li onClick={SessionUtil.logOut}>Log out</li>
         </ul>
       )
     }

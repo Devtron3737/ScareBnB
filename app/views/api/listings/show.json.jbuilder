@@ -1,7 +1,6 @@
 json.id @listing.id
 json.toe_nails @listing.toe_nails
 json.ghost_id @listing.ghost_id
-json.amenities @listing.amenities
 json.description @listing.description
 json.address @listing.address
 json.title @listing.title

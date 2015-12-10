@@ -29,7 +29,7 @@ var NewListing = React.createClass({
           lng: coords.lng,
           amenities: JSON.stringify(["amenities"])
         }
-    this.validAttrs(listingAttrs)
+    this.validateAttrs(listingAttrs)
 
     if (this.errors.length === 0) {
       ManageActions.createListing(listingAttrs);
@@ -71,7 +71,7 @@ var NewListing = React.createClass({
       },
 
       placeUndefined: function (predictions) {
-        // handled in this.validAttrs
+        // handled in this.validateAttrs
       }
     }
 
@@ -80,7 +80,7 @@ var NewListing = React.createClass({
     return coords;
   },
 
-  validAttrs: function (listingAttrs) {
+  validateAttrs: function (listingAttrs) {
     this.errors = [];
     if (!listingAttrs.lat || !listingAttrs.lng) {
       this.errors.push("Please choose a valid address.")
@@ -97,17 +97,10 @@ var NewListing = React.createClass({
   },
 
   handlePicUpload: function () {
-    cloudinary.openUploadWidget(
-      {
-        cloud_name: window.CLOUDINARY_CLOUD_NAME,
-        upload_preset: window.CLOUDINARY_UPLOAD_PRESET,
-        theme: 'white'
-      },
-      function (error, result) {
-        this.pics.push(result[0].url);
-        this.setState({picCount: this.pics.length});
-      }.bind(this)
-    )
+    CloudinaryUtil.picUpload( function (error, result) {
+      this.pics.push(result[0].url);
+      this.setState({picCount: this.pics.length});
+    }.bind(this))
   },
 
   render: function () {
