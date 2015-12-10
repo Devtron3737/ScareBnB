@@ -26,16 +26,23 @@ var Account = React.createClass({
   },
 
   handlePicUpload: function () {
-    cloudinary.openUploadWidget(
-      {
-        cloud_name: window.CLOUDINARY_CLOUD_NAME,
-        upload_preset: window.CLOUDINARY_UPLOAD_PRESET,
-        theme: 'white'
-      },
-      function (error, result) {
+    console.log('in picupload')
+    console.log(this.state.userPic)
+
+    if (this.state.userPic.url) {
+      sweetAlert({
+        title: "Oops",
+        text: "There's already  a user pic for this user!",
+        type: "error",
+        allowOutsideClick: true,
+        confirmButtonColor: "#ff4d4d",
+        confirmButtonText: "Ok"
+      })
+    } else {
+      CloudinaryUtil.picUpload( function (error, result) {
         ManageActions.addUserPic({url: result[0].url})
-      }
-    )
+      })
+    }
   },
 
   handleLeave: function () {
