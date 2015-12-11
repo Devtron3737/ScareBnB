@@ -20,11 +20,16 @@
 
   </script>
   <script async src='//www.google-analytics.com/analytics.js'></script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
-<body>
 
-<%= yield %>
+<body>
+  <script>
+	  window.CLOUDINARY_CLOUD_NAME ="<%= ENV["CLOUDINARY_CLOUD_NAME"] %>";
+    window.CLOUDINARY_UPLOAD_PRESET ="<%= ENV["CLOUDINARY_UPLOAD_PRESET"] %>";
+  </script>
+
+  <%= yield %>
 
 </body>
 </html>

@@ -14,7 +14,7 @@
 
 # Ignore application configuration
 /config/application.yml
-/app/assets/javascripts/util/secrets.js
+/config/secrets.yml
 
 # Ignore seed file
 /db/seeds.rb
