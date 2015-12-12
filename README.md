@@ -2,7 +2,7 @@
 
 [Link to Live App][heroku]
 
-[heroku]: http://www.scarebnb.xyz
+[heroku]: http://www.scarebnb.rocks
 
 ## Minimum Viable Product
 
