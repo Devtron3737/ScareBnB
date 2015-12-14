@@ -18,3 +18,4 @@
 
 # Ignore seed file
 /db/seeds.rb
+/.DS_Store
