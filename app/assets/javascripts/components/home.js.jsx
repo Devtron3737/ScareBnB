@@ -79,7 +79,7 @@ var Home = React.createClass({
 
             <li>
               <Link to='listings/Daly City, CA'>
-                <img src={'https://s3-us-west-1.amazonaws.com/scarebnbdev/cemetary3.jpg'} height='300' width='330' />
+                <img src={'https://s3-us-west-1.amazonaws.com/scarebnbdev/haunted_house_by_nassimhasan-d5qmcqh.jpg'} height='300' width='330' />
                 <div className='home-listings-title'>Daly City</div>
               </Link>
             </li>
