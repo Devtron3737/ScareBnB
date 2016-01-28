@@ -128,13 +128,42 @@
   transform: translateX(-50%);
 }
 
-#new-listing-photocount {
-  color: white;
+#manage-new-picupload::-webkit-file-upload-button {
+  // visibility: hidden;
+
+  // background: rgba(255, 77, 77, 1); //airbnb red
+  // font-weight: 300;
+  // width: 100px;
+  // color: white;
+  // height: 20px;
+  // text-align: center;
+}
+
+#manage-new-picupload {
+  // hide ugly upload button
+  width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+#listing-pic-upload-label {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  // background: blue;
+  // font-weight: 300;
   width: 100px;
+  color: white;
+  height: 20px;
   text-align: center;
+}
+
+#listing-pic-upload-label:hover {
+  cursor: pointer;
+  color: rgba(255, 128, 128, 1); //airbnb light red
 }
 
 #manage-new-submit {

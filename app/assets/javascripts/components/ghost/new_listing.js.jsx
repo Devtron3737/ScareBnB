@@ -1,6 +1,6 @@
 var NewListing = React.createClass({
   getInitialState: function () {
-    return {value: ""}
+    return {value: "", uploadText: "Add a picture!"}
   },
 
   componentDidMount: function () {
@@ -91,7 +91,7 @@ var NewListing = React.createClass({
 
   handlePicUpload: function (e) {
 
-    AWSUtil.picUpload(e.target.files[0], function (error, imageUrl) {
+    AWSUtil.picUpload(e.target.files[0], function (error, result) {
       if (error) {
         sweetAlert({
           title: "Whoops",
@@ -102,10 +102,10 @@ var NewListing = React.createClass({
           confirmButtonText: "Ok"
         })
       } else {
-        this.pics = [imageUrl]
+        this.pics = [result.Location]
+        this.setState({uploadText: result.key})
       }
     }.bind(this))
-
   },
 
   render: function () {
@@ -125,8 +125,9 @@ var NewListing = React.createClass({
             <input type='textfield' className='manage-new-input' id='manage-new-description' placeholder='Description' />
             <input type='text' className='manage-new-input' id='manage-new-toenails' placeholder='Toenails' />
 
+
+            <label htmlFor='manage-new-picupload' id='listing-pic-upload-label'>{this.state.uploadText}</label>
             <input type='file'
-                   className='button'
                    id='manage-new-picupload'
                    onChange={this.handlePicUpload}>
             </input>

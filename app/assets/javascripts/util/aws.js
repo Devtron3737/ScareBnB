@@ -13,7 +13,7 @@ var AWSUtil = {
           params = {Key: image.name, ContentType: image.type, Body: image};
 
       bucket.upload(params, function (error, result) {
-        callback(error, result.Location)
+        callback(error, result)
       });
     } else {
       sweetAlert({
