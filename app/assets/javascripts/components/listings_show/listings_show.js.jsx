@@ -48,10 +48,10 @@ var ListingsShow = React.createClass({
       var listing = this.state.listing,
           listingPictureUrl = (listing.pictures[0]) ?
                                listing.pictures[0].url :
-                               "https://s3-us-west-1.amazonaws.com/scarebnbdev/no_image_available_qhdwk9.jpg",
+                               "https://s3-us-west-1.amazonaws.com/scarebnbdev/no_image.jpg",
           userPictureUrl = (listing.user_picture) ?
                             listing.user_picture.url :
-                            "https://s3-us-west-1.amazonaws.com/scarebnbdev/no-profile-img_vqxn7j.gif";
+                            "https://s3-us-west-1.amazonaws.com/scarebnbdev/no-profile-img.gif";
         return(
           <div>
             <NavBar search={searchBarOptions}/>
@@ -71,17 +71,17 @@ var ListingsShow = React.createClass({
 
                   <div className='header-amenities clearfix'>
                     <div>
-                      <img src={'https://s3-us-west-1.amazonaws.com/scarebnbdev/tombstone_qdota8.png'} height='40' />
+                      <img src={'https://s3-us-west-1.amazonaws.com/scarebnbdev/tombstone.png'} height='40' />
                       nearby cemetary
                     </div>
 
                     <div>
-                      <img src={'https://s3-us-west-1.amazonaws.com/scarebnbdev/butler_plmuai.png'} height='40' />
+                      <img src={'https://s3-us-west-1.amazonaws.com/scarebnbdev/butler.png'} height='40' />
                       creepy butler
                     </div>
 
                     <div>
-                      <img src={'https://s3-us-west-1.amazonaws.com/scarebnbdev/children_mc3uu8.png'} height='40' />
+                      <img src={'https://s3-us-west-1.amazonaws.com/scarebnbdev/children.png'} height='40' />
                       demented children
                     </div>
                   </div>
@@ -93,7 +93,7 @@ var ListingsShow = React.createClass({
                   <div className='listing-show-rsvp-title clearfix'>
                     <div id='listing-show-rsvp-toenails'>
                       <div id='listing-show-rsvp-price'>{listing.toe_nails}</div>
-                      <img className='toenail-pic' src={'https://s3-us-west-1.amazonaws.com/scarebnbdev/toenail_on49wz.png'} height='25' />
+                      <img className='toenail-pic' src={'https://s3-us-west-1.amazonaws.com/scarebnbdev/toenail.png'} height='25' />
                       <div id='rsvp-per-night'>per night</div>
                     </div>
                   </div>

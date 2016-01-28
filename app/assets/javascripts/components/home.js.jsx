@@ -24,7 +24,7 @@ var Home = React.createClass({
           <nav className='header-nav clearfix'>
             <h2>
               <a href="/">
-               <img name='white logo' src={'https://s3-us-west-1.amazonaws.com/scarebnbdev/logo_ghost_ceoqts.png'} height='50' />
+               <img name='white logo' src={'https://s3-us-west-1.amazonaws.com/scarebnbdev/logo_ghost.png'} height='50' />
               </a>
             </h2>
             <Account />
@@ -51,42 +51,42 @@ var Home = React.createClass({
           <ul className='home-listings clearfix'>
             <li>
               <Link to='listings/San Francisco, CA'>
-                <img name='goldengate' src={'https://s3-us-west-1.amazonaws.com/scarebnbdev/goldengate_ywmoe1.jpg'} height='300' width='330' />
+                <img name='goldengate' src={'https://s3-us-west-1.amazonaws.com/scarebnbdev/goldengate.jpg'} height='300' width='330' />
                 <div className='home-listings-title'>San Francisco</div>
               </Link>
             </li>
 
             <li>
               <Link to='listings/Oakland, CA'>
-                <img src={'https://s3-us-west-1.amazonaws.com/scarebnbdev/haunted_house_n82nxu.jpg'} height='300' width='330' />
+                <img src={'https://s3-us-west-1.amazonaws.com/scarebnbdev/haunted_house.jpg'} height='300' width='330' />
                 <div className='home-listings-title'>Oakland</div>
               </Link>
             </li>
 
             <li>
               <Link to='listings/Berkeley, CA'>
-                <img src={'https://s3-us-west-1.amazonaws.com/scarebnbdev/hand_aiul9s.jpg'} height='300' width='330' />
+                <img src={'https://s3-us-west-1.amazonaws.com/scarebnbdev/hand.jpg'} height='300' width='330' />
                 <div className='home-listings-title'>Berkeley</div>
               </Link>
             </li>
 
             <li>
               <Link to='listings/Marin County, CA'>
-                <img src={'https://s3-us-west-1.amazonaws.com/scarebnbdev/imes6dcn5dj7iyteb9pq.jpg'} height='300' width='330' />
+                <img src={'https://s3-us-west-1.amazonaws.com/scarebnbdev/castle.jpg'} height='300' width='330' />
                 <div className='home-listings-title'>Marin</div>
               </Link>
             </li>
 
             <li>
               <Link to='listings/Daly City, CA'>
-                <img src={'https://s3-us-west-1.amazonaws.com/scarebnbdev/cemetary3_ymuh4q.jpg'} height='300' width='330' />
+                <img src={'https://s3-us-west-1.amazonaws.com/scarebnbdev/cemetary3.jpg'} height='300' width='330' />
                 <div className='home-listings-title'>Daly City</div>
               </Link>
             </li>
 
             <li>
               <Link to='listings/South San Francisco, CA'>
-                <img src={'https://s3-us-west-1.amazonaws.com/scarebnbdev/southsanfran_g2wdpg.jpg'} height='300' width='330' />
+                <img src={'https://s3-us-west-1.amazonaws.com/scarebnbdev/southsanfran.jpg'} height='300' width='330' />
                 <div className='home-listings-title'>South San Francisco</div>
               </Link>
             </li>

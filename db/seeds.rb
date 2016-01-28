@@ -28,14 +28,15 @@ User.create!(username: "Darth Vader", password: "boo", session_token: nil)
 
 Picture.create!(user_id: 1, url: 'https://s3-us-west-1.amazonaws.com/scarebnbdev/boogy.jpg')
 Picture.create!(user_id: 2, url: 'https://s3-us-west-1.amazonaws.com/scarebnbdev/casper.jpg')
-Picture.create!(user_id: 3, url: 'https://s3-us-west-1.amazonaws.com/scarebnbdev/wicked%20witch.jpg')
-Picture.create!(user_id: 4, url: 'https://s3-us-west-1.amazonaws.com/scarebnbdev/it%20the%20clown.png')
-Picture.create!(user_id: 5, url: 'https://s3-us-west-1.amazonaws.com/scarebnbdev/frankenstein.gif')
-Picture.create!(user_id: 6, url: 'https://s3-us-west-1.amazonaws.com/scarebnbdev/headless%20horseman.jpg')
+Picture.create!(user_id: 3, url: 'https://s3-us-west-1.amazonaws.com/scarebnbdev/witch.jpg')
+Picture.create!(user_id: 4, url: 'https://s3-us-west-1.amazonaws.com/scarebnbdev/it.png')
+Picture.create!(user_id: 5, url: 'https://s3-us-west-1.amazonaws.com/scarebnbdev/frank.gif')
+Picture.create!(user_id: 6, url: 'https://s3-us-west-1.amazonaws.com/scarebnbdev/headless_horseman.jpg')
 Picture.create!(user_id: 7, url: 'https://s3-us-west-1.amazonaws.com/scarebnbdev/hannibal.jpg')
 Picture.create!(user_id: 8, url: 'https://s3-us-west-1.amazonaws.com/scarebnbdev/scream.jpg')
-Picture.create!(user_id: 9, url: 'https://s3-us-west-1.amazonaws.com/scarebnbdev/hell%20raiser.jpg')
-Picture.create!(user_id: 10, url: 'https://s3-us-west-1.amazonaws.com/scarebnbdev/dracula.jpg')
+Picture.create!(user_id: 9, url: 'https://s3-us-west-1.amazonaws.com/scarebnbdev/hell_
+raiser.jpg')
+Picture.create!(user_id: 10, url: 'https://s3-us-west-1.amazonaws.com/scarebnbdev/dracula.jpeg')
 Picture.create!(user_id: 11, url: 'https://s3-us-west-1.amazonaws.com/scarebnbdev/freddy.jpg')
 Picture.create!(user_id: 12, url: 'https://s3-us-west-1.amazonaws.com/scarebnbdev/chucky.jpg')
 Picture.create!(user_id: 13, url: 'https://s3-us-west-1.amazonaws.com/scarebnbdev/edward.jpg')
@@ -43,9 +44,9 @@ Picture.create!(user_id: 14, url: 'https://s3-us-west-1.amazonaws.com/scarebnbde
 Picture.create!(user_id: 15, url: 'https://s3-us-west-1.amazonaws.com/scarebnbdev/exorcist.jpg')
 Picture.create!(user_id: 16, url: 'https://s3-us-west-1.amazonaws.com/scarebnbdev/jason.jpg')
 Picture.create!(user_id: 17, url: 'https://s3-us-west-1.amazonaws.com/scarebnbdev/ring.jpg')
-Picture.create!(user_id: 18, url: 'https://s3-us-west-1.amazonaws.com/scarebnbdev/sally.jpg')
+Picture.create!(user_id: 18, url: 'https://s3-us-west-1.amazonaws.com/scarebnbdev/sally.jpeg')
 Picture.create!(user_id: 19, url: 'https://s3-us-west-1.amazonaws.com/scarebnbdev/jack.jpg')
-Picture.create!(user_id: 20, url: 'https://s3-us-west-1.amazonaws.com/scarebnbdev/darth-vader_uuqnnn.jpg')
+Picture.create!(user_id: 20, url: 'https://s3-us-west-1.amazonaws.com/scarebnbdev/darth_vader.jpg')
 
 
 Listing.create!(ghost_id: 1, toe_nails: 25, title: "Lovely victorian home",
