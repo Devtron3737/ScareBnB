@@ -12,7 +12,7 @@ var ManageReservationsBlock = React.createClass({
         listingLink = '/listings/' + reservation.listing_details.id,
         listingPictureUrl = (reservation.listing_pictures) ?
                              reservation.listing_pictures[0].url :
-                             "http://res.cloudinary.com/" + window.CLOUDINARY_CLOUD_NAME + "/image/upload/v1448399595/no_image_available_qhdwk9.jpg"
+                             "https://s3-us-west-1.amazonaws.com/scarebnbdev/no_image_available_qhdwk9.jpg"
     return (
       <div className='manage-category-block clearfix'>
         <div className='manage-category-block-info clearfix'>

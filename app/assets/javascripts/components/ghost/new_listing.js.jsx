@@ -96,15 +96,28 @@ var NewListing = React.createClass({
     }
   },
 
-  handlePicUpload: function () {
-    CloudinaryUtil.picUpload( function (error, result) {
-      this.pics.push(result[0].url);
-      this.setState({picCount: this.pics.length});
-    }.bind(this))
+  handlePicUpload: function (e) {
+    console.log('in handlePicUpload')
+    // if i upload the picture twice, it will
+    // get it in files. so, handlePicUpload is firing
+    // before the file input el has the file?
+
+    var imageChooser = document.getElementById('manage-new-picupload')
+
+    console.log(imageChooser.files)
+    AWSUtil.picUpload(imageChooser.files[0])
+    // CloudinaryUtil.picUpload( function (error, result) {
+    //   this.pics.push(result[0].url);
+    //   this.setState({picCount: this.pics.length});
+    // }.bind(this))
   },
 
   render: function () {
-
+    // <button onClick={this.handlePicUpload}
+    //         className='button'
+    //         id='manage-new-picupload' >
+    //         Upload photo
+    // </button>
     return(
       <div>
 
@@ -122,11 +135,11 @@ var NewListing = React.createClass({
             <input type='textfield' className='manage-new-input' id='manage-new-description' placeholder='Description' />
             <input type='text' className='manage-new-input' id='manage-new-toenails' placeholder='Toenails' />
 
-            <button onClick={this.handlePicUpload}
-                    className='button'
-                    id='manage-new-picupload' >
-                    Upload photo
-            </button>
+            <input onClick={this.handlePicUpload}
+                   type='file'
+                   className='button'
+                   id='manage-new-picupload' >
+            </input>
 
             <div id='new-listing-photocount'>Photo count: {this.state.picCount}</div>
 

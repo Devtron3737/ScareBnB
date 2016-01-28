@@ -5,7 +5,8 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
   <%= stylesheet_link_tag    'application', href: 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,800' %>
   <%= favicon_link_tag 'http://res.cloudinary.com/dn7rukqow/image/upload/v1448470497/logo_red_mjebg6.ico' %>
-  <%= javascript_include_tag  'https://maps.googleapis.com/maps/api/js?libraries=places', charset: 'utf-8'%>
+  <%= javascript_include_tag 'https://maps.googleapis.com/maps/api/js?libraries=places', charset: 'utf-8'%>
+  <%= javascript_include_tag 'https://sdk.amazonaws.com/js/aws-sdk-2.2.32.min.js'%>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
   <%= csrf_meta_tags %>
 
@@ -25,8 +26,12 @@
 
 <body>
   <script>
-	  window.CLOUDINARY_CLOUD_NAME ="<%= ENV["CLOUDINARY_CLOUD_NAME"] %>";
-    window.CLOUDINARY_UPLOAD_PRESET ="<%= ENV["CLOUDINARY_UPLOAD_PRESET"] %>";
+    window.AWS_BUCKET_DEV ="<%= ENV["AWS_BUCKET_DEV"] %>";
+    window.AWS_ACCESS ="<%= ENV["AWS_ACCESS"] %>";
+    window.AWS_SECRET ="<%= ENV["AWS_SECRET"] %>";
+
+	  // window.CLOUDINARY_CLOUD_NAME ="<%= ENV["CLOUDINARY_CLOUD_NAME"] %>";
+    // window.CLOUDINARY_UPLOAD_PRESET ="<%= ENV["CLOUDINARY_UPLOAD_PRESET"] %>";
   </script>
 
   <%= yield %>
