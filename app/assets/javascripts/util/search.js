@@ -18,6 +18,8 @@ var SearchUtil = {
     if (options.place && options.place.geometry) {
       options.placeDefined(options.place);
     } else {
+      // user didnt enter a complete address
+      // autoselect googles first guess
       var searchField =  document.getElementById(options.elementId),
           service = new google.maps.places.AutocompleteService();
       this.placeService = new google.maps.places.PlacesService(searchField);

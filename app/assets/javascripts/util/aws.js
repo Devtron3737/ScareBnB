@@ -1,6 +1,6 @@
 var AWSUtil = {
-  picUpload: function (image) {
-    console.log('in awsutil')
+  picUpload: function (image, callback) {
+
     AWS.config.credentials = {
       accessKeyId: window.AWS_ACCESS,
       secretAccessKey: window.AWS_SECRET
@@ -12,12 +12,18 @@ var AWSUtil = {
       var bucket = new AWS.S3({params: {Bucket: window.AWS_BUCKET_DEV}}),
           params = {Key: image.name, ContentType: image.type, Body: image};
 
-      bucket.upload(params, function (error, data) {
-        console.log('error', error)
-        console.log('data', data)
+      bucket.upload(params, function (error, result) {
+        callback(error, result.Location)
       });
     } else {
-      console.log('Nothing to upload.')
+      sweetAlert({
+        title: "Whoops",
+        text: "You didnt provide a listing image!",
+        type: "error",
+        allowOutsideClick: true,
+        confirmButtonColor: "#ff4d4d",
+        confirmButtonText: "Ok"
+      })
     }
   }
 }

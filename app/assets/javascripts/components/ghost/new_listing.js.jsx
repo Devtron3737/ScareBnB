@@ -1,20 +1,11 @@
 var NewListing = React.createClass({
   getInitialState: function () {
-    return {value: "", picCount: 0}
+    return {value: ""}
   },
 
   componentDidMount: function () {
     this.pics = [];
     this.autocomplete = SearchUtil.createGoogleAutocomplete('manage-new-address');
-  },
-
-  handleChange: function () {
-    this.setState(
-      {value: event.target.value},
-      function () {
-      }
-    );
-
   },
 
   handleSubmit: function () {
@@ -26,28 +17,11 @@ var NewListing = React.createClass({
           description: this.getVal('manage-new-description'),
           pictures: this.pics,
           lat: coords.lat,
-          lng: coords.lng,
-          amenities: JSON.stringify(["amenities"])
+          lng: coords.lng
         }
-    this.validateAttrs(listingAttrs)
 
-    if (this.errors.length === 0) {
-      ManageActions.createListing(listingAttrs);
-      this.pics = [];
-      this.setState({
-        picCount: 0,
-        value: listingAttrs.address
-      })
-    } else {
-      sweetAlert({
-        title: "Whoops",
-        text: this.errors.join(", "),
-        type: "error",
-        allowOutsideClick: true,
-        confirmButtonColor: "#ff4d4d",
-        confirmButtonText: "Ok"
-      })
-    }
+    this.validateAttrs(listingAttrs)
+    this.sendAttrs(listingAttrs)
   },
 
   getVal: function (id) {
@@ -96,52 +70,66 @@ var NewListing = React.createClass({
     }
   },
 
+  sendAttrs: function (listingAttrs) {
+    if (this.errors.length === 0) {
+      ManageActions.createListing(listingAttrs);
+      this.pics = [];
+      this.setState({
+        value: ""
+      });
+    } else {
+      sweetAlert({
+        title: "Whoops",
+        text: this.errors.join(", "),
+        type: "error",
+        allowOutsideClick: true,
+        confirmButtonColor: "#ff4d4d",
+        confirmButtonText: "Ok"
+      })
+    }
+  },
+
   handlePicUpload: function (e) {
-    console.log('in handlePicUpload')
-    // if i upload the picture twice, it will
-    // get it in files. so, handlePicUpload is firing
-    // before the file input el has the file?
 
-    var imageChooser = document.getElementById('manage-new-picupload')
+    AWSUtil.picUpload(e.target.files[0], function (error, imageUrl) {
+      if (error) {
+        sweetAlert({
+          title: "Whoops",
+          text: "Something went wrong with your image upload.",
+          type: "error",
+          allowOutsideClick: true,
+          confirmButtonColor: "#ff4d4d",
+          confirmButtonText: "Ok"
+        })
+      } else {
+        this.pics = [imageUrl]
+      }
+    }.bind(this))
 
-    console.log(imageChooser.files)
-    AWSUtil.picUpload(imageChooser.files[0])
-    // CloudinaryUtil.picUpload( function (error, result) {
-    //   this.pics.push(result[0].url);
-    //   this.setState({picCount: this.pics.length});
-    // }.bind(this))
   },
 
   render: function () {
-    // <button onClick={this.handlePicUpload}
-    //         className='button'
-    //         id='manage-new-picupload' >
-    //         Upload photo
-    // </button>
+
     return(
       <div>
 
         <div className='manage-block-title'>List Your Haunting</div>
 
           <div id='manage-new-content'>
-            <input onChange={this.onTitleChange} type='text' className='manage-new-input' id='manage-new-title' placeholder='Title' />
+            <input type='text' className='manage-new-input' id='manage-new-title' placeholder='Title' />
             <input type='text'
                    className='manage-new-input'
                    id='manage-new-address'
                    placeholder='Address'
-                   onChange={this.handleChange}
-                   value={this.state.value}>
-            </input>
+            />
             <input type='textfield' className='manage-new-input' id='manage-new-description' placeholder='Description' />
             <input type='text' className='manage-new-input' id='manage-new-toenails' placeholder='Toenails' />
 
-            <input onClick={this.handlePicUpload}
-                   type='file'
+            <input type='file'
                    className='button'
-                   id='manage-new-picupload' >
+                   id='manage-new-picupload'
+                   onChange={this.handlePicUpload}>
             </input>
-
-            <div id='new-listing-photocount'>Photo count: {this.state.picCount}</div>
 
             <button onClick={this.handleSubmit}
                     className='button'
