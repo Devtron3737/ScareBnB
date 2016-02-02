@@ -159,47 +159,6 @@ ul {
     color: white;
   }
 }
-
-#nav-account {
-  position: absolute;
-  right: 0.5%;
-  top: 1%;
-}
-
-#nav-userPic {
-  border-radius: 50%;
-  border: 2px solid rgba(252, 252, 253, 1); // airbnb offwhite
-}
-
-.account-dropdown-list {
-  position: absolute;
-  bottom: 0;
-  transform: translateY(100%);
-  right: 0;
-  width: 300px;
-  background: rgba(255, 77, 77, 0.97); // airbnb red
-  border-top: 1px solid lightgrey;
-}
-
-.account-dropdown-list > li {
-  border-left: 1px solid lightgrey;
-  border-right: 1px solid lightgrey;
-  border-bottom: 1px solid lightgrey;
-  // background: lightgrey;
-  padding: 10px;
-  font-weight: 300;
-  color: white;
-  text-align: center;
-}
-
-.account-dropdown-list > li:hover {
-  background: rgba(255, 128, 128, 1); //airbnb light red
-  cursor: pointer;
-}
-
-.account-dropdown-list a:visited {
-  color: white;
-}
 // DATES--------------------------
 
 .date-field-container {

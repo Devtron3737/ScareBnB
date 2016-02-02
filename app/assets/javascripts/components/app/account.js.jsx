@@ -16,7 +16,9 @@ var Account = React.createClass({
   },
 
   _onUserPicChange: function () {
+    console.log('_onUserPicChange', SearchStore.getUserPic())
     this.setState({userPic: SearchStore.getUserPic()})
+
   },
 
   handleHover: function () {
@@ -26,19 +28,36 @@ var Account = React.createClass({
   },
 
   handlePicUpload: function () {
+    console.log('handling pic upload', thisstate.userPic.url)
     if (this.state.userPic.url) {
+      console.log('inside upload pic fail, bueno!')
       sweetAlert({
         title: "Oops",
-        text: "There's already  a user pic for this user!",
+        text: "There's already  a user pic for this user.",
         type: "error",
         allowOutsideClick: true,
         confirmButtonColor: "#ff4d4d",
         confirmButtonText: "Ok"
       })
     } else {
-      CloudinaryUtil.picUpload( function (error, result) {
-        ManageActions.addUserPic({url: result[0].url})
-      })
+    console.log('in aws upload, no bueno')
+    AWSUtil.picUpload(e.target.files[0], function (error, result) {
+      if (error) {
+        sweetAlert({
+          title: "Whoops",
+          text: "Something went wrong with your image upload.",
+          type: "error",
+          allowOutsideClick: true,
+          confirmButtonColor: "#ff4d4d",
+          confirmButtonText: "Ok"
+        })
+      } else {
+      ManageActions.addUserPic({url: result.Location})
+      }
+    })
+      // CloudinaryUtil.picUpload( function (error, result) {
+      //   ManageActions.addUserPic({url: result[0].url})
+      // })
     }
   },
 
@@ -49,13 +68,27 @@ var Account = React.createClass({
   },
 
   render: function () {
-    var dropDown;
+    var dropDown,
+        uploadElement;
+
+    // let new user add user pic
+    if (this.state.userPic.url === undefined) {
+      uploadElement = (
+        <li>
+          <label htmlFor='manage-new-picupload' id='listing-pic-upload-label'>Upload User Pic</label>
+          <input type='file'
+                 id='manage-new-picupload'
+                 onChange={this.handlePicUpload}>
+          </input>
+        </li>
+      )
+    }
 
     if (this.state.dropDown) {
       dropDown = (
         <ul className='account-dropdown-list'>
           <li><Link to='/user'>Manage listings and reservations</Link></li>
-          <li onClick={this.handlePicUpload}>Upload user picture</li>
+          {uploadElement}
           <li onClick={SessionUtil.logOut}>Log out</li>
         </ul>
       )
