@@ -9,7 +9,7 @@ var AWSUtil = {
     AWS.config.region = 'us-west-1'
 
     if (image) {
-      var bucket = new AWS.S3({params: {Bucket: window.AWS_BUCKET_PROD}}),
+      var bucket = new AWS.S3({params: {Bucket: "scarebnbprod"}}),
           params = {Key: image.name, ContentType: image.type, Body: image};
 
       bucket.upload(params, function (error, result) {
