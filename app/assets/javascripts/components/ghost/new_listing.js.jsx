@@ -92,6 +92,7 @@ var NewListing = React.createClass({
   handlePicUpload: function (e) {
 
     AWSUtil.picUpload(e.target.files[0], function (error, result) {
+      console.log(error)
       if (error) {
         sweetAlert({
           title: "Whoops",
