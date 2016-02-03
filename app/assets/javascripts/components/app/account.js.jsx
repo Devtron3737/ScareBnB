@@ -99,7 +99,7 @@ var Account = React.createClass({
 
     return(
       <div id='nav-account' onMouseEnter={this.handleHover} onMouseLeave={this.handleLeave}>
-        <img src={this.state.userPic.url || "https://s3-us-west-1.amazonaws.com/scarebnbdev/no-profile-img.gif"}
+        <img src={this.state.userPic.url || "https://s3-us-west-1.amazonaws.com/scarebnbprod/no-profile-img.gif"}
              id='nav-userPic' height='45' width='45' />
         {dropDown}
       </div>

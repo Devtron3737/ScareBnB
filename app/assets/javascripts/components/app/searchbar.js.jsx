@@ -52,7 +52,7 @@ var SearchBar = React.createClass({
   render: function () {
     return(
       <div className='search-field-container clearfix'>
-        <img src={'https://s3-us-west-1.amazonaws.com/scarebnbdev/mag_glass_grey.png'}
+        <img src={'https://s3-us-west-1.amazonaws.com/scarebnbprod/mag_glass_grey.png'}
              className='mag-glass-pic'
              alt=''
              height='38' />

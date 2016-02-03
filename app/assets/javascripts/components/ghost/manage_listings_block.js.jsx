@@ -10,7 +10,7 @@ var ManageListingsBlock = React.createClass({
         listingLink = '/listing/' + listing.id,
         listingPictureUrl = (listing.pictures[0]) ?
                              listing.pictures[0].url :
-                             "https://s3-us-west-1.amazonaws.com/scarebnbdev/no_image.jpg"
+                             "https://s3-us-west-1.amazonaws.com/scarebnbprod/no_image.jpg"
 
 
     return (

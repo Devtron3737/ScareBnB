@@ -58,7 +58,7 @@ var Map = React.createClass({
     var listingId = SearchStore.getListingHover()
 
     this.markers[listingId].setIcon({
-      url: "https://s3-us-west-1.amazonaws.com/scarebnbdev/marker_happy.png",
+      url: "https://s3-us-west-1.amazonaws.com/scarebnbprod/marker_happy.png",
       scaledSize: new google.maps.Size(26, 37),
       anchor: new google.maps.Point(15, 37)
     })
@@ -69,7 +69,7 @@ var Map = React.createClass({
     var listingId = SearchStore.getListingLeave()
 
     this.markers[listingId].setIcon({
-      url: "https://s3-us-west-1.amazonaws.com/scarebnbdev/marker_sad.png",
+      url: "https://s3-us-west-1.amazonaws.com/scarebnbprod/marker_sad.png",
       scaledSize: new google.maps.Size(27, 37),
       anchor: new google.maps.Point(15, 37)
     })
@@ -164,7 +164,7 @@ var Map = React.createClass({
 
   markMap: function (listing) {
     var ghostIcon = {
-      url: "https://s3-us-west-1.amazonaws.com/scarebnbdev/marker_sad.png",
+      url: "https://s3-us-west-1.amazonaws.com/scarebnbprod/marker_sad.png",
       scaledSize: new google.maps.Size(27, 37),
       anchor: new google.maps.Point(15, 37)
     };
