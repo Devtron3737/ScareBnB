@@ -139,16 +139,6 @@
   // text-align: center;
 }
 
-#manage-new-picupload {
-  // hide ugly upload button
-  width: 0.1px;
-	height: 0.1px;
-	opacity: 0;
-	overflow: hidden;
-	position: absolute;
-	z-index: -1;
-}
-
 #listing-pic-upload-label {
   position: relative;
   left: 50%;

@@ -106,6 +106,7 @@ var NewListing = React.createClass({
         this.setState({uploadText: result.key})
       }
     }.bind(this))
+
   },
 
   render: function () {
@@ -129,6 +130,7 @@ var NewListing = React.createClass({
             <label htmlFor='manage-new-picupload' id='listing-pic-upload-label'>{this.state.uploadText}</label>
             <input type='file'
                    id='manage-new-picupload'
+                   className='picupload'
                    onChange={this.handlePicUpload}>
             </input>
 
