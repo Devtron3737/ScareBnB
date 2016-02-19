@@ -39,7 +39,7 @@ class Api::ListingsController < ApplicationController
   def listing_params
     params.permit(
       :title, :toe_nails, :lat, :lng,
-      :address, :ghost_id, :amenities,
+      :address, :amenities,
       :description, :check_in, :check_out,
       :north, :east, :south, :west
     )
