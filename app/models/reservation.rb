@@ -11,7 +11,7 @@
 
 class Reservation < ActiveRecord::Base
   validates :listing_id, :check_in, :check_out, :guest_id, presence: true
-  validate :valid_reservation?
+  validate :conflicting_reservation?
 
   belongs_to(
     :guest,
@@ -37,7 +37,7 @@ class Reservation < ActiveRecord::Base
     ])
   end
 
-  def valid_reservation?
+  def conflicting_reservation?
     if conflicts.empty?
       true
     else
