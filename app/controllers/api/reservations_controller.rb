@@ -23,6 +23,6 @@ class Api::ReservationsController < ApplicationController
   private
 
   def reservation_params
-    params.permit(:check_in, :check_out, :listing_id, :guest_id)
+    params.permit(:check_in, :check_out, :listing_id)
   end
 end
