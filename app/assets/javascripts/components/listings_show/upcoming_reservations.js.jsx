@@ -13,7 +13,7 @@ var UpcomingReservations = React.createClass({
         <ul id='upcoming-reservations-list'>
           {this.props.reservations.map( function (reservation) {
             return(
-              <li>{DateUtil.toString(reservation.check_in) + ' to ' + DateUtil.toString(reservation.check_out)}</li>
+              <li key={reservation.id}>{DateUtil.toString(reservation.check_in) + ' to ' + DateUtil.toString(reservation.check_out)}</li>
             )
           })}
         </ul>
