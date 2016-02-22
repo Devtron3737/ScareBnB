@@ -19,7 +19,7 @@ var ListingBlock = React.createClass({
   render: function () {
     var listing = this.props.listing,
         listingPath = '/listings/' + listing.id,
-        listingPictureUrl = (listing.pictures) ?
+        listingPictureUrl = (listing.pictures[0]) ?
                              listing.pictures[0].url :
                              "https://s3-us-west-1.amazonaws.com/scarebnbprod/no_image.jpg",
         userPictureUrl = (listing.user_picture) ?

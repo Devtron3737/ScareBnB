@@ -16,13 +16,14 @@ class User < ActiveRecord::Base
 
   before_validation :ensure_sesssion_token
 
-  has_many :listings, foreign_key: :ghost_id
-  has_one :picture
+  has_many :listings, foreign_key: :ghost_id, dependent: :destroy
+  has_one :picture, dependent: :destroy
 
   has_many(
     :reservations_as_guest,
     class_name: "Reservation",
-    foreign_key: :guest_id
+    foreign_key: :guest_id,
+    dependent: :destroy
   )
 
   def upcoming_reservations_as_guest

@@ -13,7 +13,7 @@ class Api::ReservationsController < ApplicationController
 
   def destroy
     if current_user.reservations_as_guest.find(params[:id])
-      Reservation.delete(params[:id])
+      Reservation.destroy(params[:id])
       render json: {}
     else
       render json: {errors: "Reservation doesnt belong to current user"}

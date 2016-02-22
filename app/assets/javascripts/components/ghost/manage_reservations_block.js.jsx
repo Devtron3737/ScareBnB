@@ -10,7 +10,7 @@ var ManageReservationsBlock = React.createClass({
   render: function () {
     var reservation = this.props.reservation,
         listingLink = '/listings/' + reservation.listing_details.id,
-        listingPictureUrl = (reservation.listing_pictures) ?
+        listingPictureUrl = (reservation.listing_pictures[0]) ?
                              reservation.listing_pictures[0].url :
                              "https://s3-us-west-1.amazonaws.com/scarebnbprod/no_image.jpg"
     return (

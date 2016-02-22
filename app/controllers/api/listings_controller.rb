@@ -27,7 +27,7 @@ class Api::ListingsController < ApplicationController
   def destroy
     # check that listing belongs to current_user
     if current_user.listings.find(params[:id])
-      Listing.delete(params[:id])
+      Listing.destroy(params[:id])
       render json: {}
     else
       render json: {errors: "Listing doesnt belong to current user"}

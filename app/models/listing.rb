@@ -25,9 +25,9 @@ class Listing < ActiveRecord::Base
       foreign_key: :ghost_id
     )
 
-    has_many :pictures
+    has_many :pictures, dependent: :destroy
     has_one :ghost_picture, through: :ghost, source: :picture
-    has_many :reservations
+    has_many :reservations, dependent: :destroy
 
     def upcoming_reservations
       self.reservations.where(["check_in >= ?", Date.today]).order(:check_in)
