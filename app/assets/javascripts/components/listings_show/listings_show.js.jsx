@@ -46,7 +46,7 @@ var ListingsShow = React.createClass({
       return <div>Loading...</div>
     } else {
       var listing = this.state.listing,
-          listingPictureUrl = (listing.pictures[0]) ?
+          listingPictureUrl = (listing.pictures) ?
                                listing.pictures[0].url :
                                "https://s3-us-west-1.amazonaws.com/scarebnbprod/no_image.jpg",
           userPictureUrl = (listing.user_picture) ?
