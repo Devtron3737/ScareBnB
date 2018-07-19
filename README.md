@@ -4,7 +4,7 @@
 
 [heroku]: http://www.scarebnb.rocks
 
-## Minimum Viable Product
+## Minimum Viable Product 
 
 Scarebnb is a horror movie themed site allowing users to list, find, and rent lodging. It is inspired by Airbnb, built using Ruby on Rails for the backend and React.js for the front end.
 
